@@ -847,6 +847,60 @@ An EP (typically 3–6 tracks) sits between a single and an album. It may includ
 
 ---
 
+### Merch Cadence — One Drop at a Time
+
+SoundSteak merch is not a store. It is a rhythm. Every artist on the platform ships on the same cadence — one product released as a pre-sale every two to three months, for the duration of their time on the platform. Each drop is its own event: a Cue sequence, a SteakHolder notification, a new reason to share the artist.
+
+The goal is not to maximize inventory. It is to maximize moments. Four drops per year means four separate windows where the platform has something to push, SteakHolders have something to share, and the release LLC has a new revenue line opening. That compounds across a growing roster.
+
+**Year 1 cadence — every artist, at signing:**
+
+Every artist begins with the same three founding products, released in sequence across the year. A fourth drop closes the year with event ticket pre-sales.
+
+| Drop | Timing | Product | Notes |
+|---|---|---|---|
+| **1** | Month 1–2 after signing | Digital bundle | Lossless audio, lyrics, liner notes PDF, production notes. Zero production cost. Immediate earn. |
+| **2** | Month 3–4 | Zine pre-sale | 30-day pre-order window. Print-to-order through platform-contracted printer. Numbered run. |
+| **3** | Month 5–6 | Shirt pre-sale | One design, one colorway. 30-day window. Print-on-demand — no inventory risk, no minimum. |
+| **4** | Month 10–11 | Event ticket pre-sale | SteakHolders get first-window access before public. The year ends with the room filling up. |
+
+The digital bundle drops first because it costs nothing to produce and earns immediately. The zine and shirt follow at pace. Tickets close the year — every artist's last drop is the platform's biggest event.
+
+**The merch catalog grows with the catalog:**
+
+Each year an artist stays on the platform, new products unlock — not on a fixed schedule, but as the catalog, the audience, and the streaming numbers warrant. The platform proposes. SteakHolders vote. The professional network executes.
+
+| Songs on Platform | Merch Unlocked |
+|---|---|
+| **1 song (Year 1)** | Digital bundle, zine, shirt, event tickets |
+| **2 songs (Year 2)** | 45rpm vinyl — one song per side. First physical artifact. The format was built for exactly this. |
+| **3 songs (Year 3)** | Cassette or 10" EP, 3-track digital bundle upgrade, possible collab merch |
+| **4 songs (Year 4)** | Audience large enough for brand partnership conversations. Limited collab drops. |
+| **5 songs (Year 5)** | Compilation LP viable — vinyl, zine companion, box set if numbers support it |
+
+Every new format is a governance moment — SteakHolders see the streaming data, vote on whether to greenlight the run, and become the first pre-order window when it opens.
+
+**The 45rpm as a milestone:**
+
+Two songs on the platform means a 45rpm single is viable — one track per side, the format that defined the single for fifty years. It is not nostalgia. It is the right format at the right moment: small run, affordable to press, collector-grade artifact, and a meaningful signal that the artist has a body of work worth holding in your hands. The 45 is the first vinyl product most artists on the platform will release. It should feel like an event.
+
+**Every drop is a platform event:**
+
+The cadence is not artist-by-artist. It is platform-wide. When multiple artists are shipping on the same two-to-three month rhythm, the platform always has something happening. A new digital bundle, a new zine window, a new shirt drop, a vinyl governance vote in progress. SoundSteak is never quiet. Every SteakHolder on the platform, regardless of which artists they've backed, is always inside an active release window for someone.
+
+**The album timeline:**
+
+A standard album is 10–12 tracks. At one single per year, that is a decade-long catalog built on the platform — every track documented, funded, and earning before the album exists. The album on SoundSteak is not a gamble. It is a victory lap on a proven body of work.
+
+For artists who want an album faster, the compilation path (see below) allows existing singles to be packaged as an EP (3–6 tracks, reachable in years 3–6) or a short album (7–9 tracks, reachable in years 7–9). The platform's answer to "I want to make an album" is: you are making one — one song at a time, with a funded and invested audience behind every track.
+
+| Songs | Format | Approx. Platform Tenure |
+|---|---|---|
+| 3–4 | Strong EP | Years 3–4 |
+| 5–6 | Mini-album / long EP | Years 5–6 |
+| 7–9 | Legitimate album for most genres | Years 7–9 |
+| 10–12 | Traditional full-length | Years 10–12 |
+
 ### Physical Format Releases
 
 Physical formats are not nostalgia. They are a distinct product category with a distinct buyer, a distinct revenue model, and a distinct relationship to the music. SoundSteak commissions and executes every physical format through the professional network already on the platform — pressed, printed, shipped, and tracked like any other revenue stream.
