@@ -43,7 +43,7 @@ A real ownership stake in the music you believed in first — documented, perman
 
 ### For the entire music industry
 
-Every engineer, producer, photographer, promoter, director, and curator who contributes to a SoundSteak release has a verified profile built from platform-documented activity. Credits logged when they happen. Payments recorded as they clear. Attribution tracked and paid automatically. No self-reported credits. No bios. A factual record of what someone actually did — and what it earned.
+Every engineer, producer, photographer, promoter, director, and curator who contributes to a SoundSteak release has a verified profile built from platform-documented activity. Credits logged when they happen. Payments recorded as they clear. Attribution tracked and paid automatically. No self-reported credits. A factual record of what someone actually did — and what it earned.
 
 ---
 
@@ -149,7 +149,7 @@ A full **Positioning & Language** section — covering how SoundSteak describes 
 
 SoundSteak is a fan-owned record label and music investment platform. Artists are signed through a live public showcase. Fans invest directly in artists and specific releases. Every dollar the music earns — streams, shows, sync, merchandise — flows back through a transparent, automated system that pays every stakeholder their correct percentage, without anyone in the middle making decisions about money that isn't theirs.
 
-The platform handles everything an artist would otherwise have to navigate alone: PRO registration, ISRC and IPI numbers, SoundExchange enrollment, MLC registration, publishing splits, and the legal infrastructure most artists never know exists — and never get. Every contributor to a piece of music has a verified profile built entirely from platform-documented activity: sessions logged when they happen, releases registered at signing, payments recorded as they clear. No self-reported credits. No bios. Just a factual record of what someone has actually done.
+The platform handles everything an artist would otherwise have to navigate alone: PRO registration, ISRC and IPI numbers, SoundExchange enrollment, MLC registration, publishing splits, and the legal infrastructure most artists never know exists — and never get. Every contributor to a piece of music has a verified profile built entirely from platform-documented activity: sessions logged when they happen, releases registered at signing, payments recorded as they clear. No self-reported credits. Just a factual record of what someone has actually done.
 
 The founding principle is structural, not philosophical: **everyone who contributes to the success of a piece of music is documented, protected, and paid — and the theft by omission that has always been possible inside the music industry is architecturally impossible inside this one.**
 
