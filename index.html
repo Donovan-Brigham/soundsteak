@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SoundSteak</title>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F0E8;--surface:#FFFFFF;--surface-2:#EDE8DF;--text:#141210;--text-2:#6B6560;--accent:#C94B0E;--gold:#A87A08;--border:rgba(20,18,16,0.1);--radius:8px}
+@media(prefers-color-scheme:dark){:root{--bg:#141210;--surface:#1E1C19;--surface-2:#262420;--text:#F2EDE4;--text-2:#8C8580;--accent:#E05C1A;--gold:#C8960A;--border:rgba(242,237,228,0.09)}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+.eyebrow{font-size:10.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);margin-bottom:1.25rem;display:block}
+.s-rule{display:flex;align-items:center;gap:1.25rem;padding:1.25rem 2.5rem;margin-bottom:0}
+.s-rule::before,.s-rule::after{content:'';flex:1;height:1px;background:rgba(242,237,228,.1)}
+.s-rule span{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(242,237,228,.3);font-weight:500;white-space:nowrap}
+.btn{display:inline-block;padding:.8rem 1.9rem;background:var(--accent);color:#fff;font-family:'DM Sans',sans-serif;font-size:.88rem;font-weight:500;text-decoration:none;border-radius:var(--radius);letter-spacing:.03em;cursor:pointer;border:none;transition:opacity .15s}
+.btn:hover{opacity:.88}
+/* ── HERO ── */
+.s-hero{position:relative;width:100%;height:100vh;overflow:hidden;background:#0C0A08}
+.s-hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(12,10,8,.15) 0%,rgba(12,10,8,.55) 70%,rgba(12,10,8,.92) 100%)}
+.hero-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 2.5rem 4rem}
+.hero-inner{width:100%;max-width:1080px;margin:0 auto}
+.hero-type{font-family:'Bebas Neue',sans-serif;font-size:clamp(6rem,22vw,19rem);line-height:.85;color:#F2EDE4;margin-left:-.03em;pointer-events:none;user-select:none}
+.hero-type .hot{color:#E05C1A}
+.hero-sub{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:clamp(1rem,2vw,1.35rem);color:rgba(242,237,228,.65);margin-top:1rem;max-width:480px}
+/* ── ARTIST ── */
+.s-artist{background:#141210;padding:5rem 2.5rem;overflow:hidden}
+.s-artist .eyebrow{color:#E05C1A}
+.artist-inner{max-width:1080px;margin:0 auto;width:100%}
+.artist-hero-type{font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,14vw,12rem);line-height:.85;color:#F2EDE4;white-space:nowrap;margin-left:-.03em;margin-bottom:3rem;pointer-events:none;user-select:none}
+.artist-hero-type .hot{color:#E05C1A}
+.artist-lower{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+@media(max-width:660px){.artist-lower{grid-template-columns:1fr;gap:2rem}}
+.proof-stack-wrap{display:contents}
+.artist-sub{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:clamp(1.15rem,2.5vw,1.45rem);color:rgba(242,237,228,.72);line-height:1.45;text-wrap:balance;margin-bottom:1.25rem}
+.artist-copy{font-size:.97rem;color:rgba(242,237,228,.52);line-height:1.75;margin-bottom:2rem}
+.proof-stack{display:flex;flex-direction:column;gap:1.25rem}
+.proof-item{padding:1.1rem 1.25rem;border:1px solid rgba(242,237,228,.1);border-radius:var(--radius);background:rgba(242,237,228,.04)}
+.proof-item-label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(242,237,228,.35);margin-bottom:.35rem}
+.proof-item-value{font-size:.92rem;font-weight:500;color:#F2EDE4;line-height:1.4}
+.s-investor{background:var(--bg);padding:6rem 2.5rem}
+.s-investor .inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+@media(max-width:700px){.s-investor .inner{grid-template-columns:1fr;gap:3rem}}
+.section-head{font-family:'DM Serif Display',Georgia,serif;font-size:clamp(2rem,4.5vw,3.1rem);line-height:1.1;text-wrap:balance;margin-bottom:1rem}
+.section-sub{font-size:.97rem;color:var(--text-2);line-height:1.75;margin-bottom:2rem}
+.data-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:1.75rem;box-shadow:0 2px 24px rgba(0,0,0,.06)}
+.dc-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)}
+.dc-artist{font-weight:500;font-size:.97rem}
+.dc-meta{font-size:.76rem;color:var(--text-2);margin-top:.2rem}
+.live-pip{display:flex;align-items:center;gap:.4rem;font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#3A9E6F}
+.live-dot{width:6px;height:6px;border-radius:50%;background:#3A9E6F;animation:blink 2s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+.stake-pills{display:flex;gap:.5rem;margin-bottom:1.25rem;flex-wrap:wrap}
+.pill{font-size:.72rem;padding:.25rem .7rem;border-radius:100px;background:var(--surface-2);color:var(--text-2);letter-spacing:.04em}
+.earn-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.25rem}
+.earn-block .earn-label{font-size:.7rem;color:var(--text-2);text-transform:uppercase;letter-spacing:.1em;margin-bottom:.35rem}
+.earn-block .earn-num{font-size:1.65rem;font-weight:500;font-variant-numeric:tabular-nums;line-height:1;color:var(--gold)}
+.earn-block .earn-num.neutral{color:var(--text)}
+.earn-block .earn-delta{font-size:.74rem;color:#3A9E6F;margin-top:.25rem}
+.bar-chart{display:flex;align-items:flex-end;gap:3px;height:44px;margin-bottom:1.25rem}
+.bar{flex:1;border-radius:2px 2px 0 0;background:var(--surface-2)}
+.bar.lit{background:var(--accent);opacity:.55}
+.bar.now{background:var(--accent);opacity:1}
+.pipeline-row{display:flex;justify-content:space-between;align-items:center;padding-top:1.1rem;border-top:1px solid var(--border)}
+.pipeline-label{font-size:.76rem;color:var(--text-2)}
+.pipeline-val{font-size:.88rem;font-weight:500;font-variant-numeric:tabular-nums}
+.s-fan{background:var(--surface);padding:6rem 2.5rem}
+.s-fan .inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+@media(max-width:700px){.s-fan .inner{grid-template-columns:1fr;gap:3rem}}
+.s-fan .section-head{margin-bottom:1rem}
+.s-fan .section-sub{margin-bottom:2rem}
+.s-fan .journey::before{background:rgba(0,0,0,.08)}
+.s-fan .journey-num{border-color:var(--border);background:var(--bg);color:var(--accent)}
+.s-fan .journey-label{color:var(--text-2)}
+.s-fan .journey-body{color:var(--text-2);font-size:.88rem}
+.s-fan .principle{border-left-color:var(--accent)}
+.s-fan .principle-text{color:var(--text);font-style:normal;font-size:1rem}
+.share-card{max-width:340px;margin:0 auto 2.75rem;background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:1.5rem;text-align:left}
+.sc-song-row{display:flex;gap:.9rem;align-items:center;margin-bottom:1.1rem}
+.sc-art{width:50px;height:50px;border-radius:8px;background:#C94B0E;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.sc-art svg{width:22px;height:22px;stroke:rgba(255,255,255,.75);fill:none;stroke-width:2;stroke-linecap:round}
+.sc-title{font-weight:500;font-size:.95rem}
+.sc-artist{font-size:.78rem;color:var(--text-2);margin-top:.1rem}
+.sc-story{font-size:.88rem;font-style:italic;line-height:1.6;color:var(--text);padding-left:.85rem;border-left:2.5px solid var(--accent);margin-bottom:1rem}
+.sc-tags{display:flex;gap:.45rem;flex-wrap:wrap}
+.sc-tag{font-size:.68rem;padding:.22rem .6rem;border-radius:100px;background:var(--surface);color:var(--text-2);border:1px solid var(--border)}
+.sc-tag.hot{background:rgba(201,75,14,.1);color:var(--accent);border-color:transparent}
+.founding-badge{display:flex;align-items:flex-start;gap:.85rem;padding:.9rem 1.5rem;border-bottom:1px solid var(--border)}
+.founding-badge:last-child{border-bottom:none}
+.founding-badge-icon{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#C94B0E,#8B2800);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:.65rem;color:#fff;font-weight:700;margin-top:.1rem}
+.founding-badge-body{flex:1;min-width:0}
+.founding-badge-artist{font-size:.82rem;font-weight:600;color:var(--text);line-height:1.3}
+.founding-badge-meta{font-size:.72rem;color:var(--text-2);margin-top:.18rem;line-height:1.4}
+.founding-badge-label{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:#C94B0E;font-weight:600;margin-top:.22rem}
+.founding-badge-num{font-size:.72rem;color:var(--text-2);font-variant-numeric:tabular-nums;white-space:nowrap;padding-top:.15rem}
+.fan-profile-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 2px 24px rgba(0,0,0,.06)}
+.fan-discovery-note{padding:1rem 1.5rem;background:rgba(201,75,14,.06);border-top:1px solid rgba(201,75,14,.12);font-size:.74rem;color:var(--text-2);line-height:1.5}
+.fan-discovery-note strong{color:var(--accent)}
+.s-verified{background:var(--bg);padding:6rem 2.5rem;border-top:1px solid var(--border)}
+.s-verified .inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+@media(max-width:700px){.s-verified .inner{grid-template-columns:1fr;gap:3rem}}
+.s-verified .section-head{max-width:480px}
+.s-verified .section-sub{max-width:460px}
+.profile-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 2px 24px rgba(0,0,0,.06)}
+.profile-card-header{padding:1.5rem 1.5rem 1.25rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start}
+.profile-name{font-weight:600;font-size:1rem}
+.profile-role{font-size:.78rem;color:var(--text-2);margin-top:.2rem}
+.verified-seal{display:flex;align-items:center;gap:.35rem;font-size:.68rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);flex-shrink:0}
+.verified-seal svg{width:13px;height:13px;fill:var(--accent)}
+.credit-list{padding:.5rem 0}
+.credit-entry{display:grid;grid-template-columns:1fr auto;align-items:start;gap:1rem;padding:.85rem 1.5rem;border-bottom:1px solid var(--border)}
+.credit-entry:last-child{border-bottom:none}
+.credit-title{font-size:.88rem;font-weight:500;line-height:1.3}
+.credit-detail{font-size:.75rem;color:var(--text-2);margin-top:.2rem}
+.credit-badge{font-size:.65rem;padding:.2rem .55rem;border-radius:100px;background:var(--surface-2);color:var(--text-2);letter-spacing:.06em;white-space:nowrap;margin-top:.1rem}
+.no-bio-note{padding:1rem 1.5rem;background:var(--surface-2);font-size:.74rem;color:var(--text-2);display:flex;align-items:center;gap:.5rem;border-top:1px solid var(--border)}
+.no-bio-note span{opacity:.5;font-size:1rem}
+.s-eco{background:var(--bg);padding:6rem 2.5rem}
+.s-eco .inner{max-width:1080px;margin:0 auto}
+.s-eco .section-head{max-width:720px}
+.s-eco .section-sub{max-width:560px}
+.role-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:1px;background:var(--border);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:2.5rem}
+.role-cell{background:var(--surface);padding:1.5rem 1.25rem;transition:background .14s}
+.role-cell:hover{background:var(--surface-2)}
+.role-name{font-weight:500;font-size:.93rem;margin-bottom:.4rem}
+.role-desc{font-size:.8rem;color:var(--text-2);line-height:1.55}
+.role-badge{display:inline-block;margin-top:.85rem;font-size:.66rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+/* ── WHAT NOBODY ELSE BUILT ── */
+.s-nobody{background:#060402;padding:5rem 2.5rem;border-top:1px solid rgba(242,237,228,0.04)}
+.s-nobody .inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+@media(max-width:720px){.s-nobody .inner{grid-template-columns:1fr;gap:2rem}}
+.nobody-label{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(242,237,228,.2);line-height:1.6;padding-top:.35rem}
+.nobody-list{list-style:none;display:flex;flex-direction:column;gap:0}
+.nobody-item{font-size:.92rem;color:rgba(242,237,228,.55);line-height:1.6;padding:.9rem 0;border-bottom:1px solid rgba(242,237,228,.05);display:grid;grid-template-columns:1.25rem 1fr;gap:.75rem;align-items:baseline}
+.nobody-item:last-child{border-bottom:none}
+.nobody-dash{color:#E05C1A;font-weight:600}
+/* ── END NOBODY ── */
+/* ── FAN INTEL CARD ── */
+.fan-intel-card{background:#0E0C0A;border:1px solid rgba(242,237,228,.09);border-radius:12px;padding:1.5rem;margin-bottom:1.25rem}
+.fan-intel-row{display:flex;justify-content:space-between;align-items:baseline;padding:.55rem 0;border-bottom:1px solid rgba(242,237,228,.05)}
+.fan-intel-row:last-child{border-bottom:none}
+.fan-intel-label{font-size:.72rem;color:rgba(242,237,228,.32);letter-spacing:.04em}
+.fan-intel-val{font-size:.83rem;color:rgba(242,237,228,.75);font-weight:500}
+.fan-intel-val.accent{color:#E05C1A}
+.fan-intel-head{font-size:.6rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(242,237,228,.2);margin-bottom:.85rem}
+.fan-market-row{display:grid;grid-template-columns:1fr auto auto;gap:.75rem;align-items:center;padding:.45rem 0;border-bottom:1px solid rgba(242,237,228,.04)}
+.fan-market-row:last-child{border-bottom:none}
+.fan-market-city{font-size:.8rem;color:rgba(242,237,228,.6)}
+.fan-market-bar-wrap{width:80px;height:4px;background:rgba(242,237,228,.07);border-radius:2px}
+.fan-market-bar{height:100%;border-radius:2px;background:#E05C1A}
+.fan-market-num{font-size:.72rem;color:rgba(242,237,228,.35);text-align:right;min-width:28px}
+/* ── END FAN INTEL ── */
+/* ── DATA SECTION ── */
+.s-data{background:#0C0A08;padding:6rem 2.5rem;border-top:1px solid rgba(242,237,228,0.05)}
+.s-data .inner{max-width:1080px;margin:0 auto}
+.data-kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#E05C1A;font-weight:500;margin-bottom:1rem;display:block}
+.data-headline{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4.5vw,3.1rem);color:#F2EDE4;text-wrap:balance;margin-bottom:.6rem;line-height:1.1;max-width:640px}
+.data-sub{font-size:.93rem;color:#6B6158;max-width:520px;margin-bottom:3rem;line-height:1.75}
+.dollar-chart-wrap{margin-bottom:3.5rem}
+.dollar-chart-label{font-size:.7rem;text-transform:uppercase;letter-spacing:.14em;color:#6B6158;margin-bottom:.85rem}
+.dollar-bar{height:52px;border-radius:7px;overflow:hidden;display:flex;margin-bottom:1.1rem}
+.dollar-seg{height:100%;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:600;letter-spacing:.03em;transition:opacity .2s;cursor:default;position:relative}
+.dollar-seg:not(:first-child){border-left:2px solid #0C0A08}
+.dollar-seg.ds-platform{background:#252018;color:rgba(242,237,228,.35);width:30%}
+.dollar-seg.ds-label{background:#302820;color:rgba(242,237,228,.35);width:44%}
+.dollar-seg.ds-pro{background:#38302A;color:rgba(242,237,228,.35);width:11%}
+.dollar-seg.ds-artist{background:#E05C1A;color:#fff;width:15%;font-size:.76rem}
+.dollar-legend{display:flex;gap:1.5rem;flex-wrap:wrap}
+.legend-item{display:flex;align-items:center;gap:.5rem;font-size:.76rem;color:#6B6158}
+.legend-swatch{width:10px;height:10px;border-radius:2px;flex-shrink:0}
+.data-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(242,237,228,0.06);border:1px solid rgba(242,237,228,0.06);border-radius:12px;overflow:hidden;margin-bottom:1.5rem}
+@media(max-width:660px){.data-grid{grid-template-columns:1fr}}
+.kpi-tile{background:#141210;padding:2rem 1.5rem}
+.kpi-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,6vw,4.2rem);color:#E05C1A;line-height:.9;margin-bottom:.55rem;font-variant-numeric:tabular-nums}
+.kpi-label{font-size:.84rem;color:#8C8580;line-height:1.5}
+.kpi-source{font-size:.63rem;color:#3D3530;margin-top:.6rem}
+.kpi-tile.dim .kpi-num{color:#C8960A}
+.data-ninety{display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;padding:2.5rem;border:1px solid rgba(242,237,228,0.06);border-radius:12px;background:#111009}
+@media(max-width:600px){.data-ninety{grid-template-columns:1fr;gap:1rem}}
+.ninety-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,12vw,7.5rem);color:#E05C1A;line-height:.85}
+.ninety-context{font-size:1.05rem;color:#F2EDE4;font-weight:500;line-height:1.3;margin-bottom:.4rem}
+.ninety-sub{font-size:.85rem;color:#6B6158;line-height:1.6}
+.data-source-row{font-size:.65rem;color:#3D3530;margin-top:1.25rem;line-height:1.6}
+/* ── END DATA SECTION ── */
+/* ── LIVING CATALOG SECTION ── */
+.s-intelligence{background:#080604;padding:6rem 2.5rem;border-top:1px solid rgba(242,237,228,0.05)}
+.s-intelligence .inner{max-width:1080px;margin:0 auto}
+.s-intelligence .data-kicker{color:#E05C1A}
+.intel-headline{font-family:'DM Serif Display',serif;font-size:clamp(2rem,4.5vw,3.1rem);color:#F2EDE4;text-wrap:balance;margin-bottom:.75rem;line-height:1.1;max-width:680px}
+.intel-sub{font-size:.93rem;color:#6B6158;max-width:540px;margin-bottom:3.5rem;line-height:1.75}
+.intel-mockups{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:3.5rem}
+@media(max-width:680px){.intel-mockups{grid-template-columns:1fr}}
+.intel-card{background:#111009;border:1px solid rgba(242,237,228,.07);border-radius:12px;padding:1.5rem}
+.intel-card-kicker{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(242,237,228,.28);margin-bottom:1rem}
+.task-item{background:#1A1714;border:1px solid rgba(242,237,228,.06);border-radius:8px;padding:1rem 1.1rem;margin-bottom:.75rem}
+.task-item:last-child{margin-bottom:0}
+.task-prompt{font-size:.83rem;color:rgba(242,237,228,.72);line-height:1.5;margin-bottom:.65rem}
+.task-footer{display:flex;justify-content:space-between;align-items:center}
+.task-pay{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:#E05C1A;letter-spacing:.03em}
+.task-btn{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(242,237,228,.3);border:1px solid rgba(242,237,228,.1);border-radius:4px;padding:.25rem .6rem}
+.console-request{background:#0E0B09;border:1px solid rgba(242,237,228,.06);border-radius:8px;padding:1rem 1.1rem;margin-bottom:.75rem}
+.console-request:last-child{margin-bottom:0}
+.console-from{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(242,237,228,.22);margin-bottom:.35rem}
+.console-from span{color:#E05C1A}
+.console-q{font-size:.83rem;color:rgba(242,237,228,.65);line-height:1.5;margin-bottom:.65rem}
+.console-footer{display:flex;justify-content:space-between;align-items:center}
+.console-credit{font-size:.72rem;color:rgba(242,237,228,.28)}
+.console-credit strong{color:#E05C1A}
+.console-status{font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .55rem;border-radius:4px;background:rgba(224,92,26,.1);color:#E05C1A}
+.intel-pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(242,237,228,.05);border:1px solid rgba(242,237,228,.05);border-radius:12px;overflow:hidden}
+@media(max-width:700px){.intel-pillars{grid-template-columns:1fr}}
+.intel-pillar{background:#0E0B09;padding:2rem 1.5rem}
+.intel-pillar-for{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(242,237,228,.25);margin-bottom:.6rem}
+.intel-pillar-head{font-size:.97rem;font-weight:500;color:#F2EDE4;line-height:1.35;margin-bottom:.75rem}
+.intel-pillar-body{font-size:.8rem;color:#6B6158;line-height:1.6}
+.intel-pillar-accent{color:#E05C1A}
+/* ── END LIVING CATALOG ── */
+.rise{opacity:0;transform:translateY(20px);transition:opacity .55s ease,transform .55s ease}
+.rise.visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rise{opacity:1;transform:none;transition:none}}
+.feature-list{list-style:none;margin:1.5rem 0 2rem;display:flex;flex-direction:column;gap:.75rem}
+.feature-list li{font-size:.9rem;line-height:1.6;padding-left:1.25rem;position:relative;color:var(--text)}
+.feature-list li::before{content:"–";position:absolute;left:0;color:var(--accent);font-weight:500}
+.s-artist .feature-list li{color:rgba(242,237,228,.65)}
+.s-artist .feature-list li::before{color:#E05C1A}
+.section-divider{width:2.5rem;height:2px;background:var(--accent);margin:2rem 0;opacity:.5}
+/* ── ARTIST JOURNEY ── */
+.journey{display:flex;flex-direction:column;gap:0;margin:2rem 0 2.5rem;position:relative}
+.journey::before{content:'';position:absolute;left:18px;top:8px;bottom:8px;width:1px;background:rgba(242,237,228,.1)}
+.journey-step{display:grid;grid-template-columns:38px 1fr;gap:1rem;padding-bottom:1.75rem;position:relative}
+.journey-step:last-child{padding-bottom:0}
+.journey-num{width:38px;height:38px;border-radius:50%;border:1px solid rgba(242,237,228,.15);background:#1A1815;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:1rem;color:#E05C1A;flex-shrink:0;position:relative;z-index:1}
+.journey-num.event{background:#E05C1A;color:#fff;border-color:#E05C1A}
+.journey-label{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(242,237,228,.35);margin-bottom:.3rem;padding-top:.55rem}
+.journey-body{font-size:.9rem;color:rgba(242,237,228,.7);line-height:1.6}
+/* ── CONTRAST BLOCK ── */
+.contrast-block{margin:2rem 0 2.5rem;border:1px solid rgba(242,237,228,.08);border-radius:10px;overflow:hidden}
+.contrast-row{display:grid;grid-template-columns:1fr 1fr;font-size:.85rem;line-height:1.5}
+.contrast-row:not(:last-child){border-bottom:1px solid rgba(242,237,228,.06)}
+.contrast-cell{padding:.85rem 1rem}
+.contrast-cell.without{color:rgba(242,237,228,.35);background:rgba(242,237,228,.02)}
+.contrast-cell.with{color:rgba(242,237,228,.82);background:rgba(224,92,26,.04)}
+.contrast-header{display:grid;grid-template-columns:1fr 1fr;font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid rgba(242,237,228,.1)}
+.contrast-header-cell{padding:.6rem 1rem;color:rgba(242,237,228,.3)}
+.contrast-header-cell.with-label{color:#E05C1A}
+/* ── PRINCIPLE CALLOUT ── */
+.principle{margin:1.75rem 0 2rem;padding:1.35rem 1.5rem;border-left:3px solid #E05C1A;background:rgba(224,92,26,.05)}
+.principle-text{font-family:'DM Serif Display',Georgia,serif;font-style:italic;font-size:clamp(1rem,2vw,1.2rem);color:rgba(242,237,228,.88);line-height:1.55}
+.governance-note{margin-top:1.5rem;padding:1.1rem 1.25rem;border:1px solid var(--border);border-radius:var(--radius);background:rgba(201,75,14,.06)}
+.governance-note-label{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:.4rem}
+.governance-note-text{font-size:.88rem;line-height:1.55;color:var(--text-2)}
+</style>
+</head>
+<body>
+
+<section class="s-hero">
+  <video autoplay muted loop playsinline>
+    <source src="mixkit-standing-woman-listening-to-music-460-full-hd.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-inner">
+      <div class="hero-type" aria-hidden="true">SOUND<br><span class="hot">STEAK.</span></div>
+      <p class="hero-sub">The music industry well done.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 1 — THE PROBLEM
+════════════════════════════════════════ -->
+<section class="s-data">
+  <div class="s-rule rise"><span>The Problem</span></div>
+  <div class="inner">
+    <span class="data-kicker rise">The Numbers</span>
+    <h2 class="data-headline rise">A $31.7 billion industry.<br>Built by artists. Owned by someone else.</h2>
+    <p class="data-sub rise">Recorded music just had its 11th consecutive year of growth. Music catalogs sell for 12&ndash;18 times their annual earnings. Music royalties have historically returned 13% annually, largely uncorrelated with the stock market. This is one of the best-performing asset classes on the planet. It has never been available to the people who actually built it.</p>
+
+    <div class="dollar-chart-wrap rise">
+      <div class="dollar-chart-label">Who captures the value &mdash; recorded music, 2025</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;border:1px solid rgba(242,237,228,.06);border-radius:10px;overflow:hidden;margin-bottom:1.1rem">
+        <div style="background:#171210;padding:1.5rem 1.25rem">
+          <div style="font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(242,237,228,.28);margin-bottom:.85rem">The institutions</div>
+          <div style="display:flex;flex-direction:column;gap:.65rem">
+            <div style="font-size:.83rem;color:rgba(242,237,228,.45);padding-left:.75rem;border-left:2px solid rgba(242,237,228,.08);line-height:1.45">Major labels &mdash; own the catalogs, collect the royalties</div>
+            <div style="font-size:.83rem;color:rgba(242,237,228,.45);padding-left:.75rem;border-left:2px solid rgba(242,237,228,.08);line-height:1.45">Private equity &mdash; buying catalogs at 12&ndash;18&times; annual earnings for institutional portfolios</div>
+            <div style="font-size:.83rem;color:rgba(242,237,228,.45);padding-left:.75rem;border-left:2px solid rgba(242,237,228,.08);line-height:1.45">Acquisition funds &mdash; Hipgnosis (Blackstone), Primary Wave, Sony, Warner</div>
+            <div style="font-size:.83rem;color:rgba(242,237,228,.45);padding-left:.75rem;border-left:2px solid rgba(242,237,228,.08);line-height:1.45">The handful of artists who negotiated well enough to keep their masters</div>
+          </div>
+        </div>
+        <div style="background:#190E05;padding:1.5rem 1.25rem">
+          <div style="font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(242,237,228,.28);margin-bottom:.85rem">Who built it</div>
+          <div style="display:flex;flex-direction:column;gap:.65rem">
+            <div style="font-size:.83rem;color:rgba(242,237,228,.45);padding-left:.75rem;border-left:2px solid rgba(224,92,26,.25);line-height:1.45">Artists &mdash; averaged $13,327 in total annual income in 2024</div>
+            <div style="font-size:.83rem;color:rgba(242,237,228,.45);padding-left:.75rem;border-left:2px solid rgba(224,92,26,.25);line-height:1.45">80&ndash;90% of major label artists never recoup their advance &mdash; the music earns, the label keeps it</div>
+            <div style="font-size:.83rem;color:rgba(242,237,228,.45);padding-left:.75rem;border-left:2px solid rgba(224,92,26,.25);line-height:1.45">Fans &mdash; drove the streams, built the audiences, spread the word</div>
+            <div style="font-size:.83rem;color:rgba(242,237,228,.45);padding-left:.75rem;border-left:2px solid rgba(224,92,26,.25);line-height:1.45">Early believers &mdash; nothing documented, nothing paid, nothing permanent</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="data-grid rise">
+      <div class="kpi-tile">
+        <div class="kpi-num">$31.7B</div>
+        <div class="kpi-label">global recorded music revenue in 2025 &mdash; the industry&rsquo;s 11th consecutive year of growth</div>
+        <div class="kpi-source">Source: IFPI Global Music Report 2026</div>
+      </div>
+      <div class="kpi-tile">
+        <div class="kpi-num">13%+</div>
+        <div class="kpi-label">historical annual return of music royalties as an asset class, largely uncorrelated with equity markets</div>
+        <div class="kpi-source">Source: Royalty Exchange · Long Angle Music Royalties Investment Guide 2025</div>
+      </div>
+      <div class="kpi-tile dim">
+        <div class="kpi-num">$13,327</div>
+        <div class="kpi-label">average musician&rsquo;s total annual income in 2024, in an industry generating $31.7 billion</div>
+        <div class="kpi-source">Source: Two Story Media Musician Income Report, 2024</div>
+      </div>
+    </div>
+
+    <div class="data-ninety rise">
+      <div class="ninety-num">12&ndash;18&times;</div>
+      <div>
+        <div class="ninety-context">what music catalogs sell for right now, in multiples of annual earnings.</div>
+        <div class="ninety-sub">Bob Dylan&rsquo;s catalog: $300M+. Bruce Springsteen&rsquo;s: $500M+. Britney Spears&rsquo;: $200M. The buyers are Blackstone, Sony, Primary Wave, and Warner-backed acquisition funds. The sellers are artists &mdash; or more often, the labels those artists signed with decades ago, who retained the masters as a condition of the deal. The asset class has always been there. The access never was. Independent artists now represent 50% of all music streamed globally. They have none of the infrastructure to capture what that&rsquo;s worth. That is the problem SoundSteak was built to solve.</div>
+      </div>
+    </div>
+
+    <p class="data-source-row rise">Sources: IFPI Global Music Report 2026 · Two Story Media Musician Income Report 2024 · Royalty Exchange Music Royalty Investing 2025 · Long Angle Music Royalties Investment Guide 2025 · Citrin Cooperman 2025 Music Catalog Valuations · Chartlex Music Catalog Valuation Guide 2026 · MIDiA Research Global Recorded Music 2024</p>
+  </div>
+</section>
+<!-- ═══════════════════════════════════════
+     SECTION 2 — FOR ARTISTS
+════════════════════════════════════════ -->
+<section class="s-artist">
+  <div class="s-rule"><span>For Artists</span></div>
+  <div class="artist-inner">
+    <div class="artist-lower">
+      <div class="rise">
+        <h2 class="section-head" style="color:#F2EDE4;margin-bottom:1rem">One single. One year.<br>One event that changes everything.</h2>
+        <p class="artist-copy">SoundSteak is a record label built differently from the ground up. The contract it offers is scoped to a single release &mdash; not an album deal, not a multi-year lock-in, not a vague promise. The journey is tailored to where you are and where you want to go. Every registration, every split, every legal structure is in place before you record a note. And when you receive your recording contract with SoundSteak, the world gets its first chance to own a piece of what you&rsquo;re about to make.</p>
+
+        <div class="principle rise">
+          <p class="principle-text">This record label does what is in the best interest of the artist &mdash; because that is what is in the best interest of the SteakHolders, and in turn, SoundSteak. That alignment is not a policy. It is the structure.</p>
+        </div>
+
+        <div class="journey">
+          <div class="journey-step">
+            <div class="journey-num">1</div>
+            <div>
+              <div class="journey-label">Apply</div>
+              <div class="journey-body">Artists apply each cycle. To advance, you record a verified live video &mdash; the platform confirms it&rsquo;s real, in real time. Then fans pledge $1 each to back you. The pledges cover pre-signing costs and prove there are real people behind the music. The label doesn&rsquo;t pick the winners. The people do.</div>
+            </div>
+          </div>
+          <div class="journey-step">
+            <div class="journey-num event">2</div>
+            <div>
+              <div class="journey-label">Event One &mdash; The Opening</div>
+              <div class="journey-body">The gong rings. The contract is awarded and the IPO happens in the same moment &mdash; ownership of the release opens to SteakHolders for the first time. Before signing, you decide what percentage you retain. That number is locked. SoundSteak simultaneously forms an LLC for the release: every band member&rsquo;s cut documented, every registration filed &mdash; ISRC, IPI, PRO, SoundExchange, MLC &mdash; before a single note is recorded. You show up to make music. The business is already built.</div>
+            </div>
+          </div>
+          <div class="journey-step">
+            <div class="journey-num">3</div>
+            <div>
+              <div class="journey-label">The Threshold</div>
+              <div class="journey-body">Funding doesn&rsquo;t trickle in &mdash; it has a target and a deadline. The raise must hit its goal within a defined window or recording doesn&rsquo;t begin. When it clears, the clock starts immediately. This is not a slow label. The speed is by design &mdash; momentum is part of the release strategy, and investors know exactly when the work begins.</div>
+            </div>
+          </div>
+          <div class="journey-step">
+            <div class="journey-num">4</div>
+            <div>
+              <div class="journey-label">The Year &mdash; Recording to Release</div>
+              <div class="journey-body">Twelve months from threshold to drop. Recording, production, campaign &mdash; milestone-funded and moving. Capital releases as verified work gets done, not all at once. Every step tracked on the artist&rsquo;s profile, visible to every SteakHolder in real time. The goal is a finished single ready to release at the next event.</div>
+            </div>
+          </div>
+          <div class="journey-step">
+            <div class="journey-num event">5</div>
+            <div>
+              <div class="journey-label">Event Two &mdash; The Release</div>
+              <div class="journey-body">One year later, the gong rings again. The single drops publicly at the next event. Earnings begin flowing immediately &mdash; tracked in real time across streams, sync, and every other revenue source. The artist&rsquo;s profile becomes a live performance record, charted like a stock. The music stays in the system, earning and available for new investment, until the artist initiates the exit.</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="btn">Apply for the next cycle</a>
+      </div>
+      <div class="proof-stack rise">
+        <div style="background:#0E0C0A;border:1px solid rgba(242,237,228,.1);border-radius:12px;padding:1.5rem;margin-bottom:1.25rem">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.25rem">
+            <div>
+              <div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.04em;color:#F2EDE4;line-height:1.1">The Hollow North</div>
+              <div style="font-size:.68rem;color:rgba(242,237,228,.3);letter-spacing:.08em;text-transform:uppercase;margin-top:.2rem">2027 Cycle &nbsp;&middot;&nbsp; &ldquo;No Signal&rdquo;</div>
+            </div>
+            <div class="live-pip"><span class="live-dot"></span>Live</div>
+          </div>
+          <div style="margin-bottom:1.25rem">
+            <div style="font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(242,237,228,.25);margin-bottom:.55rem">Journey Stage</div>
+            <div style="display:flex;gap:4px;margin-bottom:.4rem">
+              <div style="flex:1;height:3px;border-radius:2px;background:#E05C1A"></div>
+              <div style="flex:1;height:3px;border-radius:2px;background:#E05C1A"></div>
+              <div style="flex:1;height:3px;border-radius:2px;background:#E05C1A"></div>
+              <div style="flex:1;height:3px;border-radius:2px;background:rgba(242,237,228,.1)"></div>
+              <div style="flex:1;height:3px;border-radius:2px;background:rgba(242,237,228,.1)"></div>
+            </div>
+            <div style="font-size:.74rem;color:#E05C1A;font-weight:500">Step 3 &mdash; The Threshold</div>
+          </div>
+          <div style="margin-bottom:1.25rem">
+            <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.4rem">
+              <span style="font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(242,237,228,.25)">Funding Goal</span>
+              <span style="font-size:.7rem;color:#E05C1A;font-weight:500">81% &nbsp;&middot;&nbsp; 14 days left</span>
+            </div>
+            <div style="height:5px;border-radius:3px;background:rgba(242,237,228,.07)"><div style="height:100%;width:81%;background:#E05C1A;border-radius:3px"></div></div>
+            <div style="display:flex;justify-content:space-between;margin-top:.3rem">
+              <span style="font-size:.66rem;color:rgba(242,237,228,.3)">$24,300 raised</span>
+              <span style="font-size:.66rem;color:rgba(242,237,228,.3)">$30,000 goal</span>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.5rem;padding-top:.9rem;border-top:1px solid rgba(242,237,228,.07)">
+            <div style="text-align:center">
+              <div style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;color:#E05C1A;line-height:1">47</div>
+              <div style="font-size:.58rem;letter-spacing:.09em;text-transform:uppercase;color:rgba(242,237,228,.28);margin-top:.15rem">SteakHolders</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;color:#F2EDE4;line-height:1">23</div>
+              <div style="font-size:.58rem;letter-spacing:.09em;text-transform:uppercase;color:rgba(242,237,228,.28);margin-top:.15rem">Pre-orders</div>
+            </div>
+            <div style="text-align:center">
+              <div style="font-family:'Bebas Neue',sans-serif;font-size:1.7rem;color:#F2EDE4;line-height:1">312</div>
+              <div style="font-size:.58rem;letter-spacing:.09em;text-transform:uppercase;color:rgba(242,237,228,.28);margin-top:.15rem">Pledges</div>
+            </div>
+          </div>
+        </div>
+        <div class="contrast-block" style="margin-bottom:2rem">
+          <div class="contrast-header">
+            <div class="contrast-header-cell">On your own</div>
+            <div class="contrast-header-cell with-label">With SoundSteak</div>
+          </div>
+          <div class="contrast-row">
+            <div class="contrast-cell without">Google "how to copyright a song" at 2am</div>
+            <div class="contrast-cell with">Every registration filed at signing, before you record</div>
+          </div>
+          <div class="contrast-row">
+            <div class="contrast-cell without">Chase down split agreements after the fact, if at all</div>
+            <div class="contrast-cell with">Band member cuts documented and locked in the LLC on day one</div>
+          </div>
+          <div class="contrast-row">
+            <div class="contrast-cell without">Hope a manager or lawyer knows what an IPI number is</div>
+            <div class="contrast-cell with">ISRC, IPI, PRO, SoundExchange, MLC &mdash; handled, automatically</div>
+          </div>
+          <div class="contrast-row">
+            <div class="contrast-cell without">Sign a deal with terms you won't understand for years</div>
+            <div class="contrast-cell with">One single, one year, one contract &mdash; plain terms, defined exit</div>
+          </div>
+          <div class="contrast-row">
+            <div class="contrast-cell without">Royalties arrive months late in a spreadsheet that explains nothing</div>
+            <div class="contrast-cell with">Every dollar traced from source to your account, in real time</div>
+          </div>
+          <div class="contrast-row">
+            <div class="contrast-cell without">Build an audience with no way to monetize their belief in you</div>
+            <div class="contrast-cell with">Fans invest directly in the release &mdash; the opening turns supporters into SteakHolders</div>
+          </div>
+        </div>
+        <div class="proof-item"><div class="proof-item-label">Event One</div><div class="proof-item-value">Contract awarded and IPO open in the same moment. Your LLC exists before the first session.</div></div>
+        <div class="proof-item"><div class="proof-item-label">Pre-orders</div><div class="proof-item-value">Merch pre-orders go live on your profile immediately after signing &mdash; before anything is designed or printed. Your SteakHolders start selling for you the same night.</div></div>
+        <div class="proof-item"><div class="proof-item-label">Your ownership</div><div class="proof-item-value">You set your retained percentage before Event One. It is locked into the LLC. It cannot be renegotiated.</div></div>
+        <div class="proof-item"><div class="proof-item-label">The threshold</div><div class="proof-item-value">Funding must hit its goal within a defined window. When it clears, recording starts immediately &mdash; no delays, no committee.</div></div>
+        <div class="proof-item"><div class="proof-item-label">The year</div><div class="proof-item-value">Twelve months, milestone by milestone. Every step tracked live on your profile for every SteakHolder to see.</div></div>
+        <div class="proof-item"><div class="proof-item-label">Event Two</div><div class="proof-item-value">The single drops at the next event. Earnings begin immediately. Your performance record goes live.</div></div>
+        <div class="proof-item"><div class="proof-item-label">Long-term</div><div class="proof-item-value">The music stays in the system earning and available for investment until you initiate the exit &mdash; on your terms, on your timeline.</div></div>
+        <div class="proof-item"><div class="proof-item-label">AI licensing</div><div class="proof-item-value">At signing, you set your terms for AI use of your music &mdash; training data, generation tools, app integration. Opt in and earn from it. Opt out and it&rsquo;s enforced at the contract and API level. The platform protects what you decide.</div></div>
+        <div class="fan-intel-card">
+          <div class="fan-intel-head">Fan intelligence &mdash; The Hollow North</div>
+          <div style="margin-bottom:1.1rem">
+            <div class="fan-market-row"><span class="fan-market-city">Nashville, TN</span><div class="fan-market-bar-wrap"><div class="fan-market-bar" style="width:100%"></div></div><span class="fan-market-num">312</span></div>
+            <div class="fan-market-row"><span class="fan-market-city">Toronto, ON</span><div class="fan-market-bar-wrap"><div class="fan-market-bar" style="width:82%"></div></div><span class="fan-market-num">256</span></div>
+            <div class="fan-market-row"><span class="fan-market-city">Atlanta, GA</span><div class="fan-market-bar-wrap"><div class="fan-market-bar" style="width:61%"></div></div><span class="fan-market-num">189</span></div>
+            <div class="fan-market-row"><span class="fan-market-city">Chicago, IL</span><div class="fan-market-bar-wrap"><div class="fan-market-bar" style="width:44%"></div></div><span class="fan-market-num">137</span></div>
+          </div>
+          <div class="fan-intel-row"><span class="fan-intel-label">Top attribution source</span><span class="fan-intel-val accent">@morgan_k &rarr; 4.2x conversion</span></div>
+          <div class="fan-intel-row"><span class="fan-intel-label">Pledge &rarr; investor conversion</span><span class="fan-intel-val">18 days avg</span></div>
+          <div class="fan-intel-row"><span class="fan-intel-label">Markets played</span><span class="fan-intel-val">Nashville only &mdash; 3 untapped</span></div>
+          <div style="margin-top:1rem;padding:.75rem;background:rgba(224,92,26,.06);border-radius:6px;border-left:2px solid #E05C1A">
+            <div style="font-size:.73rem;color:rgba(242,237,228,.55);line-height:1.55">Toronto and Atlanta show higher engagement than Nashville — but you&rsquo;ve never played either market. A single show in either city before release would likely convert a significant number of fans to pre-orders.</div>
+          </div>
+        </div>
+        <div class="proof-item"><div class="proof-item-label">Get paid to document</div><div class="proof-item-value">Context tasks appear on your dashboard throughout the year. Describe your drum arrangement. Annotate a lyric. Name your production reference. Each answer earns a direct payout &mdash; funded by the AI companies and developers who need what only you can tell them. Your creative process has always had value. Now it has a number.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════
+     SECTION 3 — FOR INVESTORS
+════════════════════════════════════════ -->
+<section class="s-investor">
+  <div class="s-rule"><span>For SteakHolders</span></div>
+  <div class="inner">
+    <div class="rise">
+      <h2 class="section-head">You believed first.<br>Now you own first.</h2>
+      <p class="section-sub">One single. One raise. One gong. The IPO opens the moment the contract is signed &mdash; first come, first served, no minimums, no maximums. The window never closes.</p>
+
+      <div class="principle">
+        <p class="principle-text" style="color:var(--text)">The platform&rsquo;s standing mandate is finding every possible way to maximize what a SteakHolder&rsquo;s stake earns &mdash; and improving it constantly. There is no version of this platform winning where you lose. That isn&rsquo;t a promise in the terms of service. It is the legal architecture.</p>
+      </div>
+
+      <ul class="feature-list">
+        <li><strong>Invest before the record exists.</strong> Not in a finished song &mdash; in the full journey. The recording, the rollout, the campaign. You know exactly what your money is building before anyone touches a microphone.</li>
+        <li><strong>Every dollar the music earns flows to your stake.</strong> Streams, sync, live, merch &mdash; every source tracked in real time, indefinitely. No mystery deductions. No quarterly PDFs. Just a live number that moves when the music does.</li>
+        <li><strong>Your sharing pays you.</strong> Every listener or investor you convert is tracked from the moment they click your link to the moment they invest. The platform records it, pays it, and compounds it across every artist you back. Your network is part of your stake.</li>
+        <li><strong>Pre-orders go live the same night.</strong> Merch pre-orders open on the artist&rsquo;s profile immediately after signing. Because you earn from what you sell, the SteakHolder network starts working for the artist from the first hour of the contract.</li>
+        <li><strong>Nothing is hidden before you commit.</strong> Platform fee disclosed upfront. Buyout terms written into every contract before a dollar is invested &mdash; a premium acquisition is a return, not a surprise.</li>
+        <li><strong>Governance votes show up in your inbox and actually change things.</strong> Artwork direction, tour routing, milestone decisions, platform priorities &mdash; SteakHolders vote on real choices through a formal governance system. Not a survey. Not a suggestion box. A structured vote with a documented outcome that the platform is accountable to.</li>
+        <li><strong>AI licensing is a revenue stream no other label is offering.</strong> Artists set their AI licensing terms at signing &mdash; opt in, limit scope, or opt out entirely. When they opt in, their music earns from AI companies and developers through a metered developer console. That revenue flows through the same pipe as every other income stream to your stake.</li>
+      </ul>
+      <a href="#" class="btn">Become a SteakHolder</a>
+    </div>
+    <div class="rise">
+      <div class="data-card">
+        <div class="dc-header">
+          <div><div class="dc-artist">The Hollow North</div><div class="dc-meta">2027 Cycle &nbsp;&middot;&nbsp; Single: &ldquo;No Signal&rdquo;</div></div>
+          <div class="live-pip"><span class="live-dot"></span>Live</div>
+        </div>
+        <div class="stake-pills"><span class="pill">SteakHolder #23</span><span class="pill">0.42% stake</span><span class="pill">Active investment</span></div>
+        <div class="earn-grid">
+          <div class="earn-block"><div class="earn-label">Your earnings</div><div class="earn-num">$34.17</div><div class="earn-delta">&uarr; $2.40 this week</div></div>
+          <div class="earn-block"><div class="earn-label">Total streams</div><div class="earn-num neutral">84.2k</div><div class="earn-delta">&uarr; 12% this month</div></div>
+        </div>
+        <div class="bar-chart" aria-hidden="true">
+          <div class="bar" style="height:28%"></div><div class="bar" style="height:36%"></div><div class="bar" style="height:32%"></div>
+          <div class="bar lit" style="height:48%"></div><div class="bar lit" style="height:55%"></div><div class="bar lit" style="height:51%"></div>
+          <div class="bar lit" style="height:64%"></div><div class="bar lit" style="height:70%"></div><div class="bar lit" style="height:66%"></div>
+          <div class="bar lit" style="height:75%"></div><div class="bar lit" style="height:82%"></div><div class="bar now" style="height:91%"></div>
+        </div>
+        <div class="pipeline-row"><span class="pipeline-label">Pipeline &mdash; confirmed, pending settlement</span><span class="pipeline-val">$18.40</span></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:.85rem;margin-top:1.1rem">
+        <div class="governance-note">
+          <div class="governance-note-label">First come, first served</div>
+          <div class="governance-note-text">The IPO opens at Event One. No minimums. No maximums. One person can buy the entire available stake. Speed and conviction are the only criteria.</div>
+        </div>
+        <div class="governance-note">
+          <div class="governance-note-label">Defined exit</div>
+          <div class="governance-note-text">Buyout terms are written into every release contract before a dollar is committed. Your position, your returns, and the resolution process are locked in advance. No side deals.</div>
+        </div>
+        <div class="governance-note">
+          <div class="governance-note-label">Regular mediation is built in</div>
+          <div class="governance-note-text">At defined points in the release cycle, the platform holds a structured alignment between you, the artist, and the vendors delivering the work. Not a dispute mechanism &mdash; a scheduled rhythm. You see delivery status, timeline progress, and any flags before they become problems. The record is permanent. Nothing is managed behind your back.</div>
+        </div>
+        <div class="governance-note">
+          <div class="governance-note-label">The catalog appreciates</div>
+          <div class="governance-note-text">Every context task an artist completes, every console request answered, every layer of documentation added to the profile makes the release more valuable to licensees. Your stake earns more in year three than year one &mdash; not because the music changed, but because the world spent two years telling the platform what it means.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 5 — FOR FANS
+════════════════════════════════════════ -->
+<section class="s-fan">
+  <div class="s-rule rise"><span>For Fans</span></div>
+  <div class="inner">
+    <div class="rise">
+      <h2 class="section-head">You knew them<br>before everyone else.</h2>
+      <p class="section-sub">A dollar gets you a real stake in what the music earns &mdash; and a connection to the artist that no streaming service can give you. Spotify doesn&rsquo;t care that you found them first. SoundSteak does. That moment is documented, permanent, and worth something.</p>
+
+      <div class="principle">
+        <p class="principle-text">The platform speaks for the fans so the artist can hear them without listening to all of them at once.</p>
+      </div>
+
+      <div class="journey">
+        <div class="journey-step">
+          <div class="journey-num">1</div>
+          <div>
+            <div class="journey-label">Discover</div>
+            <div class="journey-body">Find an artist you believe in before the world catches on. Their profile is live the moment they apply &mdash; you can pledge before the event, before the press, before anyone.</div>
+          </div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-num">2</div>
+          <div>
+            <div class="journey-label">Pledge $1 as a Believer</div>
+            <div class="journey-body">Your dollar reserves your spot in the founding cohort. The first 300 fans who pledge become Believers. The LLC formation cost is covered by the aggregate pool &mdash; your $1 sits at the table, not spent, until the gong rings.</div>
+          </div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-num event">G</div>
+          <div>
+            <div class="journey-label">The gong rings</div>
+            <div class="journey-body">The artist signs. The moment it happens, your pledge converts automatically to a $1 investment in their release LLC. No action required. No fees deducted. Your $1 pledge becomes a $1 stake.</div>
+          </div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-num">4</div>
+          <div>
+            <div class="journey-label">Founding SteakHolder &mdash; forever</div>
+            <div class="journey-body">Your badge is permanent. Timestamped, verified, displayed on your profile alongside your number in the founding cohort. That status can never be bought retroactively. You either were there or you weren&rsquo;t.</div>
+          </div>
+        </div>
+        <div class="journey-step">
+          <div class="journey-num">5</div>
+          <div>
+            <div class="journey-label">The music earns &mdash; so do you</div>
+            <div class="journey-body">Streams, sync, live, merch, AI licensing &mdash; every revenue stream flows to your stake indefinitely. Back artists that break through and your discovery record says so. The platform recognizes fans who find artists before anyone else.</div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="feature-list">
+        <li><strong>Fan Cues connect you without the noise.</strong> Artwork direction, tour routing, milestone priorities &mdash; your input is a structured signal that goes directly to the artist through the platform. Not a comment buried under thousands of others. A Cue.</li>
+        <li><strong>Your sharing earns attribution.</strong> Every listener or investor you bring to an artist is tracked and recorded. Fan or influencer, 80 followers or 800,000 &mdash; the platform pays the same way. A profile is all you need.</li>
+        <li><strong>Founding SteakHolders share an origin story.</strong> The 300 people who backed the same artist before the gong rang have something real in common. A community with a documented beginning, not an algorithm-assembled audience.</li>
+      </ul>
+
+      <a href="#" class="btn">Find your artist</a>
+    </div>
+
+    <div class="rise">
+      <div class="data-card">
+        <div class="dc-header">
+          <div><div class="dc-artist">The Hollow North</div><div class="dc-meta">2027 Cycle &nbsp;&middot;&nbsp; Single: &ldquo;No Signal&rdquo;</div></div>
+          <div class="live-pip"><span class="live-dot"></span>Signed</div>
+        </div>
+        <div class="stake-pills">
+          <span class="pill">Founding SteakHolder #23</span>
+          <span class="pill">$1.00 stake</span>
+          <span class="pill">300 believers</span>
+        </div>
+        <div style="margin:1rem 0;padding:.85rem 1rem;background:rgba(201,75,14,.08);border-radius:8px;border-left:2px solid var(--accent)">
+          <div style="font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:.3rem">Gong rang &mdash; Jan 14, 2027 &middot; 10:47pm</div>
+          <div style="font-size:.85rem;color:var(--text-2);line-height:1.5">Your pledge converted automatically. You are now a Founding SteakHolder. Your $1 pledge is a $1 investment &mdash; nothing deducted.</div>
+        </div>
+        <div class="earn-grid">
+          <div class="earn-block"><div class="earn-label">Your earnings</div><div class="earn-num">$34.17</div><div class="earn-delta">&uarr; $2.40 this week</div></div>
+          <div class="earn-block"><div class="earn-label">Total streams</div><div class="earn-num neutral">84.2k</div><div class="earn-delta">&uarr; 12% this month</div></div>
+        </div>
+        <div class="bar-chart" aria-hidden="true">
+          <div class="bar" style="height:18%"></div><div class="bar" style="height:24%"></div><div class="bar" style="height:20%"></div>
+          <div class="bar lit" style="height:38%"></div><div class="bar lit" style="height:44%"></div><div class="bar lit" style="height:40%"></div>
+          <div class="bar lit" style="height:55%"></div><div class="bar lit" style="height:63%"></div><div class="bar lit" style="height:59%"></div>
+          <div class="bar lit" style="height:70%"></div><div class="bar lit" style="height:78%"></div><div class="bar now" style="height:91%"></div>
+        </div>
+        <div class="pipeline-row"><span class="pipeline-label">Attribution pipeline &mdash; 3 referrals pending</span><span class="pipeline-val">$6.20</span></div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:.85rem;margin-top:1.1rem">
+        <div class="governance-note">
+          <div class="governance-note-label">The badge stack</div>
+          <div class="governance-note-text">Every artist you backed as a Founding SteakHolder lives on your profile forever. A stack of these badges is a documented record of taste that no follower count can replicate. Back artists that break through and the platform recognizes it.</div>
+        </div>
+        <div class="governance-note">
+          <div class="governance-note-label">Your discovery is on the record</div>
+          <div class="governance-note-text">The date you backed an artist is documented permanently &mdash; before the press, before the playlist, before everyone else caught on. The platform doesn&rsquo;t forget who showed up first.</div>
+        </div>
+        <div class="governance-note">
+          <div class="governance-note-label">No comment sections. Ever.</div>
+          <div class="governance-note-text">Expression on SoundSteak happens through Cues &mdash; structured, purposeful signals the platform routes directly to the people who need them. Your voice reaches further when it isn&rsquo;t buried in a feed.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 6 — THE SOUNDSTEAK PROFILE
+════════════════════════════════════════ -->
+<section class="s-verified">
+  <div class="s-rule"><span>The SoundSteak Profile</span></div>
+  <div class="inner">
+    <div class="rise">
+      <h2 class="section-head">Your profile is the record.</h2>
+      <p class="section-sub">Every credit on your SoundSteak profile is placed there by the platform &mdash; sessions logged when they happen, releases registered at signing, payments documented as they clear. When someone looks you up, they see exactly what you&rsquo;ve done, verified by the system that documented it.</p>
+      <p class="section-sub" style="margin-top:-.75rem">Not what you claim. Not what you remember. What actually happened.</p>
+      <ul class="feature-list">
+        <li>Credits are timestamped and tied to the project that generated them &mdash; no one can add, remove, or alter them after the fact.</li>
+        <li>Payment history is part of the record. Not just that you were paid, but when, how much, and from what source.</li>
+        <li>Attribution earnings are tracked and visible &mdash; if your share of a song drove streams or investment, that contribution is documented on your profile.</li>
+        <li>Governance participation is logged. If you voted, it&rsquo;s on the record. The platform is accountable to the people who participate in it.</li>
+        <li>Every role in the system &mdash; engineer, producer, photographer, promoter, fan &mdash; has the same standard of verification. No tier of contributor gets a lesser record.</li>
+        <li>The profile travels with you across every project, every artist, every release. It accumulates over time into something no r&eacute;sum&eacute; or reel can replicate.</li>
+      </ul>
+    </div>
+    <div class="rise">
+      <div class="profile-card">
+        <div class="profile-card-header">
+          <div><div class="profile-name">Marcus Webb</div><div class="profile-role">Mixing Engineer &middot; Atlanta, GA</div></div>
+          <div class="verified-seal"><svg viewBox="0 0 16 16"><path d="M8 1l1.8 2.6 3-.6-1 3 2.2 2.2-2.9.9L11 12l-3-1.4L5 12l-.1-2.9-2.9-.9L4.2 6l-1-3 3 .6z"/></svg>Verified</div>
+        </div>
+        <div class="credit-list">
+          <div class="credit-entry"><div><div class="credit-title">Liora &mdash; &ldquo;Distance Protocol&rdquo;</div><div class="credit-detail">Mixing &middot; Single &middot; Completed Mar 2027 &middot; SoundSteak Class of 2027</div></div><div class="credit-badge">Mix Credit</div></div>
+          <div class="credit-entry"><div><div class="credit-title">The Hollow North &mdash; &ldquo;No Signal&rdquo;</div><div class="credit-detail">Mixing &middot; Single &middot; Completed Jan 2027</div></div><div class="credit-badge">Mix Credit</div></div>
+          <div class="credit-entry"><div><div class="credit-title">Session &mdash; Studio B, 14 Jan 2027</div><div class="credit-detail">Recording &middot; Kellan Price &middot; 6 hrs &middot; Compensated</div></div><div class="credit-badge">Session Log</div></div>
+          <div class="credit-entry"><div><div class="credit-title">Earnings cleared &middot; Q1 2027</div><div class="credit-detail">$840.00 &middot; Distributed directly &middot; No holdbacks</div></div><div class="credit-badge">Payment Record</div></div>
+        </div>
+        <div class="no-bio-note"><span>&mdash;</span>No bio. No uploaded photos. No self-reported history. Platform-verified only.</div>
+      </div>
+
+      <div class="fan-profile-card" style="margin-top:1.5rem">
+        <div class="profile-card-header">
+          <div><div class="profile-name">Jordan Reyes</div><div class="profile-role">SteakHolder &middot; Chicago, IL</div></div>
+          <div class="verified-seal"><svg viewBox="0 0 16 16"><path d="M8 1l1.8 2.6 3-.6-1 3 2.2 2.2-2.9.9L11 12l-3-1.4L5 12l-.1-2.9-2.9-.9L4.2 6l-1-3 3 .6z"/></svg>Verified</div>
+        </div>
+        <div class="founding-badge">
+          <div class="founding-badge-icon">F</div>
+          <div class="founding-badge-body">
+            <div class="founding-badge-artist">The Hollow North &mdash; &ldquo;No Signal&rdquo;</div>
+            <div class="founding-badge-meta">Pledged Jan 2027 &middot; Raise opened same night &middot; 84.2k streams</div>
+            <div class="founding-badge-label">Founding SteakHolder #23</div>
+          </div>
+          <div class="founding-badge-num">$34.18</div>
+        </div>
+        <div class="founding-badge">
+          <div class="founding-badge-icon">F</div>
+          <div class="founding-badge-body">
+            <div class="founding-badge-artist">Liora &mdash; &ldquo;Distance Protocol&rdquo;</div>
+            <div class="founding-badge-meta">Pledged Mar 2027 &middot; Raise opened same night &middot; 61.4k streams</div>
+            <div class="founding-badge-label">Founding SteakHolder #87</div>
+          </div>
+          <div class="founding-badge-num">$18.42</div>
+        </div>
+        <div class="founding-badge">
+          <div class="founding-badge-icon">F</div>
+          <div class="founding-badge-body">
+            <div class="founding-badge-artist">Kellan Price &mdash; &ldquo;Undertow&rdquo;</div>
+            <div class="founding-badge-meta">Pledged Jun 2027 &middot; Raise opened same night &middot; 112.8k streams</div>
+            <div class="founding-badge-label">Founding SteakHolder #142</div>
+          </div>
+          <div class="founding-badge-num">$61.90</div>
+        </div>
+        <div class="founding-badge" style="opacity:.55">
+          <div class="founding-badge-icon" style="background:var(--surface-2);color:var(--text-2)">S</div>
+          <div class="founding-badge-body">
+            <div class="founding-badge-artist">Mira Voss &mdash; &ldquo;Pale Signal&rdquo;</div>
+            <div class="founding-badge-meta">Invested Aug 2027 &middot; 28.1k streams</div>
+            <div class="founding-badge-label" style="color:var(--text-2)">SteakHolder</div>
+          </div>
+          <div class="founding-badge-num">$9.05</div>
+        </div>
+        <div class="fan-discovery-note">
+          <strong>Discovery record:</strong> 3 of 4 artists backed exceeded 60k streams within 6 months of signing. Jordan found The Hollow North before their first press mention.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 6B — THE INTELLIGENCE LAYER
+════════════════════════════════════════ -->
+<section class="s-intelligence">
+  <div class="s-rule rise"><span>The Intelligence Layer</span></div>
+  <div class="inner">
+    <span class="data-kicker rise">The Living Catalog</span>
+    <h2 class="intel-headline rise">The music industry has always sold sound.<br>We&rsquo;re the first to sell meaning.</h2>
+    <p class="intel-sub rise">Every other catalog is a fixed asset &mdash; audio files with sparse metadata scraped from streaming services. SoundSteak builds something no competitor can replicate: a living record of each release, from first demo to post-release market response, narrated by the artist in real time. The recording is the least interesting thing in the dataset.</p>
+
+    <div class="intel-mockups rise">
+      <div class="intel-card">
+        <div class="intel-card-kicker">Artist dashboard &mdash; context tasks</div>
+        <div class="task-item">
+          <div class="task-prompt"><strong style="color:rgba(242,237,228,.9)">Describe your drum arrangement.</strong> Walk us through the percussion on this track. What is the kick pattern doing? What did you leave out on purpose?</div>
+          <div class="task-footer"><span class="task-pay">$12.00</span><span class="task-btn">Complete task</span></div>
+        </div>
+        <div class="task-item">
+          <div class="task-prompt"><strong style="color:rgba(242,237,228,.9)">Your primary influence on this song.</strong> Name one artist whose work shaped how you approached this single. Describe specifically what you borrowed from them.</div>
+          <div class="task-footer"><span class="task-pay">$6.00</span><span class="task-btn">Complete task</span></div>
+        </div>
+        <div class="task-item">
+          <div class="task-prompt"><strong style="color:rgba(242,237,228,.9)">Annotate your bridge.</strong> What is the bridge doing emotionally that the verse and chorus don&rsquo;t? Why did this section need to exist?</div>
+          <div class="task-footer"><span class="task-pay">$8.00</span><span class="task-btn">Complete task</span></div>
+        </div>
+      </div>
+
+      <div class="intel-card">
+        <div class="intel-card-kicker">Developer console &mdash; context requests</div>
+        <div class="console-request">
+          <div class="console-from">Request from <span>Meridian AI &mdash; Music Intelligence</span></div>
+          <div class="console-q">For &ldquo;No Signal&rdquo; by The Hollow North &mdash; describe the vocal layering approach in the chorus and what emotional effect it was intended to create.</div>
+          <div class="console-footer"><span class="console-credit">Credits charged: <strong>$8.00 → artist</strong></span><span class="console-status">Pending response</span></div>
+        </div>
+        <div class="console-request">
+          <div class="console-from">Request from <span>Frameshift Sync &mdash; Licensing</span></div>
+          <div class="console-q">Does this track reference any real locations or people by name? We need to confirm clearance requirements before placing in a documentary.</div>
+          <div class="console-footer"><span class="console-credit">Credits charged: <strong>$5.00 → artist</strong></span><span class="console-status">Answered</span></div>
+        </div>
+        <div class="console-request">
+          <div class="console-from">Request from <span>Atlas Models &mdash; AI Training</span></div>
+          <div class="console-q">What was the production reference you handed to your engineer? We&rsquo;re building a style embedding and want to understand the intentional sonic target.</div>
+          <div class="console-footer"><span class="console-credit">Credits charged: <strong>$7.00 → artist</strong></span><span class="console-status">Answered</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intel-pillars rise">
+      <div class="intel-pillar">
+        <div class="intel-pillar-for">For Artists</div>
+        <div class="intel-pillar-head">Your creative process is worth more than you think. Now it pays like it.</div>
+        <div class="intel-pillar-body">Tasks appear on your dashboard throughout the release year. Answer a question about your chord progression. Describe your drum arrangement. Explain what the bridge is doing. Each answer earns a direct payout from the context fund &mdash; revenue generated by the companies who need exactly what you know. The more you document, the more your catalog is worth. The more your catalog is worth, the <span class="intel-pillar-accent">more your SteakHolders earn</span>.</div>
+      </div>
+      <div class="intel-pillar">
+        <div class="intel-pillar-for">For SteakHolders</div>
+        <div class="intel-pillar-head">Your stake appreciates through documentation, not just plays.</div>
+        <div class="intel-pillar-body">Every task your artist completes enriches the catalog. Every console request answered adds a permanent layer to the release profile. Richer context commands higher per-use licensing rates. AI companies, sync supervisors, and app developers pay more for music they can understand deeply &mdash; and that premium flows through the LLC <span class="intel-pillar-accent">to your stake</span>. Year three of a SoundSteak release is worth more than year one.</div>
+      </div>
+      <div class="intel-pillar">
+        <div class="intel-pillar-for">For Developers &amp; AI Companies</div>
+        <div class="intel-pillar-head">The only licensed, contextually annotated music catalog in existence.</div>
+        <div class="intel-pillar-body">Clean provenance. Artist-defined licensing terms enforced at the API level. Rich contextual data &mdash; intent, influences, structure, lyrical annotation, stems, production credits &mdash; that no scraped catalog can provide. And if you need something that isn&rsquo;t in the profile yet, you can <span class="intel-pillar-accent">ask the artist directly through the console</span>. The answer becomes part of the permanent record. The catalog learns what you need.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 7 — FOR THE INDUSTRY
+════════════════════════════════════════ -->
+<section class="s-eco">
+  <div class="s-rule rise"><span>For the Entire Music Industry</span></div>
+  <div class="inner">
+    <h2 class="section-head rise">Everyone who builds the music gets paid for building it.</h2>
+    <p class="section-sub rise">The industry has always needed engineers, producers, promoters, photographers, directors, curators &mdash; and a hundred other people nobody remembered to pay correctly. SoundSteak changes that. Every credit documented. Every contribution tracked. Your cut finds you automatically.</p>
+    <ul class="feature-list rise" style="max-width:720px;margin-bottom:3rem">
+      <li>Every role in the system participates in governance. Your stake &mdash; however you earned it &mdash; gives you a voice in how the platform operates.</li>
+      <li>Attribution earnings flow to anyone who drove discovery: the influencer who posted it, the curator who playlisted it, the fan who shared it the day it dropped. If your action brought listeners or investors, the system records it and pays you for it.</li>
+      <li>A percentage of platform ad revenue is distributed across the ecosystem &mdash; proportional to participation, not seniority. The people who built the audience share in what the audience generates.</li>
+      <li>Fee structures are fixed and disclosed. Every percentage the platform takes is visible before you agree to anything. No fine print. No percentage that shifts after the fact.</li>
+      <li>The platform is not a gatekeeper. Anyone with a verified role in a SoundSteak project has a profile. The system documents what happened &mdash; it doesn&rsquo;t decide who was important enough to be remembered.</li>
+      <li><strong>Some professionals take equity instead of cash &mdash; and SoundSteak makes that arrangement as easy as the cash one.</strong> If a studio, mastering engineer, or videographer is willing to work for a percentage of the release LLC, the platform handles the negotiation, the contract, and the equity issuance through their profiles. No separate paperwork. The credit and the stake live in the same record. When the music earns, they earn &mdash; indefinitely.</li>
+    </ul>
+    <div class="role-grid rise">
+      <div class="role-cell"><div class="role-name">Influencer</div><div class="role-desc">Get paid for the listeners you actually bring &mdash; tracked from share to stake, automatically. No guesswork, no chasing anyone.</div><div class="role-badge">Attribution Earnings</div></div>
+      <div class="role-cell"><div class="role-name">Content Creator</div><div class="role-desc">Post the song, drive the streams, earn your attribution. Every play traced back to your fingerprint on it.</div><div class="role-badge">Attribution Earnings</div></div>
+      <div class="role-cell"><div class="role-name">Producer</div><div class="role-desc">Beat sales, co-production stakes, session royalties &mdash; every arrangement tracked and paid without you having to ask twice.</div><div class="role-badge">Beat Marketplace</div></div>
+      <div class="role-cell"><div class="role-name">Recording Engineer</div><div class="role-desc">Every session credited and compensated. Your work on the platform is verified &mdash; not self-reported.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Mixing Engineer</div><div class="role-desc">Your stake in the final mix is documented before you begin the session &mdash; so nothing gets renegotiated after the fact. Willing to work for equity? Negotiate a release LLC percentage through the platform instead of a flat fee. Your credit and your stake live in the same record.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Mastering Engineer</div><div class="role-desc">The final pair of ears on the record gets their credit and their cut &mdash; and the option to take that cut as a percentage of what the music earns forever, not a one-time payment. Equity arrangements are negotiated and signed through the platform.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Songwriter / Co-Writer</div><div class="role-desc">Publishing splits locked and registered from the room. Your pen has always been worth something &mdash; now it&rsquo;s documented.</div><div class="role-badge">Publishing Splits</div></div>
+      <div class="role-cell"><div class="role-name">Session Musician</div><div class="role-desc">Performance credits verified. If you played on the record, the record says so &mdash; and the money follows it.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Music Video Director</div><div class="role-desc">Every project verified by the platform that commissioned it. A real portfolio, not a reel nobody can vouch for. Directors willing to work for equity negotiate their percentage through the platform &mdash; so the video that helps break the artist also earns from everything the artist earns.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Photographer</div><div class="role-desc">Press kit, live shots, album art &mdash; credited and paid, every time, through the system.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Show Promoter</div><div class="role-desc">Book funded, investment-backed artists. When the money arrives, it goes directly where it belongs &mdash; no mystery cuts.</div><div class="role-badge">Preferred Partner</div></div>
+      <div class="role-cell"><div class="role-name">Booking Agent</div><div class="role-desc">Represent artists whose finances are already organized. Book the show, earn your commission through the system.</div><div class="role-badge">Preferred Partner</div></div>
+      <div class="role-cell"><div class="role-name">Publicist / PR</div><div class="role-desc">Run press campaigns for artists with real budgets and real traction. Your placements tracked against the release cycle.</div><div class="role-badge">Preferred Partner</div></div>
+      <div class="role-cell"><div class="role-name">Playlist Curator</div><div class="role-desc">Earn attribution when your placements drive streams. Discovery that pays is discovery that compounds.</div><div class="role-badge">Attribution Earnings</div></div>
+      <div class="role-cell"><div class="role-name">Graphic Designer</div><div class="role-desc">Album art, merch mockups, brand identity &mdash; commissioned and credited to your profile permanently.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Recording Studio</div><div class="role-desc">A steady pipeline of funded, investment-backed artists who need exactly what you offer &mdash; with investors watching the outcome. Studios willing to trade session time for a release LLC percentage negotiate and sign through the platform. The room that recorded the record earns from what the record earns.</div><div class="role-badge">Equity Partnership</div></div>
+
+      <div class="role-cell"><div class="role-name">Manager</div><div class="role-desc">Your commission is documented before the first email gets sent. No ambiguity, no renegotiation after the deal closes.</div><div class="role-badge">Preferred Partner</div></div>
+      <div class="role-cell"><div class="role-name">Tour Manager</div><div class="role-desc">Runs the tour, not the booking — a distinct role that finally has a distinct credit and a verified payment trail.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Live Sound Engineer</div><div class="role-desc">Every show on the platform's artists logged to your profile. The audience heard it because of you. The record knows it.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Production Manager</div><div class="role-desc">Coordinates every technical element of a live show. The person who makes it actually happen gets the credit that proves it.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Lighting Designer</div><div class="role-desc">The visual half of a live performance. Your design is credited on every show it's used — not invisible behind the PA.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Music Supervisor</div><div class="role-desc">Place SoundSteak artists in film, TV, and advertising. Your placements are documented. Attribution follows the sync.</div><div class="role-badge">Sync Placement</div></div>
+      <div class="role-cell"><div class="role-name">Sync Agent</div><div class="role-desc">Pitch artists for licensing opportunities. Your role in getting music into the room is tracked and credited in the system.</div><div class="role-badge">Sync Placement</div></div>
+      <div class="role-cell"><div class="role-name">DJ / Remix Artist</div><div class="role-desc">Remixes commissioned through the platform are credited and compensated. If you drove streams with it, the system knows.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Vocal Producer</div><div class="role-desc">The person who shaped the performance, not just the arrangement. A real credit for a role the industry has always undercounted.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Arranger / Orchestrator</div><div class="role-desc">Strings, horns, choral arrangement — every chart you write for a SoundSteak release is credited on the record permanently.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Stylist / Wardrobe</div><div class="role-desc">Visual identity is part of the release. Your contribution to how an artist is seen is credited alongside how they sound.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Video Editor / Animator</div><div class="role-desc">Lyric videos, visualizers, short-form content — every piece commissioned through the platform credited to your profile.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Music Journalist</div><div class="role-desc">Earn attribution when your coverage drives discovery. Your press is part of the release story — and the system remembers it.</div><div class="role-badge">Attribution Earnings</div></div>
+      <div class="role-cell"><div class="role-name">Radio Promoter</div><div class="role-desc">Regional and national radio placement tracked against the release. Your work broke the song. The platform documents it.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Business Manager</div><div class="role-desc">Manages the finances, not the creative. Your role in keeping an artist's career solvent is a verified credential on this platform.</div><div class="role-badge">Preferred Partner</div></div>
+      <div class="role-cell"><div class="role-name">Podcast Host</div><div class="role-desc">Discovery happens in ears, not just on feeds. Earn attribution when your episode drives listeners or investors to an artist.</div><div class="role-badge">Attribution Earnings</div></div>
+      <div class="role-cell"><div class="role-name">Venue Owner / Operator</div><div class="role-desc">Host funded, investment-backed artists with verified payment structures. Your space is part of the milestone path.</div><div class="role-badge">Preferred Partner</div></div>
+      <div class="role-cell"><div class="role-name">Street Team Coordinator</div><div class="role-desc">Grassroots reach tracked and attributed. The people who put up the posters and worked the crowd helped build the audience.</div><div class="role-badge">Attribution Earnings</div></div>
+      <div class="role-cell"><div class="role-name">Community Manager</div><div class="role-desc">Organizes the earliest believers into a real community. Your work building the fan base is documented from day one.</div><div class="role-badge">Verified Credits</div></div>
+      <div class="role-cell"><div class="role-name">Merch Manager</div><div class="role-desc">Runs physical merchandise operations — fulfillment, inventory, vendor relationships. Compensated and credited through the system.</div><div class="role-badge">Preferred Partner</div></div>
+    </div>
+    <a href="#" class="btn rise">Start your profile</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     SECTION 8 — WHY THIS IS DIFFERENT
+════════════════════════════════════════ -->
+<section class="s-nobody">
+  <div class="s-rule rise"><span>Why This Is Different</span></div>
+  <div class="inner">
+    <ul class="nobody-list rise">
+      <li class="nobody-item"><span class="nobody-dash">—</span><span>300 real fans are louder than 300,000 fake ones. Every person on this platform has a verified identity, a real dollar on the line, and a documented relationship to the artist. You cannot bot-farm a pledge. You cannot purchase provenance.</span></li>
+      <li class="nobody-item"><span class="nobody-dash">—</span><span>An LLC formed per release at the moment of signing. Every investor owns an actual legal entity with documented terms &mdash; not a token, not a handshake, not a promise.</span></li>
+      <li class="nobody-item"><span class="nobody-dash">—</span><span>Governance rights that extend to how the platform itself is run. The people who built the audience have a vote on what the platform does with it.</span></li>
+      <li class="nobody-item"><span class="nobody-dash">—</span><span>Regular mediation between the artist, vendors, and SteakHolders — built into the release calendar. Alignment is scheduled, not reactive.</span></li>
+      <li class="nobody-item"><span class="nobody-dash">—</span><span>A fan intelligence layer that gives independent artists the data infrastructure major labels have always kept for themselves — who their fans are, what drives them, where the next show should be.</span></li>
+      <li class="nobody-item"><span class="nobody-dash">—</span><span>A catalog that appreciates through documentation — growing in value with every answered question, every context task completed, every year of fan behavior recorded. Not a fixed asset. A living one.</span></li>
+    </ul>
+    <ul class="nobody-list rise">
+      <li class="nobody-item"><span class="nobody-dash">—</span><span>Professionals who work for a percentage of the release LLC instead of a flat fee — the studio, the engineer, the director all earning from what the music earns, indefinitely.</span></li>
+      <li class="nobody-item"><span class="nobody-dash">—</span><span>An MCP-mediated feedback system that surfaces meaningful signal without comment sections, ratings, or toxic feedback loops. Intelligence decides what&rsquo;s worth sharing.</span></li>
+      <li class="nobody-item"><span class="nobody-dash">—</span><span>A developer console where AI companies access licensed music, request context directly from the artist, and pay them for the answer.</span></li>
+      <li class="nobody-item"><span class="nobody-dash">—</span><span>Real-time earnings across every revenue stream, indefinitely. Every source, every format, every deal &mdash; one live number that moves when the music does.</span></li>
+      <li class="nobody-item"><span class="nobody-dash">—</span><span>A conversational AI that engages every participant as a relationship, not a task list. The platform reaches out. It listens. It knows what&rsquo;s going on before the data does.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section style="background:#080604;padding:6rem 2.5rem;text-align:center;border-top:1px solid rgba(242,237,228,0.04)">
+  <p style="font-family:'DM Serif Display',Georgia,serif;font-size:clamp(1.5rem,3.5vw,2.4rem);color:rgba(242,237,228,0.92);font-style:italic;letter-spacing:.01em;margin:0">Built for the next generation of artists.</p>
+</section>
+
+<script>
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.rise').forEach(el => io.observe(el));
+</script>
+</body>
+</html>

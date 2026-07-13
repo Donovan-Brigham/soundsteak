@@ -1,0 +1,229 @@
+<title>SoundSteak — Seed Round</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap');
+
+:root{--bg:#060402;--surface:#0D0A07;--text:#F0EBE1;--text-dim:rgba(240,235,225,0.45);--text-muted:rgba(240,235,225,0.18);--gold:#C4920A;--orange:#E05C1A;--border:rgba(240,235,225,0.06)}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased;min-height:100vh;overflow-x:hidden}
+
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:.028;pointer-events:none;z-index:999}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:0 7vw;position:relative;overflow:hidden}
+.hero-glow{position:absolute;top:20%;right:-5%;width:55vw;height:55vw;background:radial-gradient(ellipse,rgba(196,146,10,.05) 0%,transparent 65%);pointer-events:none}
+.wordmark{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,7.5vw,6.5rem);letter-spacing:.07em;color:var(--text);line-height:1;margin-bottom:2.75rem}
+.wordmark em{font-style:normal;color:var(--orange)}
+.rule{width:2.75rem;height:1px;background:var(--gold);opacity:.55;margin-bottom:2.75rem}
+.hero-headline{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(1.65rem,3.2vw,2.8rem);line-height:1.22;max-width:620px;margin-bottom:2.75rem;text-wrap:balance}
+.hero-meta{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-muted);margin-bottom:3rem;display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.hero-meta span{display:flex;align-items:center;gap:.5rem}
+.hero-meta span::before{content:'';display:block;width:4px;height:4px;border-radius:50%;background:var(--gold);opacity:.6}
+.hero-meta span:first-child::before{display:none}
+.cta{display:inline-flex;align-items:center;gap:.85rem;background:var(--gold);color:#020100;font-size:.75rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:1rem 2.25rem;text-decoration:none;transition:opacity .2s;border:none;cursor:pointer;font-family:'DM Sans',sans-serif}
+.cta:hover{opacity:.85}
+.cta-arr{transition:transform .2s}
+.cta:hover .cta-arr{transform:translateX(5px)}
+.scroll-hint{position:absolute;bottom:2.5rem;left:7vw;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--text-muted);display:flex;align-items:center;gap:.85rem}
+.scroll-hint::before{content:'';display:block;width:1px;height:2.75rem;background:var(--border)}
+
+/* NUMBERS */
+.s-numbers{display:grid;grid-template-columns:repeat(3,1fr);background:var(--border);gap:1px;border-top:1px solid var(--border)}
+@media(max-width:640px){.s-numbers{grid-template-columns:1fr}}
+.num-block{background:var(--bg);padding:4rem 3rem}
+.num-fig{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5rem);color:var(--gold);line-height:.88;margin-bottom:.85rem;font-variant-numeric:tabular-nums}
+.num-label{font-size:.82rem;color:var(--text-dim);line-height:1.65;max-width:220px}
+.num-source{font-size:.6rem;color:var(--text-muted);margin-top:.85rem;letter-spacing:.05em}
+
+/* PROSE */
+.s-prose{padding:7rem 7vw;border-top:1px solid var(--border);max-width:900px}
+.kicker{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:2rem}
+.prose-head{font-family:'DM Serif Display',serif;font-size:clamp(1.4rem,2.8vw,2.2rem);line-height:1.22;margin-bottom:2rem;text-wrap:balance}
+.prose-body{font-size:.91rem;color:var(--text-dim);line-height:1.9;max-width:640px}
+.prose-body+.prose-body{margin-top:1.35rem}
+.redacted{display:inline-block;background:rgba(240,235,225,.09);color:transparent;border-radius:2px;letter-spacing:.02em;user-select:none;padding:0 .15em;position:relative;cursor:default;transition:background .2s}
+.redacted:hover{background:rgba(240,235,225,.15)}
+.redacted::after{content:'Disclosed to qualified investors only';position:absolute;bottom:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#1A1510;border:1px solid rgba(196,146,10,.25);color:rgba(240,235,225,.65);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;padding:.4rem .85rem;border-radius:3px;opacity:0;pointer-events:none;transition:opacity .2s;font-family:'DM Sans',sans-serif}
+.redacted:hover::after{opacity:1}
+
+/* FOUNDER */
+.s-founder{padding:7rem 7vw;border-top:1px solid var(--border);max-width:900px}
+.founder-rule{width:2rem;height:1px;background:var(--gold);opacity:.4;margin-bottom:2rem}
+.founder-quote{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(1.15rem,2.4vw,1.7rem);line-height:1.5;color:var(--text);max-width:640px;margin-bottom:2.5rem;text-wrap:balance}
+.founder-byline{display:flex;align-items:center;gap:1.25rem}
+.founder-name{font-size:.75rem;font-weight:500;color:var(--text-dim);letter-spacing:.06em}
+.founder-title{font-size:.72rem;color:var(--text-muted);letter-spacing:.04em}
+
+/* ROUND */
+.s-round{padding:7rem 7vw;border-top:1px solid var(--border)}
+.round-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:3.5rem;max-width:780px}
+@media(max-width:580px){.round-grid{grid-template-columns:1fr}}
+.round-block{background:var(--bg);padding:2.75rem 2.25rem}
+.round-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.5rem,5vw,4rem);color:var(--text);line-height:.88;margin-bottom:.6rem}
+.round-detail{font-size:.78rem;color:var(--text-dim);line-height:1.6}
+.round-note{margin-top:2.75rem;max-width:560px;font-size:.76rem;color:var(--text-muted);line-height:1.75;border-left:1px solid var(--border);padding-left:1.5rem}
+
+/* SOCIAL PROOF */
+.s-proof{padding:5rem 7vw;border-top:1px solid var(--border);display:flex;align-items:center;gap:3rem;flex-wrap:wrap}
+.proof-num{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,5rem);color:var(--text);line-height:.88}
+.proof-label{font-size:.82rem;color:var(--text-dim);line-height:1.65;max-width:280px}
+
+/* FORM */
+.s-form{padding:7rem 7vw 9rem;border-top:1px solid var(--border)}
+.form-head{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(1.35rem,2.8vw,2.1rem);margin-bottom:3rem;max-width:480px;line-height:1.22}
+.form-row{display:flex;max-width:520px}
+.form-input{flex:1;background:var(--surface);border:1px solid var(--border);border-right:none;color:var(--text);font-family:'DM Sans',sans-serif;font-size:.88rem;padding:.95rem 1.35rem;outline:none;transition:border-color .2s}
+.form-input::placeholder{color:var(--text-muted)}
+.form-input:focus{border-color:rgba(196,146,10,.5)}
+.form-submit{background:var(--gold);color:#020100;border:none;font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:0 2rem;cursor:pointer;transition:opacity .2s;white-space:nowrap}
+.form-submit:hover{opacity:.86}
+.form-note{margin-top:1.35rem;font-size:.72rem;color:var(--text-muted);max-width:440px;line-height:1.7}
+
+/* CLOSER */
+.s-closer{padding:5rem 7vw;border-top:1px solid var(--border);text-align:left}
+.closer-line{font-family:'DM Serif Display',serif;font-style:italic;font-size:clamp(1rem,2.2vw,1.5rem);color:rgba(240,235,225,.28);letter-spacing:.01em}
+
+/* RISE */
+.rise{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.rise.visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rise{opacity:1;transform:none;transition:none}}
+</style>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="wordmark rise">SOUND<em>S</em>TEAK</div>
+  <div class="rule rise"></div>
+  <h1 class="hero-headline rise">Before the platform.<br>Before the artists.<br>Before the world knows what this is.</h1>
+  <div class="hero-meta rise">
+    <span>Seed round</span>
+    <span>Accredited investors only</span>
+    <span>Limited window</span>
+  </div>
+  <a href="#form" class="cta rise">Request investor information <span class="cta-arr">→</span></a>
+  <div class="scroll-hint">Scroll</div>
+</section>
+
+<!-- NUMBERS -->
+<section class="s-numbers">
+  <div class="num-block rise">
+    <div class="num-fig">$31.7B</div>
+    <div class="num-label">global recorded music revenue in 2025 — the industry's 11th consecutive year of uninterrupted growth</div>
+    <div class="num-source">IFPI Global Music Report 2026</div>
+  </div>
+  <div class="num-block rise">
+    <div class="num-fig">12–18×</div>
+    <div class="num-label">what music catalogs sell for right now in annual earnings multiples — to Blackstone, Sony, Primary Wave</div>
+    <div class="num-source">Citrin Cooperman · Chartlex 2026</div>
+  </div>
+  <div class="num-block rise">
+    <div class="num-fig">13%+</div>
+    <div class="num-label">historical annual return of music royalties as an asset class — largely uncorrelated with equity markets</div>
+    <div class="num-source">Royalty Exchange · Long Angle 2025</div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="s-prose rise">
+  <span class="kicker">The problem</span>
+  <h2 class="prose-head">One of the best-performing asset classes on earth has never been available to the people who built it.</h2>
+  <p class="prose-body">Private equity buys catalogs at 12–18× earnings. The major labels collect royalties on masters they acquired as a condition of deals signed decades ago. The artists who created those catalogs earn roughly fifteen cents of every dollar their music generates — if they're lucky enough to recoup their advance at all.</p>
+  <p class="prose-body">The fan who was there first, who told ten people, who showed up before anyone else cared — gets nothing. Not even a record that they existed.</p>
+  <p class="prose-body">This is not a distribution problem. It is a structure problem. Structure can be changed.</p>
+</section>
+
+<!-- WHAT WE BUILT -->
+<section class="s-prose rise">
+  <span class="kicker">What we built</span>
+  <h2 class="prose-head">A record label on a completely different structure — legal, securities-compliant, and built to pay everyone who builds the music.</h2>
+  <p class="prose-body">We are not an NFT platform. We are not a streaming service. We are not a crowdfunding site. Every platform that attempted fan ownership of music in the last decade failed because the vehicle was wrong. The concept was right. We built it on the correct foundation.</p>
+  <p class="prose-body">The specific mechanics of how SoundSteak works are not being disclosed publicly at this stage. That is intentional — not because we have anything to hide, but because the architecture is the asset. What we can tell you: the legal structure is sound, the regulatory path is clear, and the infrastructure we have built does not exist anywhere else.</p>
+  <p class="prose-body">What we can also tell you: we are building the only catalog of its kind with <span class="redacted">████████████████████████████████████████</span> at the precise moment AI companies are <span class="redacted">████████████████████████████████</span> and will pay a significant premium for exactly what we will have. The window to be positioned before that market matures is measured in months, not years.</p>
+</section>
+
+<!-- ROUND -->
+<section class="s-round rise">
+  <span class="kicker">The seed round</span>
+  <h2 class="prose-head" style="max-width:580px">Ten percent of the company. One raise. One window.</h2>
+  <div class="round-grid">
+    <div class="round-block">
+      <div class="round-num">10%</div>
+      <div class="round-detail">of total company ownership in this round — no further dilution at this valuation</div>
+    </div>
+    <div class="round-block">
+      <div class="round-num">$10M</div>
+      <div class="round-detail">pre-money valuation — based on infrastructure built, legal framework in place, and market timing</div>
+    </div>
+    <div class="round-block">
+      <div class="round-num">$1M</div>
+      <div class="round-detail">target raise — covering legal completion, technical build, and runway through the first public event</div>
+    </div>
+  </div>
+  <p class="round-note">Every investor owns a <span class="redacted">████████████████████████████</span> formed at the moment of signing — a real legal entity, not a token, not a promise. Offered under Reg D 506(b). Available to accredited investors only. No public solicitation. This page is not an offer to sell securities — it is an invitation to begin a conversation. Formal offering documents provided to qualified parties only.</p>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="s-proof rise">
+  <div class="proof-num" id="proof-count">47</div>
+  <div class="proof-label">investors have already requested information. The round does not stay open indefinitely.</div>
+</section>
+
+<!-- FOUNDER -->
+<section class="s-founder rise">
+  <div class="founder-rule"></div>
+  <p class="founder-quote">&ldquo;I&rsquo;ve been in bands my whole life. I know what it feels like to play a show where every person in the room believed in you before anyone else did — and then watch that moment disappear with nothing to show for it. No record it happened. No way to say thank you that meant anything financially. I built SoundSteak because that moment deserves to be worth something. For the artist and for the person who showed up. I&rsquo;m not building the next streaming platform. I&rsquo;m building the infrastructure the music industry should have had from the beginning.&rdquo;</p>
+  <div class="founder-byline">
+    <div class="founder-rule" style="margin:0;width:1.5rem"></div>
+    <div>
+      <div class="founder-name">Donovan Brigham</div>
+      <div class="founder-title">Founder, SoundSteak</div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="s-form rise" id="form">
+  <h2 class="form-head">If you understand what this is, now is the time.</h2>
+  <div class="form-row">
+    <input class="form-input" type="email" placeholder="Your email address">
+    <button class="form-submit">I want in</button>
+  </div>
+  <p class="form-note">This connects you directly with the founder. No pitch deck spam. No automated sequence. A real conversation about whether this is the right fit — for you and for us.</p>
+</section>
+
+<!-- CLOSER -->
+<section class="s-closer">
+  <p class="closer-line rise">Built for the next generation of artists.</p>
+</section>
+
+<script>
+// Scroll reveals
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}
+  });
+},{threshold:0.07});
+document.querySelectorAll('.rise').forEach(el=>io.observe(el));
+
+// Live counter — counts up to target when scrolled into view
+const counterEl = document.getElementById('proof-count');
+const target = 47;
+let counted = false;
+const countIO = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if(e.isIntersecting && !counted){
+      counted = true;
+      let start = 38;
+      counterEl.textContent = start;
+      const step = () => {
+        start++;
+        counterEl.textContent = start;
+        if(start < target) setTimeout(step, 80);
+      };
+      setTimeout(step, 420);
+    }
+  });
+},{threshold:0.5});
+if(counterEl) countIO.observe(counterEl);
+</script>
