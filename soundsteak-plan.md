@@ -141,7 +141,7 @@ A full **Positioning & Language** section — covering how SoundSteak describes 
 
 ---
 
-**Landing page preview:** https://soundsteak-info-72172853s-projects.vercel.app
+**Landing page:** https://taemarketing.github.io/soundsteak/
 
 ---
 
