@@ -43,7 +43,7 @@ A real ownership stake in the music you believed in first — documented, perman
 
 ### For the entire music industry
 
-Every engineer, producer, photographer, promoter, director, and curator who contributes to a SoundSteak release has a verified profile built from platform-documented activity. Credits logged when they happen. Payments recorded as they clear. Attribution tracked and paid automatically. No self-reported history. No bios. A factual record of what someone actually did — and what it earned.
+Every engineer, producer, photographer, promoter, director, and curator who contributes to a SoundSteak release has a verified profile built from platform-documented activity. Credits logged when they happen. Payments recorded as they clear. Attribution tracked and paid automatically. No self-reported credits. No bios. A factual record of what someone actually did — and what it earned.
 
 ---
 
@@ -1287,7 +1287,7 @@ A person is not one thing. The studio owner is also a session bassist. The produ
 **Verification layer:** Tags become verifiable over time through credited platform projects, collaborator reviews, and documented work history. A producer with five successful platform projects carries visible, system-generated proof of track record — not self-reported, recorded as it happened. This builds a reputation economy inside the platform and eventually makes platform credits the industry's de facto credential.
 
 ### What Each Profile Contains
-- Personal identity and verification
+- Personal identity and verification — including a profile photo. Every person on the platform has a face. Artists, fans, engineers, investors — no one is anonymous. The photo is identity, not a credential, and is not subject to verification. It is the one thing a profile holder supplies freely.
 - Individual payment method (direct deposit, ACH, etc.)
 - Personal earnings dashboard — real-time revenue across all projects
 - Ownership documentation — every stake held, in every band, on every product
