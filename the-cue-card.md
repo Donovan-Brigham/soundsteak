@@ -15,7 +15,7 @@ Someone is messaging a friend. It's late and music is playing in the background.
 
 The system catches it.
 
-Not because it was looking for a review. Not because a prompt was waiting at the end of the experience. Because it was present in the conversation, listening for the thing that matters, and it recognized the moment when the moment arrived.
+Not because it was fishing for a review. Not because a prompt was waiting at the end of the experience. Because it was present in the conversation, listening for the thing that matters, and it recognized the moment when the moment arrived.
 
 It interrupts — gently, briefly, in the spirit of the conversation already taking place. *The band would love to hear this. Would you mind if we shared it on their profile?*
 
