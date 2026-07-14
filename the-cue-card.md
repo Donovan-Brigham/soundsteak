@@ -98,6 +98,10 @@ Presence requires a platform to be inside the experience, not waiting at the end
 
 That intelligence is the hard part. It cannot be a keyword filter. It cannot be sentiment analysis run against a transcript three days later. It has to be contextual, continuous, and quiet enough that the person having the experience doesn't feel observed. The moment you feel observed, you stop being honest. You start performing. And performance is exactly what every existing platform is already drowning in.
 
+Genuine expression lives in two places. In a private message between two people — unfiltered, unperformed, said because the context made it safe to say. And in an open conversation with an AI, where the absence of social stakes makes honesty easier than it has ever been. Everywhere else — the public post, the comment, the reaction — people already know they're being seen. The performance has already started.
+
+A listening platform is built around these two channels. Not to surveil them. To recognize the moments within them when something worth keeping surfaces, and to ask — with the person's full awareness and consent — whether it should become part of the record.
+
 Listening, done right, is nearly invisible.
 
 ---
