@@ -252,6 +252,10 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(-
 .governance-note{margin-top:1.5rem;padding:1.1rem 1.25rem;border:1px solid var(--border);border-radius:var(--radius);background:rgba(201,75,14,.06)}
 .governance-note-label{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:.4rem}
 .governance-note-text{font-size:.88rem;line-height:1.55;color:var(--text-2)}
+.stream-group{margin:1.5rem 0}
+.stream-group-label{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:.6rem}
+.stream-tags{display:flex;flex-wrap:wrap;gap:.4rem}
+.stream-tag{font-size:.75rem;padding:.22rem .65rem;border-radius:100px;background:var(--surface-2);color:var(--text-2);border:1px solid var(--border);letter-spacing:.02em}
 </style>
 </head>
 <body>
@@ -496,14 +500,107 @@ body{font-family:'DM Sans',system-ui,sans-serif;background:var(--bg);color:var(-
 
       <ul class="feature-list">
         <li><strong>Invest before the record exists.</strong> Not in a finished song &mdash; in the full journey. The recording, the rollout, the campaign. You know exactly what your money is building before anyone touches a microphone.</li>
-        <li><strong>Every dollar the music earns flows to your stake.</strong> Streams, sync, live, merch &mdash; every source tracked in real time, indefinitely. No mystery deductions. No quarterly PDFs. Just a live number that moves when the music does.</li>
         <li><strong>Your sharing pays you.</strong> Every listener or investor you convert is tracked from the moment they click your link to the moment they invest. The platform records it, pays it, and compounds it across every artist you back. Your network is part of your stake.</li>
-        <li><strong>Pre-orders go live the same night.</strong> Merch pre-orders open on the artist&rsquo;s profile immediately after signing. Because you earn from what you sell, the SteakHolder network starts working for the artist from the first hour of the contract.</li>
         <li><strong>Nothing is hidden before you commit.</strong> Platform fee disclosed upfront. Buyout terms written into every contract before a dollar is invested &mdash; a premium acquisition is a return, not a surprise.</li>
         <li><strong>Governance votes show up in your inbox and actually change things.</strong> Artwork direction, tour routing, milestone decisions, platform priorities &mdash; SteakHolders vote on real choices through a formal governance system. Not a survey. Not a suggestion box. A structured vote with a documented outcome that the platform is accountable to.</li>
-        <li><strong>AI licensing is a revenue stream no other label is offering.</strong> Artists set their AI licensing terms at signing &mdash; opt in, limit scope, or opt out entirely. When they opt in, their music earns from AI companies and developers through a metered developer console. That revenue flows through the same pipe as every other income stream to your stake.</li>
-        <li><strong>Stems are assets, not archive files.</strong> Every recording contract requires individual stereo stems for every instrument and vocal. Each one is a licensable product &mdash; producer licenses, remix packs, sync placements, pre-cleared samples, AI training data. Every pathway the artist approved at signing earns automatically. A producer discovering the drum track years after release and licensing it sends revenue straight back to the LLC, straight to your stake.</li>
       </ul>
+
+      <div style="margin:1.5rem 0 2rem">
+        <div style="font-size:.8rem;line-height:1.6;color:var(--text-2);margin-bottom:1.25rem">Every source below flows to your stake automatically &mdash; tracked in real time, distributed the moment it clears. No mystery deductions. No quarterly PDFs. One live number that moves when the music does. Every stream the platform opens is additional return on the same investment you already made.</div>
+
+        <div class="stream-group">
+          <div class="stream-group-label">Streaming &amp; Digital</div>
+          <div class="stream-tags">
+            <span class="stream-tag">Spotify</span>
+            <span class="stream-tag">Apple Music</span>
+            <span class="stream-tag">Tidal</span>
+            <span class="stream-tag">Amazon Music</span>
+            <span class="stream-tag">YouTube Music</span>
+            <span class="stream-tag">Deezer</span>
+            <span class="stream-tag">SoundExchange</span>
+            <span class="stream-tag">YouTube Content ID</span>
+            <span class="stream-tag">Digital download sales</span>
+            <span class="stream-tag">Bandcamp</span>
+            <span class="stream-tag">Karaoke / instrumental version</span>
+            <span class="stream-tag">A cappella release</span>
+          </div>
+        </div>
+
+        <div class="stream-group">
+          <div class="stream-group-label">Royalties</div>
+          <div class="stream-tags">
+            <span class="stream-tag">Mechanical royalties (MLC)</span>
+            <span class="stream-tag">Performance royalties (PRO)</span>
+            <span class="stream-tag">Digital performance (SoundExchange)</span>
+            <span class="stream-tag">Publishing splits</span>
+            <span class="stream-tag">Spatial audio premium</span>
+          </div>
+        </div>
+
+        <div class="stream-group">
+          <div class="stream-group-label">Sync &amp; Licensing</div>
+          <div class="stream-tags">
+            <span class="stream-tag">TV &amp; film sync</span>
+            <span class="stream-tag">Advertising</span>
+            <span class="stream-tag">Branded content</span>
+            <span class="stream-tag">Sync &mdash; stems / instrumental</span>
+            <span class="stream-tag">Gaming integration</span>
+            <span class="stream-tag">Livestream licensing (Twitch, TikTok)</span>
+            <span class="stream-tag">Social platform licensing</span>
+            <span class="stream-tag">Brand deal integration</span>
+            <span class="stream-tag">Pre-cleared sample licensing</span>
+          </div>
+        </div>
+
+        <div class="stream-group">
+          <div class="stream-group-label">Stem Licensing</div>
+          <div class="stream-tags">
+            <span class="stream-tag">Full stem pack &mdash; producer license</span>
+            <span class="stream-tag">Individual stem license</span>
+            <span class="stream-tag">Remix license</span>
+            <span class="stream-tag">Fan remix competition</span>
+            <span class="stream-tag">Physical stem release (USB)</span>
+          </div>
+        </div>
+
+        <div class="stream-group">
+          <div class="stream-group-label">AI Licensing</div>
+          <div class="stream-tags">
+            <span class="stream-tag">AI training data</span>
+            <span class="stream-tag">AI generation licensing</span>
+            <span class="stream-tag">AI app integration (metered)</span>
+            <span class="stream-tag">Developer console context tasks</span>
+          </div>
+        </div>
+
+        <div class="stream-group">
+          <div class="stream-group-label">Merch &amp; Physical</div>
+          <div class="stream-tags">
+            <span class="stream-tag">Digital bundle</span>
+            <span class="stream-tag">Zine</span>
+            <span class="stream-tag">Shirt</span>
+            <span class="stream-tag">45rpm vinyl</span>
+            <span class="stream-tag">Cassette</span>
+            <span class="stream-tag">CD</span>
+            <span class="stream-tag">10&rdquo; / 12&rdquo; vinyl</span>
+            <span class="stream-tag">8-track</span>
+            <span class="stream-tag">USB / digital card</span>
+            <span class="stream-tag">Box set</span>
+            <span class="stream-tag">Event tickets</span>
+          </div>
+        </div>
+
+        <div class="stream-group">
+          <div class="stream-group-label">Platform &amp; Network</div>
+          <div class="stream-tags">
+            <span class="stream-tag">Attribution earnings (your referrals)</span>
+            <span class="stream-tag">Fan tips</span>
+            <span class="stream-tag">Educational licensing</span>
+            <span class="stream-tag">Artist profile sponsorship</span>
+            <span class="stream-tag">SoundSteak event revenue share</span>
+          </div>
+        </div>
+      </div>
       <a href="#" class="btn">Become a SteakHolder</a>
     </div>
     <div class="rise">
