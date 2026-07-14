@@ -31,7 +31,6 @@ This almost never happens. Not because the feeling isn't there. Because the plat
 
 ### The Box at the Bottom
 
-Somewhere in the early web, a decision got made without anyone deciding.
 
 The web had given everyone a voice. Someone had to build a place to put it. So they did — a field, a form, a comment section, a like button, a reaction strip, a star rating, a character-limited post. One container after another, each one assuming that expression would arrive on schedule, in the right format, through the right channel. The intent was generous. The error was in the geometry.
 
