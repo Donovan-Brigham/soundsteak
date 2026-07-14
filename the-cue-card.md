@@ -87,7 +87,7 @@ Every star rating you've ever shipped is evidence that you weren't there for it.
 
 ---
 
-## Part II — What Listening Actually Looks Like
+## Part II — What Listening Looks Like
 
 ---
 
