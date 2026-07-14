@@ -1199,9 +1199,25 @@ The moment this catalog begins to form, it becomes a conversation with frontier 
 
 ## The AI Company Relationship — Every Dimension
 
-SoundSteak does not take a side in the AI debate. It gives artists the infrastructure to take their own side, and honors whatever they decide. That is not a compromise. It is the only principled position available — and it makes SoundSteak the only music platform an AI company can work with cleanly.
+### The Most Important Thing — and the One We Don't Say Out Loud
 
-Most of what AI companies need from music is unavailable without legal exposure. Scraped audio is a lawsuit. Missing context makes the data shallow. No consent trail means no defensible product. SoundSteak solves all three: artist-authorized, context-rich, provenance-documented from the first recording. That is not just a dataset. It is infrastructure no competitor is building.
+SoundSteak's language around AI is deliberately neutral. The platform does not call AI good or bad. It does not editorialize. It gives artists the infrastructure to define their own relationship with AI, honors whatever they decide, and enforces it structurally. That neutrality is not a diplomatic compromise — it is a foundational commitment to artist respect.
+
+But the effect of that neutrality, over time, is something AI companies cannot build for themselves: a proof of concept.
+
+A segment of the artist community has deep, legitimate hostility toward AI — not toward technology broadly, but toward extraction. Their work taken without consent. Their sound replicated without credit. Their livelihood undercut without compensation. That hostility is rational and it is not going away through press releases or policy documents.
+
+What could move it — slowly, over time — is evidence. An artist who chose to engage with an AI company through SoundSteak, on documented terms, and came out of it credited, compensated, and in control of what happened. Another artist watching that and reconsidering. A conversation between two artists where one says *"I licensed my stems through SoundSteak — here's what I got for it."* That is not a marketing campaign. That is culture changing from the inside.
+
+SoundSteak is the platform where artist-AI collaboration is consensual, documented, and credited. That makes it the only place an AI company can point to and say — truthfully, provably — *we worked with artists, not against them.* No amount of lobbying, litigation defense, or PR spend buys that. Only a real relationship with real artists on real terms does.
+
+**The platform's terminology stays neutral in every public-facing context.** Not because the platform is indifferent, but because the artists aren't — and their position deserves to be honored, not overridden by a label that has a commercial interest in AI licensing revenue. The platform collaborates with AI in every possible way behind the scenes. It does not ask artists to endorse that collaboration. It asks only whether they want to participate — and enforces whatever they decide.
+
+That is what an AI company cannot build alone. And it is the most valuable thing SoundSteak offers them.
+
+---
+
+Most of what AI companies need from music is also unavailable without legal exposure. Scraped audio is a lawsuit. Missing context makes the data shallow. No consent trail means no defensible product. SoundSteak solves all three: artist-authorized, context-rich, provenance-documented from the first recording. That is not just a dataset. It is infrastructure no competitor is building.
 
 The relationship is not a single arrangement. It is every arrangement that serves both parties simultaneously — pursued in parallel, compounding over time.
 
@@ -1230,9 +1246,9 @@ Beyond training data, AI companies are building products that need music in spec
 
 ### The Pitch
 
-This is not "we have data for sale." It is: **we are building the only music platform designed from the start to be an AI partner. The catalog is clean. The artists consented. The context is documented. Come build the intelligence layer with us — and be in every dimension of what this becomes.**
+This is not "we have data for sale." It is: **we are building the only platform where artist-AI collaboration is consensual, documented, and credited. The catalog is clean. The artists set their terms. The context is rich. And when an artist on this platform works with an AI company and the result is something real — that is the proof of concept no one else has been able to produce.**
 
-The relationship is as big as both parties want it to be. Data vendor, technology partner, co-builder, platform investor, equity holder, public signal. All of the above. None of it in conflict. All of it compounding.
+Come build the intelligence layer with us. Be in every dimension of what this becomes. The relationship is as big as both parties want it to be — data vendor, technology partner, co-builder, platform investor, equity holder. All of it compounding. None of it in conflict. And all of it pointing toward the same thing: a music industry where artists and AI are not at war, because the infrastructure for something better was built first.
 
 **Each artist's rate is specified in their contract.** Artists and SteakHolders vote on licensing strategy through governance. Revenue flows through the LLC exactly like streaming royalties.
 
