@@ -1914,13 +1914,21 @@ If a service, vendor, or creative is not registered with a profile on SoundSteak
 |---|---|---|
 | **1. Participation confirmation** | Each contributing artist confirms via Cue — split terms, track selection, timeline | All contributing artists |
 | **2. Visual direction vote** | Governance vote: which artist's visual identity leads the cover? SteakHolders across all contributing LLCs vote | All SteakHolders of contributing artists |
-| **3. Cover art pitch** | Open pitch sent to every graphic designer registered on the platform. Submissions reviewed by the artists or put to a SteakHolder vote | All platform designers |
-| **4. Designer selected** | Commissioned, credited, compensated — equity arrangement negotiable through the platform. Their credit is permanent on the release record | Selected designer |
+| **3. Designer selection** | Governance vote: SteakHolders and contributing artists browse designer profiles — verified credits, platform work history, documented style — and vote on who to hire. No spec work. No submission calls. One designer is selected and hired. | All SteakHolders of contributing artists |
+| **4. Designer commissioned** | The hired designer is briefed and paid. They produce what they produce. Their creative direction is their own within the agreed brief. Credit is permanent on the release record. Equity arrangement negotiable through the platform. | Selected designer only |
 | **5. Mastering** | Cue to mastering engineers on the platform for the compilation master | All platform mastering engineers |
 | **6. Zine / companion piece** | If the release warrants a printed companion, Cue goes to writers and designers on the platform | Platform writers and designers |
 | **7. Pressing / printing** | Routes only to platform-registered pressing plants and printers. No external fulfillment service unless it holds a platform profile | Registered vendors |
 | **8. Pre-order and fulfillment** | Pre-order window opens to SteakHolders first. Fulfillment tracked and credited through the system | Platform fulfillment partners |
 | **9. Revenue routing** | Every vendor, every designer, every engineer earns their documented cut. Every SteakHolder in every contributing artist earns their proportional share | Automatic — no manual distribution |
+
+**No spec work. Ever.**
+
+SoundSteak does not run design competitions. It does not ask multiple creatives to submit work with only one getting paid. Spec work is one of the most exploitative practices in the creative industry — and a platform built around paying people correctly cannot use it as a sourcing mechanism.
+
+The model is always: the community decides who gets hired, then the hired person does the work. Governance votes and Cues are used to select the artist. Once selected, they are commissioned, briefed, and paid. What they produce is theirs to make. Their creative direction is their own within the brief. No one else submits. No one else works for free hoping to win.
+
+This applies to every creative need the platform generates — cover art, zine design, merch design, photography direction, music video direction, event branding. The selection is a vote. The execution is a commission.
 
 **The principle:**
 
