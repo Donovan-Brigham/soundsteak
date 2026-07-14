@@ -206,6 +206,7 @@ Everything else in this platform is built on top of that.
 - Open to any verified human artist with original music and a real audience — no AI-generated acts
 - Every member of every band is protected from day one
 - The platform is a **label**, not a software product
+- **This company remains private. Forever.** A public offering hands control to a board whose mandate is profit over everything else — the same logic that built the system SoundSteak exists to replace. The moment that happens, the platform becomes what it was built against. Growth is welcome. Outside investment is welcome. A public exit is not on the table, under any circumstances, at any valuation.
 
 ---
 
