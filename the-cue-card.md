@@ -119,7 +119,7 @@ Listening, done right, is nearly invisible.
 
 ### Initiation Is a Design Principle
 
-The first thing a listening platform has to do is show up first.
+The first thing a listening platform has to do is show up.
 
 Not with a notification. Not with a prompt at the bottom of a page. With a deliberate, context-aware opening — a moment the platform chooses, based on what it knows about a person and what it knows about right now, to start a conversation. Not to extract data. To ask something worth asking, at the moment asking it actually makes sense.
 
