@@ -77,23 +77,11 @@ The feeling evaporates. The metric climbs. No one notices the difference because
 
 ---
 
-### The Failure Is Structural
-
-This is not a problem better UX will fix. Not a moderation problem. Not a product problem in the sense of something patchable.
-
-It is a philosophical error about what communication is.
+### The Failure Is Philosophical
 
 Human beings do not communicate in forms. They do not express themselves through reaction buttons or character-limited fields or prompted ratings. They communicate in conversation — messy, contextual, nonlinear, arriving sideways in the middle of something else. The platforms looked at that and built containers for it. Then they looked at what the containers collected and called it human communication.
 
 It isn't. It is what human communication looks like when you ask it to hold still and fit inside a box.
-
-Expression doesn't happen on request. It isn't triggered by a notification. It doesn't arrive because you built a field and wrote *Share your thoughts...* in gray inside it. It happens when it happens — in conversation, in context, as a byproduct of genuine contact with something that moved you — and it has no particular interest in your feature roadmap.
-
-The platforms built the place and called it listening.
-
-But listening is not infrastructure. It is not passive capacity waiting to be filled. It is something active — a presence that meets expression where expression actually lives, in the moment it surfaces, before the person has decided they're saying anything important.
-
-That moment is the whole record. Everything worth knowing is in it.
 
 Every star rating you've ever shipped is evidence that you weren't there for it.
 
