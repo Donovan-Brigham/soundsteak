@@ -27,7 +27,7 @@ This is not a service failure. What failed was older and quieter: the assumption
 
 Somewhere in the early web, a decision got made without anyone deciding.
 
-The web had given everyone a voice. Someone had to build a place to put it. So they did — a field, a form, a star rating, a comment section stretching down the page. The intent was generous. The error was in the geometry.
+The web had given everyone a voice. Someone had to build a place to put it. So they did — a field, a form, a comment section, a like button, a reaction strip, a star rating, a character-limited post. One container after another, each one assuming that expression would arrive on schedule, in the right format, through the right channel. The intent was generous. The error was in the geometry.
 
 They built the box and waited for the feeling to come to it.
 
@@ -37,9 +37,9 @@ The box waited. The feeling kept happening somewhere else.
 
 ---
 
-### What a Star Rating Actually Contains
+### What the Mechanisms Actually Contain
 
-Consider what a star rating knows.
+The star rating is the most honest version of the failure because it makes the extraction visible. Consider what it knows.
 
 Five positions. A thumb moved along a scale. Behind it — weeks behind it, sometimes — an experience. A meal. A product. A night you won't forget or one you're trying to. All of that compressed, by you, in some distracted moment, into a number.
 
@@ -47,11 +47,13 @@ The platform calls this data. It runs the numbers. It is very confident in what 
 
 What it knows is residue. The shadow a feeling casts when you ask it to hold still.
 
-And the shadow is skewed. Star ratings are taken by people who were enraged or enchanted — the experience had to clear some threshold of intensity just to make them open their phone. The vast middle of honest, considered, specific reaction goes unrecorded. Every review ecosystem is structurally a collection of outliers with a confidence interval on top.
+The like button is the same operation with less friction. The reaction strip gives you five options for the full range of human emotion. The comment section hands you a blank field and waits. Each one is a platform saying: we need something from you, and here is the shape we need it in. None of them are listening. They are collecting.
 
-The prompted review is worse. *How would you rate your recent experience?* A notification fired into the future, long after the feeling has gone cold, asking you to reconstruct an emotion you've already finished having. The platform isn't curious. It's mining. It has convinced itself that extraction and listening are the same operation.
+And the collection is skewed. Expression captured through these mechanisms comes from people who were enraged or enchanted enough to act — the feeling had to clear some threshold of intensity just to reach the interface. The vast middle of honest, considered, specific reaction goes unrecorded. Every engagement metric in the history of the web is structurally a collection of outliers with a confidence interval on top.
 
-You've been turned into a data labeler. You just weren't told.
+The prompted review makes this explicit. *How would you rate your recent experience?* A notification fired into the future, long after the feeling has gone cold, asking you to reconstruct an emotion you've already finished having. The platform isn't curious. It's mining — convinced that extraction and listening are the same operation.
+
+They are not. You've been turned into a data labeler across every platform you've ever used. You just weren't told.
 
 ---
 
@@ -73,7 +75,11 @@ The feeling evaporates. The metric climbs. No one notices the difference because
 
 This is not a problem better UX will fix. Not a moderation problem. Not a product problem in the sense of something patchable.
 
-It is a philosophical error about what expression is.
+It is a philosophical error about what communication is.
+
+Human beings do not communicate in forms. They do not express themselves through reaction buttons or character-limited fields or prompted ratings. They communicate in conversation — messy, contextual, nonlinear, arriving sideways in the middle of something else. The platforms looked at that and built containers for it. Then they looked at what the containers collected and called it human communication.
+
+It isn't. It is what human communication looks like when you ask it to hold still and fit inside a box.
 
 Expression doesn't happen on request. It isn't triggered by a notification. It doesn't arrive because you built a field and wrote *Share your thoughts...* in gray inside it. It happens when it happens — in conversation, in context, as a byproduct of genuine contact with something that moved you — and it has no particular interest in your feature roadmap.
 
@@ -191,15 +197,17 @@ The difference is not aesthetic. It is evidentiary. One type of record tells you
 
 ---
 
-### Provenance Instead of Reviews
+### Provenance Instead of Content
 
-A review is a retrospective. It asks someone to summarize an experience they've already finished having, in a format the platform designed, at a moment the platform chose. What it produces is a compressed, delayed, decontextualized account — useful as a rough signal, useless as anything more.
+Every platform that has ever existed produces content. Posts, comments, reactions, reviews, threads, replies — an endless accumulation of expression-shaped objects that fill feeds and databases and engagement dashboards. What almost none of them produce is context.
 
-Provenance is different. It is the experience itself, partially preserved — a record of what was said, in what context, at what point in a relationship. It does not ask for a summary. It captures the expression that arose naturally and keeps the circumstances that made it credible.
+Context is what makes expression mean something. Not just what was said, but who said it, when, from what relationship, at what point in their engagement with a thing. A comment without context is a fragment. A reaction without context is noise. A review without context is a number with a story attached that you have no way to verify.
 
-The distinction matters because provenance answers questions a review never can. Not just *what did they think* but *what is this person's relationship to the thing they're describing*. How long they've been engaged. What they understood before they said what they said. Whether their position is that of a newcomer or someone who has watched something develop over time. A name attached to that context adds weight. But even without one, the context itself is more honest than a star.
+Provenance is the alternative. Not a summary of an experience after the fact, but the experience itself, partially preserved — a record of what was said, in what context, at what point in a relationship. It does not ask for a summary. It captures expression that arose naturally and keeps the circumstances that made it credible.
 
-This is a richer object than a rating. It makes no claim to objectivity, because it doesn't need to. It claims something more valuable: this is what someone in this specific relationship, at this specific moment, actually said — and here is enough of the circumstance for you to judge it yourself.
+The distinction matters because provenance answers questions that content never can. Not just *what did they think* but *what is this person's relationship to the thing they're describing*. How long they've been engaged. What they understood before they spoke. Whether their position is that of a newcomer or someone who has watched something develop over time. A name attached to that context adds weight — but even without one, the context itself is more honest than anything collected through a prompted mechanism.
+
+This is a richer object than a post. It makes no claim to objectivity, because it doesn't need to. It claims something more valuable: this is what someone in this specific relationship, at this specific moment, actually said — and here is enough of the circumstance for you to judge it yourself.
 
 ---
 
