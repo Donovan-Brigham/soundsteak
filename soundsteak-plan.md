@@ -1191,6 +1191,43 @@ AI companies training on scraped music get waveforms and sparse metadata pulled 
 **The AI company partnership opportunity:**
 The moment this catalog begins to form, it becomes a conversation with frontier AI labs — Anthropic, Google DeepMind, OpenAI, Stability AI — about what data fields, metadata structures, and consent frameworks make a music catalog maximally useful to them. That conversation is worth having in Year 1, while the profile system and intake questionnaire are still being designed. Getting the architecture right from the first artist costs nothing extra. Retrofitting it after 500 releases would be expensive. The right AI partner could also become a platform investor, a developer console anchor client, and a public signal to the industry that SoundSteak is operating at a level no other label is.
 
+## The AI Company Relationship — Every Dimension
+
+SoundSteak does not take a side in the AI debate. It gives artists the infrastructure to take their own side, and honors whatever they decide. That is not a compromise. It is the only principled position available — and it makes SoundSteak the only music platform an AI company can work with cleanly.
+
+Most of what AI companies need from music is unavailable without legal exposure. Scraped audio is a lawsuit. Missing context makes the data shallow. No consent trail means no defensible product. SoundSteak solves all three: artist-authorized, context-rich, provenance-documented from the first recording. That is not just a dataset. It is infrastructure no competitor is building.
+
+The relationship is not a single arrangement. It is every arrangement that serves both parties simultaneously — pursued in parallel, compounding over time.
+
+### Every Way an AI Company Can Be Part of This
+
+**As a data licensee — via the developer console**
+The most immediate relationship. AI companies access the catalog through the metered console: clean audio, labeled stems, artist context, consent documentation, provenance records. Everything a training pipeline needs. Everything a lawsuit requires you to have. Revenue flows to artists and SteakHolders automatically.
+
+**As a technology partner — powering the intelligence layer**
+The Signal Boards, the Cue system, the organic review extraction, the attribution modeling, the fan behavior clustering — all of this is AI-powered infrastructure that SoundSteak needs and an AI company can build better than anyone. A purpose-built model trained on SoundSteak data and deployed inside the platform makes the intelligence layer dramatically more capable. The model improves on the data. The data improves as the model gets better at extracting it. It compounds.
+
+**As a co-builder of the intake interview system**
+The artist intake interview — the conversation that extracts themes, influences, production notes, creative intent — can be conducted by an AI partner whose training pipeline shaped the questions being asked. The AI company gets data structured exactly the way their models need it. SoundSteak gets an interview process better than any human journalist could run at scale. The catalog that results is the most AI-native music dataset in existence, built in collaboration with the company that uses it.
+
+**As a platform investor**
+An AI company with a strategic interest in the catalog's growth has every reason to invest in the platform that builds it. As a SteakHolder at the platform level — not in individual releases, but in SoundSteak itself — they benefit from every release signed, every artist onboarded, every context layer added. Their investment accelerates the catalog. The catalog accelerates their models. That is a compounding return on both sides.
+
+**As a public signal to the industry**
+A named AI partnership — Anthropic, Google DeepMind, OpenAI — announced alongside the first cohort is a different kind of credibility than any press mention. It tells the industry that SoundSteak is operating at a level no other label has reached. It tells artists that their data is valuable enough that the world's most sophisticated AI companies came to the table. It tells investors that the developer console is not a speculative feature — it has anchor clients before the platform launches.
+
+**As an equity partner in specific releases**
+An AI company could hold a stake in a release LLC — not as a cash investor, but as a technology contributor. If their model runs the intake interview, powers the Cue system for that release cycle, or generates the Signal Board insights that drive its merch and sync performance, that contribution has quantifiable value. An equity arrangement in exchange for technology services is a natural extension of the same model that applies to studios and engineers.
+
+**As a consumer of stem licensing, spatial audio, and format-specific products**
+Beyond training data, AI companies are building products that need music in specific forms: isolated stems for generation tools, spatial audio for immersive applications, instrumental versions for app integration. The stem licensing pathway and the format catalog serve these needs directly — metered, consent-documented, and priced per the artist's terms.
+
+### The Pitch
+
+This is not "we have data for sale." It is: **we are building the only music platform designed from the start to be an AI partner. The catalog is clean. The artists consented. The context is documented. Come build the intelligence layer with us — and be in every dimension of what this becomes.**
+
+The relationship is as big as both parties want it to be. Data vendor, technology partner, co-builder, platform investor, equity holder, public signal. All of the above. None of it in conflict. All of it compounding.
+
 **Each artist's rate is specified in their contract.** Artists and SteakHolders vote on licensing strategy through governance. Revenue flows through the LLC exactly like streaming royalties.
 
 **"Need More Context" — The Console as a Data Generation Engine**
