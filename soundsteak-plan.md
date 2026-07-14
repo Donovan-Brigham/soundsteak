@@ -964,6 +964,134 @@ The album emerges from the process. It isn't pre-declared. That's a different re
 
 ---
 
+## The Product Catalog — Everything a Release Generates
+
+A SoundSteak release is not a single. It is a product catalog that grows over time. The recorded track is the seed. What grows from it — digital products, physical formats, stem licenses, merch, events — is the full return on the investment. Every item in the catalog is tracked, approved by the artist, and earns through the same LLC.
+
+The catalog expands in two directions simultaneously: **depth** (more products derived from the same recording) and **breadth** (more recordings that unlock new format possibilities). An artist with one song has a specific product set. An artist with five songs has a different and larger one.
+
+---
+
+### Tier 1 — Digital Products (Available at Signing, Zero Production Cost)
+
+These ship immediately. No inventory. No lead time. No fulfillment cost. Every artist launches with all of these active or available.
+
+| Product | Description | Availability |
+|---|---|---|
+| **Streaming master** | The single on all platforms via ISRC | At release (Month 10–11) |
+| **Digital download bundle** | Lossless audio + lyrics + liner notes PDF + production notes | At signing — first merch drop |
+| **A cappella** | Vocal stem published as a standalone product | Artist opt-in at signing |
+| **Instrumental** | Full instrumental derived from stem mix | Artist opt-in at signing |
+| **Stem pack** | All individual stems available for producer license | Artist opt-in at signing |
+| **Context data** | Artist answers, production notes, influence maps — available via developer console | Continuous through release year |
+
+---
+
+### Tier 2 — Merch Cadence (Four Drops Per Year, Every Year)
+
+Every artist ships on the same platform-wide rhythm — one product released as a pre-sale every two to three months. The cadence is consistent. The product evolves.
+
+**Year 1 — every artist, at signing:**
+
+| Drop | Timing | Product |
+|---|---|---|
+| **1** | Month 1–2 | Digital bundle — lossless audio, lyrics, liner notes, production notes |
+| **2** | Month 3–4 | Zine — numbered print run, artist-designed, 30-day pre-order window |
+| **3** | Month 5–6 | Shirt — one design, one colorway, print-on-demand, 30-day window |
+| **4** | Month 10–11 | Event tickets — SteakHolder first-window pre-sale |
+
+**Catalog unlocks by song count:**
+
+| Songs on Platform | New Merch Available |
+|---|---|
+| 2 | 45rpm vinyl — one song per side. The natural two-song format. |
+| 3 | Cassette or 10" EP, 3-track digital bundle upgrade |
+| 4 | Brand partnership collab drops become viable |
+| 5 | Compilation LP, box set, zine companion volume |
+| 7+ | Full album vinyl, definitive collection |
+
+Each new format is a governance moment — SteakHolders see the streaming data, vote on whether to greenlight the run, and hold the first pre-order window when it opens.
+
+---
+
+### Tier 3 — Physical Formats (Milestone-Triggered, Governance-Voted)
+
+Physical products are not launched on day one. They unlock as the catalog and the audience earn them. Every run is a pre-sale first — no inventory exists until orders justify pressing.
+
+| Format | Trigger | Notes |
+|---|---|---|
+| **7" vinyl (45rpm)** | 2 songs on platform | One song per side. First physical milestone. Collector format with real market. |
+| **Cassette** | 3+ songs or aesthetic fit | Strong lo-fi and collector market. Short runs (50–200 units) viable. |
+| **10" EP vinyl** | 3–4 songs | Mid-format. Less common but distinctive. |
+| **CD** | Audience demographic warrants it | Low production cost. Still meaningful in certain markets. |
+| **12" LP vinyl** | 7+ songs or compilation | The premium physical artifact. Minimum 100–300 unit run. 10–16 week lead time. |
+| **8-track** | Artist chooses as a statement | Niche collector format. Custom manufacturing. |
+| **USB / digital card** | Any point | High-resolution download on a physical object. Bonus content, art files, liner notes. |
+| **Zine** | Year 1 (drop 2) and any subsequent release | Numbered, designed, printed. Artist-directed. Can be digital companion or physical exclusive. |
+| **Box set** | Compilation milestone | Vinyl + zine + USB + additional artifacts bundled as a collector edition. |
+
+---
+
+### Tier 4 — Stem Licensing Products (Artist-Approved at Signing, Earn Indefinitely)
+
+Every recording contract requires delivery of individual stereo stems. Each stem is a licensable product the LLC holds permanently. The artist approves which pathways are active at signing — the platform enforces and earns automatically from that point forward.
+
+| Product | Buyer | Notes |
+|---|---|---|
+| **Full stem pack license** | Producers | All stems, licensed for use in one production. Attribution tracked. |
+| **Individual stem license** | Producers | Single instrument or vocal element. Priced per stem type. |
+| **Remix license** | Producers / fans | Full stems licensed for an official remix. Remix may become its own LLC. |
+| **Pre-cleared sample** | Producers | Artist sets a rate at signing. Clearance is automatic — no lawyers. |
+| **AI training data** | AI companies | Clean, labeled, consent-documented stems. Premium tier of music training data. |
+| **AI generation license** | AI developers | Stems as reference for style generation. Separate opt-in per licensee type. |
+| **AI app integration** | App developers | Metered per-use through developer console. |
+| **Karaoke / instrumental** | Consumers / platforms | Vocal stem muted. Published as a separate streaming and download product. |
+| **Sync — stem version** | Supervisors | Instrumental or isolated element for TV, film, advertising. Expands sync conversation. |
+| **Educational license** | Schools / platforms | Low rate, automated, high volume. |
+| **Fan remix competition pack** | Fans | Time-limited stem release for a structured competition. Artist and SteakHolders judge. |
+| **Physical stem release** | Collectors | USB card with full stem pack. SteakHolder pre-order window first. |
+
+---
+
+### Tier 5 — Licensing & Sync (Ongoing, Platform-Brokered)
+
+The platform acts as the sync licensing agent. All inquiries route through the platform. All deals close inside the system.
+
+| License Type | Description |
+|---|---|
+| **Sync — master** | TV, film, advertising, branded content. Full mixed master licensed for a placement. |
+| **Sync — stems** | Supervisor requests an instrumental or specific element. Expanded licensing opportunity. |
+| **Spatial audio premium** | Dolby Atmos or spatial mix licensed for premium platforms. |
+| **Gaming integration** | Track licensed for use in a game soundtrack or in-game event. |
+| **Livestream / social** | Twitch, TikTok, YouTube creators pay per-use rates. Content ID managed by platform. |
+| **Brand deal integration** | Track used in a brand campaign. Platform contracts on artist's behalf. |
+
+---
+
+### The Full Catalog View — What One Artist Can Have After 5 Years
+
+An artist who has been on the platform for five years, released five singles, and engaged consistently with the merch cadence and stem licensing has a catalog that looks like this:
+
+- 5 streaming singles earning across all platforms
+- 5 digital download bundles (updated annually)
+- 5 zines (one per release year, each a numbered artifact)
+- 5 shirt designs (one per year)
+- 1 × 45rpm vinyl (songs 1 and 2)
+- 1 × cassette or 10" EP (songs 1–3)
+- 1 × compilation LP (songs 1–5, governance-voted)
+- 1 × zine companion volume for the compilation
+- Active stem licensing across 13 approved pathways
+- 5 years of event ticket pre-sales
+- A cappella and instrumental versions of every song that warranted them
+- Sync placements accumulating across TV, film, games, and social
+- AI licensing revenue from training data and generation use
+
+Every one of those items is a line on the earnings dashboard. Every one pays SteakHolders automatically. The artist who signed five years ago with one song now has a catalog that earns across dozens of channels, without having renegotiated a single contract.
+
+That is what the platform is actually selling. Not a single. A machine.
+
+---
+
 ## Revenue Infrastructure
 
 The platform captures and routes all artist revenue streams automatically. Every dollar that enters the system is split and paid to individuals directly — never pooled inside a band account.
