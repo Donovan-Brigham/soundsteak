@@ -209,6 +209,22 @@ Everything else in this platform is built on top of that.
 
 ---
 
+## A Note on Being Unusual
+
+This platform does things the music industry has never done. Fan-curated vinyl. Stem licensing at signing. Signal-generated compilations. Governance votes to select a designer. A fan's voice weighted by stake and delivered to the artist as signal rather than noise.
+
+Some of it will seem unusual.
+
+That is the point.
+
+**What is unusual for the usually bad is usually good.**
+
+The music industry's usual is a bassist who never got paid. A fan whose early belief was worth nothing. An engineer whose credit disappeared. A label that kept the money because the system let it. The usual is the problem.
+
+Every feature of this platform that seems unusual is unusual because it is the opposite of something the industry normalized that it never should have. The discomfort is the signal. Lean into it.
+
+---
+
 ## Language & Brand Voice
 
 Words matter. The platform speaks differently depending on who it's talking to — but never uses industry jargon that creates distance or sounds like a check you wait for.
