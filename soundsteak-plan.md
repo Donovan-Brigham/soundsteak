@@ -264,9 +264,9 @@ Nobody forgets that word. Nobody confuses it with anything else. Nobody else can
 
 **The word does its own marketing in the wild:**
 
-Two people talking about a band. One says *"I'm a SteakHolder in them."* The other person hears S-T-E-A-K — pauses — and the whole platform clicks into place from a single word. *Oh yeah, SoundSteak. Me too.*
+Imagine two people talking about a band. One says *"I'm a SteakHolder in them."* The other person hears S-T-E-A-K — pauses — and the whole platform clicks into place from a single word. *Oh yeah, SoundSteak. Me too.*
 
-That moment requires no explanation, no pitch, no context. The terminology carries the brand. A fan saying they're a SteakHolder in a band is simultaneously telling someone what the platform is, what ownership in music feels like, and that it's something worth being part of. One word. Unprompted. In the wild. That is the best marketing the platform will ever have — and it happens every time a fan talks about an artist they believe in.
+That moment requires no explanation, no pitch, no context. The terminology carries the brand. A fan saying they're a SteakHolder in a band is simultaneously telling someone what the platform is, what ownership in music feels like, and that it's something worth being part of. One word. Unprompted. In the wild. That is the best marketing the platform will ever have — and it will happen every time a fan talks about an artist they believe in.
 
 ---
 
