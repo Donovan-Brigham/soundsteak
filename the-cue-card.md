@@ -83,8 +83,6 @@ Human beings do not communicate in forms. They do not express themselves through
 
 It isn't. It is what human communication looks like when you ask it to stuff itself in a box.
 
-Every star rating you've ever shipped is evidence that you weren't there for it.
-
 ---
 
 ## Part II — What Listening Looks Like
