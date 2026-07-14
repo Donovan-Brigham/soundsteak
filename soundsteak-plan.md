@@ -1811,6 +1811,97 @@ Every competitor operates as a black box. They change policies, adjust fees, mak
 
 ---
 
+## The Signal Boards
+
+The platform is always listening. Every stream, every click, every Cue response, every merch purchase, every SteakHolder location — all of it is behavioral data that reveals what the community wants before anyone articulates it. The Signal Boards are how that data surfaces.
+
+A Signal Board is a rotating, algorithmically-generated display of what the platform's data is currently implying — pairings the community is already making, markets that are building demand, formats that the streaming patterns are suggesting, opportunities the platform has spotted before anyone asked. Boards are not curated by staff. They are not submission queues. They emerge from signal and fade when the signal weakens.
+
+There is no single board. There are many, each a different lens on the same underlying data, rotating as conditions change.
+
+---
+
+### The Boards
+
+**Community Proposed**
+Collaborations, pairings, and cross-artist ideas implied by streaming behavior. If enough fans who love Artist A also consistently stream Artist B, that pairing surfaces. It did not need to be submitted. The behavior already said it. The board makes the implicit explicit.
+
+**Market Demand**
+Geographic clusters where SteakHolder density or streaming volume is building around multiple artists without a corresponding show on the calendar. The board doesn't say "someone wants a show here." It says: *"Chicago. Three artists. Same fans. No event."* The city, the artists, the gap — surfaced together.
+
+**Format Signals**
+Streaming patterns that imply a physical or product opportunity. Two songs consistently played back to back by the same listeners implies a split vinyl. A catalog track suddenly spiking implies a reissue moment. High instrumental stream counts on a track imply sync interest or karaoke demand. The board surfaces the pattern and lets the community respond to it.
+
+**Rising Pairings**
+New artists on the platform getting cross-streamed with established ones. An early signal that two audiences are already finding each other — before either artist or their SteakHolders have noticed.
+
+**Sync Mood**
+Songs on the platform clustering around a mood, tempo, or emotional register that sync supervisors are currently searching. The board doesn't pitch the artist. It surfaces the opportunity so the artist and SteakHolders can decide whether to pursue it.
+
+**Merch Signals**
+Fans who bought one artist's zine are also streaming another artist heavily. Fans who own the shirt keep showing up at the same shows. Cross-pollination in the merch purchase data that implies a collab product before either artist has considered it.
+
+**Show Demand**
+Markets where SteakHolder concentration and streaming volume are high but no live event exists. Ranked by signal strength. Geo-precise. This board is one of the most actionable — it tells artists and the platform where showing up would land.
+
+**Catalog Moments**
+Songs from earlier in the platform's history that are experiencing renewed attention — a spike in streams, a new sync match, a geographic surge. The board surfaces these before they peak so the platform can capitalize on the moment: a reissue, a new merch drop timed to the spike, a Cue to the artist.
+
+**Open Collabs**
+Artists who have responded to a Cue indicating they are open to collaboration. No names surfaced without consent. The board shows signals — genre overlap, audience intersection, geographic proximity — between willing artists. A matchmaking surface built entirely from opt-in data.
+
+**Fan-Curated Patterns**
+Aggregated tracklist data from fan-curated vinyl orders and digital bundles. Which songs keep appearing together. Which pairings fans are already making when given full freedom. This board tells artists and SteakHolders how the community is actually experiencing the catalog — not how the platform presented it.
+
+---
+
+### How Boards Trigger Cues
+
+A Signal Board is not a passive display. It is a Cue surface. The platform watches how each person interacts with each board — what they linger on, what they click through, what they return to — and uses that behavior to decide when and whether to send a Cue.
+
+The Cue does not fire immediately on interaction. The platform waits for the right moment — a pattern of engagement that suggests genuine interest rather than accidental contact. When the moment arrives, the Cue appears in the person's profile. It is calibrated to who they are and what their behavior implied:
+
+- A fan who keeps returning to a collab pairing gets: *"You've been spending time on the [Artist A] × [Artist B] idea. What do you think would make it interesting?"*
+- A SteakHolder in a Chicago artist who engaged with the Market Demand board gets: *"Chicago keeps showing up in your artist's data. Would a show there be worth pursuing?"*
+- An artist who appeared on the Open Collabs board and whose audience is heavily overlapping with another artist gets: *"Your listeners and [Artist B]'s listeners have been finding each other. We thought you should know."*
+
+No one submitted a request. No one filed a proposal. The platform noticed the behavior and asked the right question at the right moment. That is the Cue philosophy applied to governance — organic extraction, not solicitation.
+
+---
+
+### AB Testing and Personalization
+
+Every board is different for every person. The underlying signals are shared, but the framing, the ordering, and the specific entries a person sees are personalized to their behavior, their stakes, their location, and their history on the platform.
+
+The platform runs continuous AB testing across board presentations:
+- Same signal, different framing: one group sees a pairing as a collab opportunity, another sees it as a show idea, another sees it as a split vinyl
+- Same board, different ordering: which entry surfaces first for which type of user
+- Same Cue, different timing: when in the interaction cycle the question lands
+- Geo-specific variations: a Market Demand board entry that surfaces as a show idea for fans in that city surfaces as an investment opportunity for SteakHolders elsewhere
+
+The winning framing — measured by Cue response rate, governance participation, and downstream action — becomes the default for that signal type. The platform learns continuously what surfaces feel right to what people at what moment.
+
+No artist, SteakHolder, or fan sees a board designed for someone else. A producer sees different Format Signals than a casual listener. A SteakHolder in five artists sees a different Community Proposed board than someone who just pledged their first dollar. The same data, shaped by who is looking at it.
+
+---
+
+### What Boards Tell the Platform
+
+Signal Boards are also the platform's internal intelligence layer. The entries that generate the most Cue responses, the most governance participation, the most downstream action — those are the signals worth acting on first. The platform's team does not need to guess what the community wants. The boards tell them, weighted by the engagement of people who have actual stakes.
+
+This is the most valuable form of product intelligence: emergent, behavioral, stake-weighted, and already filtered through the community's genuine interest. No survey. No town hall. No suggestion box. Just a living map of what the people who care most are already doing.
+
+---
+
+### Open Questions — Signal Boards
+- [ ] What is the minimum signal threshold before a pairing or idea surfaces on a board? (Avoids surfacing noise too early)
+- [ ] How long does an entry stay on a board before it ages off if the signal weakens?
+- [ ] Do artists see the boards for signals involving their own music? What do they see and when?
+- [ ] Is there a public version of certain boards visible to non-registered visitors, or are all boards gated to platform members?
+- [ ] How does the platform handle a Signal Board entry that implies something the artist has already privately declined?
+
+---
+
 ## Governance & Shareholder Voting
 
 Governance operates on two distinct tiers — artist-level and platform-level. Both are public, both are binding within their defined scope, and both treat stakeholders as genuine owners rather than passive participants. This is one of the platform's most differentiated features and one of its most powerful trust builders.
