@@ -198,6 +198,7 @@ Everything else in this platform is built on top of that.
 ## Core Philosophy
 
 - **Everyone gets paid their cut of the steak — artist, investor, engineer, promoter, influencer, fan. Every contributor documented, protected, and paid automatically**
+- **No one tells the artist what to make.** The platform funds, documents, and distributes. It does not direct. Creative decisions belong to the artist — always, without exception. Governance votes select who gets hired. The hired person decides what they create.
 - Earnings from work already done cannot be taken away by anyone, through any mechanism the platform controls
 - The platform looks out for artists because that looks out for investors
 - Every artist gets the infrastructure a major label would provide — automatically, at signing
@@ -1915,7 +1916,7 @@ If a service, vendor, or creative is not registered with a profile on SoundSteak
 | **1. Participation confirmation** | Each contributing artist confirms via Cue — split terms, track selection, timeline | All contributing artists |
 | **2. Visual direction vote** | Governance vote: which artist's visual identity leads the cover? SteakHolders across all contributing LLCs vote | All SteakHolders of contributing artists |
 | **3. Designer selection** | Governance vote: SteakHolders and contributing artists browse designer profiles — verified credits, platform work history, documented style — and vote on who to hire. No spec work. No submission calls. One designer is selected and hired. | All SteakHolders of contributing artists |
-| **4. Designer commissioned** | The hired designer is briefed and paid. They produce what they produce. Their creative direction is their own within the agreed brief. Credit is permanent on the release record. Equity arrangement negotiable through the platform. | Selected designer only |
+| **4. Designer commissioned** | The hired designer is paid. They produce what they produce. No one tells them what to make. Credit is permanent on the release record. Equity arrangement negotiable through the platform. | Selected designer only |
 | **5. Mastering** | Cue to mastering engineers on the platform for the compilation master | All platform mastering engineers |
 | **6. Zine / companion piece** | If the release warrants a printed companion, Cue goes to writers and designers on the platform | Platform writers and designers |
 | **7. Pressing / printing** | Routes only to platform-registered pressing plants and printers. No external fulfillment service unless it holds a platform profile | Registered vendors |
@@ -1926,7 +1927,7 @@ If a service, vendor, or creative is not registered with a profile on SoundSteak
 
 SoundSteak does not run design competitions. It does not ask multiple creatives to submit work with only one getting paid. Spec work is one of the most exploitative practices in the creative industry — and a platform built around paying people correctly cannot use it as a sourcing mechanism.
 
-The model is always: the community decides who gets hired, then the hired person does the work. Governance votes and Cues are used to select the artist. Once selected, they are commissioned, briefed, and paid. What they produce is theirs to make. Their creative direction is their own within the brief. No one else submits. No one else works for free hoping to win.
+The model is always: the community decides who gets hired, then the hired person does the work. Governance votes and Cues are used to select the artist. Once selected, they are commissioned and paid. What they produce is theirs to make. No one tells them what to create. No one else submits. No one else works for free hoping to win.
 
 This applies to every creative need the platform generates — cover art, zine design, merch design, photography direction, music video direction, event branding. The selection is a vote. The execution is a commission.
 
