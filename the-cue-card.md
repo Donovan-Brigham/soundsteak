@@ -81,7 +81,7 @@ The feeling evaporates. The metric climbs. No one notices the difference because
 
 Human beings do not communicate in forms. They do not express themselves through reaction buttons or character-limited fields or prompted ratings. They communicate in conversation — messy, contextual, nonlinear, arriving sideways in the middle of something else. The platforms looked at that and built containers for it. Then they looked at what the containers collected and called it human communication.
 
-It isn't. It is what human communication looks like when you ask it to hold still and fit inside a box.
+It isn't. It is what human communication looks like when you ask it to stuff itself in a box.
 
 Every star rating you've ever shipped is evidence that you weren't there for it.
 
