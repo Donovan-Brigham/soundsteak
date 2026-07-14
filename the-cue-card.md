@@ -19,7 +19,7 @@ Not because it was looking for a review. Not because a prompt was waiting at the
 
 It interrupts — gently, briefly, in the spirit of the conversation already taking place. *The band would love to hear this. Would you mind if we shared it on their profile?*
 
-*OMG. Yes. Please.*
+*OMG! Are you freaking kidding me?! YES! Please.*
 
 Done.
 
