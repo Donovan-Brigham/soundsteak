@@ -11,7 +11,7 @@ Donovan Brigham
 
 ### You Already Know How This Feels
 
-Someone is messaging a friend. It's late. They're not thinking about the platform they're on. They're just talking — the way people actually talk — about what this band has meant to them over the last two years. The words are specific. The feeling is real. It's the most honest thing anyone has ever said about this band.
+Someone is messaging a friend. It's late and music is playing in the background. They're just talking — the way people actually talk — about what this band has meant to them over the last two years. The words are specific. The feeling is real. It's the most honest thing anyone has ever said about this band.
 
 The system catches it.
 
