@@ -231,20 +231,6 @@ Attribution is not a feature. It is what expression looks like when a platform r
 
 ---
 
-### The Earliest Believers
-
-There is a particular kind of person that every significant thing produces: the one who was there first.
-
-Before the crowd arrived. Before the consensus formed. Before it was safe or obvious or popular to say so. They saw it early, said so clearly, and the record should show it — not because they want credit, but because that record is the most honest account of how something actually grew.
-
-Right now, that record does not exist. Platforms have timestamps but no provenance. You can see when something was posted; you cannot see what a person's relationship to it was, or how long they'd been paying attention before they spoke. The earliest believers are indistinguishable from anyone else. Their timing is invisible. Their position in the story is lost.
-
-A listening platform changes this permanently. Because expression is captured in context — with identity, with relationship history, with the moment intact — the record of who was there first is structural, not reconstructed. It does not require anyone to claim it. It does not depend on the platform deciding to surface it. It is simply part of what the record contains, available to anyone who wants to understand how something came to be.
-
-This is not a small thing. The ability to prove you believed in something before it mattered — and to have that belief documented on a platform that did not incentivize it, did not prompt it, did not manufacture it — is a different kind of signal than anything a rating system produces. It is evidence of genuine conviction, caught at the moment of its expression, before the outcome was known.
-
----
-
 ### What Trust Looks Like at Scale
 
 Trust at scale, under the current model, is a number. An aggregate score computed from self-selected responses to prompted requests, averaged across time, displayed next to a product or a person or a place as if the number means something precise.
@@ -256,6 +242,20 @@ What a listening platform produces, over time, is a body of evidence. Not a scor
 This is harder to display than five stars. It requires more of the person reading it. It also tells the truth in a way that five stars structurally cannot — because it does not ask you to trust the aggregate. It asks you to read the record and decide for yourself.
 
 That is what trust has always required. Platforms just stopped asking for it because asking for it was harder than shipping a widget.
+
+---
+
+### The Earliest Believers
+
+There is a particular kind of person that every significant thing produces: the one who was there first.
+
+Before the crowd arrived. Before the consensus formed. Before it was safe or obvious or popular to say so. They saw it early, said so clearly, and the record should show it — not because they want credit, but because that record is the most honest account of how something actually grew.
+
+Right now, that record does not exist. Platforms have timestamps but no provenance. You can see when something was posted; you cannot see what a person's relationship to it was, or how long they'd been paying attention before they spoke. The earliest believers are indistinguishable from anyone else. Their timing is invisible. Their position in the story is lost.
+
+A listening platform changes this permanently. Because expression is captured in context — with identity, with relationship history, with the moment intact — the record of who was there first is structural, not reconstructed. It does not require anyone to claim it. It does not depend on the platform deciding to surface it. It is simply part of what the record contains, available to anyone who wants to understand how something came to be.
+
+This is not a small thing. The ability to prove you believed in something before it mattered — and to have that belief documented on a platform that did not incentivize it, did not prompt it, did not manufacture it — is a different kind of signal than anything a rating system produces. It is evidence of genuine conviction, caught at the moment of its expression, before the outcome was known.
 
 ---
 
