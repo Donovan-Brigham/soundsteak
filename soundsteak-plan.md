@@ -1030,6 +1030,75 @@ Every request answered makes the catalog smarter. Every question the market asks
 
 This is not a feature that exists anywhere in the music industry. No catalog, no API, no data product lets buyers of music data ask the artist a follow-up question. SoundSteak does — and pays the artist for the answer.
 
+### Stems as Contract Requirement and Product Infrastructure
+
+Every recording contract on SoundSteak requires the delivery of individual stereo stem files for every instrument and vocal element in the recording. This is not optional and is not subject to negotiation. It is a structural requirement of the release contract — the same way ISRC registration is a requirement. The engineer delivers stems. The platform receives them. They are archived, tagged, and held as a first-class asset in the release LLC.
+
+**Why stems are a contract requirement:**
+
+The mixed-down stereo master is the final product. The stems are the infrastructure. A catalog of stereo masters is valuable. A catalog of stereo masters with clean, labeled, individually tracked stems is worth significantly more — to sync supervisors, AI companies, producers, educators, and the artist's own future projects. Requiring stems at the recording stage costs nothing extra; failing to require them and trying to recover them later is often impossible.
+
+**Standard stem deliverables (required for every release):**
+
+| Stem | Notes |
+|---|---|
+| Lead vocal | Dry and wet (with processing) |
+| Backing vocals | All harmonies, stacked separately |
+| Drums | Full kit mix, plus kick and snare isolated if tracked separately |
+| Bass | Direct and/or amplified |
+| Guitars | All parts isolated |
+| Keys / synths | All parts isolated |
+| Strings / brass / other | Any additional instrumentation |
+| Full instrumental | All elements minus vocal |
+| A cappella | Vocal only, dry |
+
+The specific stems delivered depend on the instrumentation of the recording. The contract specifies what is required based on the session lineup.
+
+---
+
+### The Stem-to-Product Pathway
+
+Stems are not an archive item. They are an active product category with their own licensing template, their own approval workflow, and their own revenue pipe. Every release LLC holds its stems as assets. The artist approves each potential use at signing through a Cue sequence — a checklist of every pathway the platform supports, with an opt-in or opt-out for each.
+
+**The approval template — artist sets terms at signing for every pathway:**
+
+| Use Type | Description | Artist Decision |
+|---|---|---|
+| **Full stem pack — producer license** | A producer purchases a licensed copy of all stems to use in their own production. Attribution tracked. Revenue to LLC. | Opt in / opt out |
+| **Individual stem license** | A producer licenses a single element — the drum track, the bass line, the guitar part — for use in their own work. Priced per stem. | Opt in / opt out per stem type |
+| **Remix license** | A fan or producer licenses the full stem pack to create an official remix. The remix may become its own release with its own LLC, with the original artist holding a documented attribution stake. | Opt in / opt out |
+| **AI training data** | Stems made available to AI companies for model training. Clean, labeled, individually tracked stems are the premium tier of music training data. Each stem type can be individually opted in or out. | Opt in / opt out per stem type |
+| **AI generation licensing** | A developer uses the artist's stems as reference material to generate music in the artist's style. Separate and more restrictive than training data — requires explicit opt-in per licensee type. | Opt in / opt out |
+| **AI app integration** | An app (playlist generator, mood-matching tool, sync search engine) uses the stems in a live product. Revenue is metered per use through the developer console. | Opt in / opt out |
+| **Karaoke / instrumental** | Instant product derived from stems — the vocal stem is muted and the instrumental is published as a separate product. Low production cost, immediate earn. | Opt in / opt out |
+| **A cappella release** | The vocal stem published as a standalone product — sheet music companion, fan remix resource, collector release. | Opt in / opt out |
+| **Sync — stems available** | When a sync supervisor licenses the master for TV, film, or advertising, they may also request a stem version — instrumental for a scene that needs no vocals, or a specific element isolated. Pre-approving stem sync expands the sync conversation significantly. | Opt in / opt out |
+| **Music education licensing** | A school, teacher, or educational platform licenses stems for classroom analysis, ear training, or production study. Low rate, automated, high volume. | Opt in / opt out |
+| **Sample clearance — pre-cleared rate** | The artist sets a pre-approved rate at which any element of their stems can be licensed as a sample by another producer. No lawyer required on either side — the platform handles the clearance automatically at the stated rate. | Opt in / set rate |
+| **Physical stem release** | A USB card or digital card containing the full stem pack sold as a collector product. SteakHolder pre-order window first. Limited run. | Opt in / opt out |
+| **Fan remix competition** | Stems released to a defined pool of fans or the public for a time-limited remix competition. Entries judged by the artist and/or SteakHolders. Winner may receive an official release credit. | Opt in / opt out |
+
+**How the approval works:**
+
+At signing, a Cue sequence walks the artist through each pathway one at a time — not a wall of checkboxes, but a structured conversation. For each pathway they opt into, they set their rate parameters (fixed fee, revenue share percentage, or platform-defined rate for that category). The platform encodes their preferences into the release contract and enforces them automatically at the API level. No one can license a stem in a way the artist didn't approve. No revenue from stem licensing bypasses the LLC.
+
+**What this means for the release LLC:**
+
+Stems are a revenue-generating asset class the LLC holds in perpetuity. Every opt-in pathway is an income stream that does not require the artist to do anything after signing. A producer discovering the drum track six years after the single dropped, licensing it, using it in a record that charts — that revenue flows back to the LLC and distributes to every SteakHolder, automatically, at their documented percentage. The stem catalog is the long tail of the release. It earns on its own timeline.
+
+**What this means for the developer console:**
+
+The AI licensing pathways feed directly into the developer console. A labeled, consent-documented stem catalog — where every instrument is individually tagged, every use type is explicitly permitted or denied, and every licensee is tracked — is the highest-quality music data asset in the industry. No other platform is building this by design from the first recording. SoundSteak is.
+
+**Open questions — Stems**
+- [ ] Who holds the master stem files — platform-managed cloud storage, artist-managed with platform access, or distributed across both?
+- [ ] What file format and sample rate standard does the platform require? (Likely 24-bit / 48kHz WAV minimum)
+- [ ] What happens to stem licensing rights if an artist exits the platform?
+- [ ] Does the platform set floor rates for each pathway category, or are rates entirely artist-defined?
+- [ ] How are stems tagged and labeled — engineer-submitted metadata, platform-standardized taxonomy, or AI-assisted tagging at upload?
+
+---
+
 ### Artist Rights in the AI Era
 
 AI use of music without permission is one of the defining legal and ethical battles of the current moment. SoundSteak's position is clear: **the artist decides. The platform enforces it.**
