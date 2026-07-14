@@ -914,7 +914,9 @@ Physical formats are not nostalgia. They are a distinct product category with a 
 | **CD** | Low production cost. Still meaningful in certain markets and demographics. Commissioned through platform partner pressing facilities. |
 | **Cassette** | Strong collector and lo-fi aesthetic market. Short runs (50–200 units) are viable. Commissioned and tracked as a merch-class product. |
 | **Vinyl** | The premium physical format. 7" single, 10" EP, 12" LP. Minimum viable runs of 100–300 units. Pressing lead time 10–16 weeks — planned into the release calendar. |
-| **8-Track** | Niche collector market. Custom manufacturing through specialty vendors. A statement format for artists who want it. |
+| **Cross-artist merch** | Collaborative products between two or more platform artists — split vinyl, cohort shirt, compilation zine. Each artist's LLC earns their proportional share automatically. |
+| **Cohort compilation** | A vinyl, digital release, or zine featuring all artists from a signing class. The Class of 2027, front to back. SteakHolders in any contributing artist earn from their slice of every sale. |
+| **Fan-curated personal vinyl** | A fan selects individual tracks from across the catalog and orders a custom pressing — their personal mix-tape on vinyl. The platform handles mastering, pressing, and split routing. Every artist on the tracklist earns their cut proportional to track count. A Cue can surface this: *"You've been listening to these six artists — want to put them on a record?"* |
 | **USB / Digital card** | High-resolution download delivered on a physical object. Can include bonus content, visual art files, liner notes as PDFs. |
 | **Zine** | A printed companion piece — lyrics, artwork, artist notes, photographs, production stories, essays. Commissioned through graphic designers and writers on the platform. Limited print runs. The zine is the album's context made physical. |
 
@@ -941,6 +943,36 @@ The zine is commissioned through designers and writers who are already on the pl
 **Vinyl as a milestone:**
 
 A vinyl pressing is the physical declaration that a release has earned permanence. On SoundSteak, the vinyl milestone is a governance vote — SteakHolders decide, based on streaming performance and financial position, whether a vinyl run makes sense. If they vote yes, the platform commissions it, manages the pressing timeline, opens pre-orders to SteakHolders first, and routes the sales revenue back into the LLC. The vinyl pre-order is also a new discovery moment — a reason for SteakHolders to share the artist again, to new audiences who care about physical music.
+
+### Cross-Artist Products
+
+The platform's roster is not a collection of isolated artists. It is a catalog. Once multiple artists exist on the platform, products that cross artist boundaries become possible — and some of them are among the most compelling products the platform can offer.
+
+**Cross-artist merch:**
+
+Two or more platform artists collaborate on a shared product — a split 45rpm vinyl (one artist per side), a cohort shirt featuring all five signing-class artists, a compilation zine with each artist contributing one page. The product is commissioned through the platform, pre-ordered by SteakHolders of any contributing artist, and revenue is routed automatically to each contributing LLC at a defined split. SteakHolders in any one of the contributing artists earn from their artist's portion of every sale. No cross-LLC money movement happens manually — the system routes it.
+
+**The cohort compilation:**
+
+Every signing class is a natural compilation. Five artists. One year. One event. The Class of 2027, front to back — a vinyl or digital release that captures the entire cohort as a collected artifact. It ships at or after the graduation event, when all five singles are finished. SteakHolders who backed any artist in the class can pre-order it. It is also a discovery product for new listeners: one record that introduces the whole class at once.
+
+The cohort compilation is a platform product, not an individual artist product. Revenue splits are defined by track count and any additional contribution (artwork, liner notes). Every contributing LLC earns automatically.
+
+**The fan-curated personal vinyl:**
+
+A fan goes into the platform, browses the catalog, and selects individual tracks from across multiple artists to build their own tracklist. The platform presses it as a custom vinyl — their personal mix-tape, on a real record, with real sleeve art generated from the catalog's visual assets.
+
+Every artist on the tracklist earns their cut, proportional to how many of their tracks appear. The pressing cost is covered by the fan at order. The platform handles mastering, sequencing, pressing coordination, and revenue routing. No artist needs to approve each individual fan order — the licensing terms they set at signing cover this use type as an opt-in pathway.
+
+The Cue system is the natural discovery surface for this product: *"You've been streaming these six artists consistently for the past three months. Want to put them on a record?"* A fan who might never have thought to build a compilation gets the idea surfaced at exactly the right moment.
+
+This product does not exist anywhere in the music industry at this level of integration. It is uniquely possible on SoundSteak because every track has clean provenance, documented ownership, and pre-set licensing terms. A streaming service cannot offer it. A traditional label cannot offer it. SoundSteak can, because the infrastructure that makes it possible was built for every other reason first.
+
+**Open questions — cross-artist products:**
+- [ ] What is the minimum catalog depth required before fan-curated vinyl is viable? (Likely 3+ artists with 2+ songs each)
+- [ ] How is the cohort compilation timed — does it ship at the graduation event or after all singles have had their individual release window?
+- [ ] Does a fan-curated vinyl require per-order artist notification, or is it fully automated under existing licensing terms?
+- [ ] Is there a track limit for fan-curated vinyl (e.g., max 10 tracks per side), and does the platform enforce sequencing standards?
 
 ### The Album Question
 
@@ -1025,7 +1057,9 @@ Physical products are not launched on day one. They unlock as the catalog and th
 | **10" EP vinyl** | 3–4 songs | Mid-format. Less common but distinctive. |
 | **CD** | Audience demographic warrants it | Low production cost. Still meaningful in certain markets. |
 | **12" LP vinyl** | 7+ songs or compilation | The premium physical artifact. Minimum 100–300 unit run. 10–16 week lead time. |
-| **8-track** | Artist chooses as a statement | Niche collector format. Custom manufacturing. |
+| **Cross-artist merch** | Any milestone | Collaborative product between two or more platform artists. Split vinyl, cohort shirt, compilation zine. Revenue split routed per contributing LLC automatically. |
+| **Cohort compilation** | Annual — end of cycle | All artists from a signing class on one release. Vinyl, digital, or zine. Class of [Year] as a collector artifact. |
+| **Fan-curated vinyl** | When catalog depth warrants | Fan selects tracks from across the catalog. Platform presses and routes. Each artist earns proportional to track count. |
 | **USB / digital card** | Any point | High-resolution download on a physical object. Bonus content, art files, liner notes. |
 | **Zine** | Year 1 (drop 2) and any subsequent release | Numbered, designed, printed. Artist-directed. Can be digital companion or physical exclusive. |
 | **Box set** | Compilation milestone | Vinyl + zine + USB + additional artifacts bundled as a collector edition. |
