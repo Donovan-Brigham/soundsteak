@@ -545,6 +545,10 @@ SteakHolders who back the artist without the guitar know what they signed up for
 
 The artist's LLC doesn't just fund studio sessions. It funds whatever the journey requires. An instrument. A microphone. A laptop for production. An interface. These are production assets of the release — documented in the LLC just like session time and mixing fees. The guitar that made the record is part of the record's story. Its provenance is part of the catalog.
 
+Rehearsal spaces are milestone resources just like recording studios — and in practice, used far more often. An artist doesn't enter a studio once they sign; they spend weeks in a practice room first. Registered rehearsal spaces are bookable through the platform, documented in the release timeline, and paid through the LLC. The room where the band got tight is part of the record's story.
+
+**Future consideration — Space Rental Marketplace:** A peer-to-peer model for practice and studio space (analogous to Airbnb) is a natural long-term extension of this infrastructure. Private spaces, home studios, rehearsal rooms — owners list availability, artists book through the platform. Not a near-term priority, but the ecosystem and identity infrastructure to support it will already exist.
+
 Instrument makers, luthiers, gear manufacturers, and equipment vendors who register profiles on the platform can list assets available to signed artists. A luthier can offer an instrument to be purchased through the platform for an artist who needs one. A gear company can make equipment available through the platform's internal marketplace. Every transaction is documented, every vendor credited, and the platform enforces that all equipment used in a SoundSteak journey is sourced through the system — not from outside it.
 
 A SteakHolder who backed this artist knows their investment helped buy the guitar. That is not a footnote. That is the entire emotional core of why early belief should be worth something.
