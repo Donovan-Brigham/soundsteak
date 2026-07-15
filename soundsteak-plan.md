@@ -529,6 +529,36 @@ Milestones can be:
 - **Unlocked early** — if the artist earns it ahead of schedule through strong performance
 - **Flagged** — if an artist stalls, the platform identifies what needs to be addressed before the next raise opens
 
+### The Artist Who Starts With Nothing — and Why That Is the Point
+
+The current music industry has an entry tax. You need a demo to get a deal. You need money to record a demo. You need equipment to record. You need a space to practice. You need time, which means you need not to be working three jobs. Every gate in the system was built by people who never had to think about those gates — because someone else paid their tuition, bought their first guitar, gave them a room to make noise in without getting evicted.
+
+SoundSteak exists for the person in a small town with 300 real fans, a phone, and a voice — who cannot take the next step because the next step costs money they don't have. The platform signs that artist. The platform builds the infrastructure around whatever they actually need to make the record. And the journey doesn't move faster than the artist's real life allows.
+
+**The journey adapts to the starting point:**
+
+An artist with a studio, an engineer, and a finished demo goes on one milestone path. An artist who needs a guitar before they can record a note goes on another. Both paths end at the same place — a finished single, a funded LLC, a community of SteakHolders who believed early. The timelines are different. The destination is the same.
+
+SteakHolders who back the artist without the guitar know what they signed up for. The milestone map is visible. The journey is documented. They didn't invest in a finished product — they invested in getting someone to the starting line. That is a different relationship than backing someone who already had everything they needed. And the people who do it are the earliest believers of anyone on the platform.
+
+**The equipment and gear pathway:**
+
+The artist's LLC doesn't just fund studio sessions. It funds whatever the journey requires. An instrument. A microphone. A laptop for production. An interface. These are production assets of the release — documented in the LLC just like session time and mixing fees. The guitar that made the record is part of the record's story. Its provenance is part of the catalog.
+
+Instrument makers, luthiers, gear manufacturers, and equipment vendors who register profiles on the platform can list assets available to signed artists. A luthier can offer an instrument to be purchased through the platform for an artist who needs one. A gear company can make equipment available through the platform's internal marketplace. Every transaction is documented, every vendor credited, and the platform enforces that all equipment used in a SoundSteak journey is sourced through the system — not from outside it.
+
+A SteakHolder who backed this artist knows their investment helped buy the guitar. That is not a footnote. That is the entire emotional core of why early belief should be worth something.
+
+**Deadline flexibility:**
+
+The cohort model holds — artists graduate when their single is finished and ready. An artist who needs six extra months to acquire equipment, learn their instrument, and get to a recording-ready place takes six extra months. Their SteakHolders are updated through the Cue system at every step. The milestone map shows exactly where the delay is and why. No one is surprised. No one is managing behind anyone's back. The record gets finished when it's ready. Not when a label needs a quarterly release.
+
+**This is who the platform is for:**
+
+Not the artist who already had everything and needed a distributor. Not the artist who went to Berklee and had connections before they wrote a song. The artist who had to choose between instrument and rent. The artist whose town doesn't have a venue. The artist who has been making music on their phone because that's what they have.
+
+The existing system was set up for people who could afford to fail. SoundSteak is set up for people who can't — and who are building something real precisely because of it.
+
 ### What Investors See
 Each artist profile shows a **visual journey map** — milestones completed, current position, what's next, and when the next investment opportunity opens. Investors comparing artists can evaluate not just current earnings but the roadmap ahead, the quality of the plan, and the progress against it. A well-structured, well-funded journey at an early stage is as compelling as strong current earnings.
 
@@ -3114,6 +3144,7 @@ Everything that is not on the MVP list above gets built in the months following 
 - Ticketing integration (Eventbrite/DICE API)
 - Sync licensing marketplace
 - Beat marketplace
+- Gear marketplace
 - Governance and voting system (full version)
 - Influencer attribution tracking
 - Automated social marketing engine
