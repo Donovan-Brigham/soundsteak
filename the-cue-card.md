@@ -82,34 +82,9 @@ Listening, done right, is nearly invisible.
 
 ---
 
-### Consent Before Record
+### Consent and Provenance
 
-The second principle is that expression should belong to the person who produced it, until they choose otherwise.
-
-Sometimes expression surfaces not because anyone asked for it, but because a conversation made it easy. A sentence more specific than the person planned. An opinion that arrived complete. A feeling named out loud in passing, in the middle of something else. These are the most honest moments on any platform — and they are currently lost, or captured without permission, or buried in a feed the person can no longer control.
-
-The alternative is to reflect expression back before it becomes record. To show the person what they said and ask if they meant to say it. Not as a friction mechanism. Not as a dark pattern. As a genuine transfer of ownership — their words, in context, with a simple choice: keep it or release it.
-
-The person who agrees becomes an author, not a subject. The consent is structural, not buried in a terms of service. It cannot be undone by a platform policy update because it was the person's decision from the beginning.
-
-This is the opposite of the comment section, where expression disappears into a feed the moment it's posted. Returning ownership before publication changes what expression means — and changes what the platform can honestly claim it collected.
-
----
-
-### The Weight of Context
-
-
-A review without identity is an opinion without weight.
-
-This has always been true. The reason prompted reviews feel hollow — even when they're positive, even when they're detailed — is that they are structurally unverifiable. Anyone could have written them. The platform may have incentivized them. The author may have no real relationship to the thing being reviewed. The star rating next to a product tells you the average of what a self-selected group of strangers felt, some unknown time ago, under unknown circumstances.
-
-You read it anyway because there's nothing else. But you don't trust it. Not really.
-
-The alternative is provenance. Not just who said it, but the nature of the relationship that produced it. How long they've been engaged. What they've done on the platform. What their stake is. Expression with that context attached means something different — not because the words changed, but because you know what kind of person is behind them and what they had to gain or lose by saying it.
-
-Provenance is also how you defend against a new and accelerating problem: synthetic expression. AI-generated reviews, ghost-written testimonials, coordinated campaigns designed to look like organic response. The only structural defense is an unbroken chain from the moment of expression to its publication — not written externally, not generated, provably originated in a real conversation with a real person at a known point in time.
-
-Verified identity isn't a privacy policy. It is the foundation of any claim that what you're reading is true.
+The alternative to extraction is ownership. Expression should belong to the person who produced it until they choose otherwise — reflected back before it becomes record, with a simple choice: keep it or release it. What gets released carries provenance: not just what was said, but the nature of the relationship that produced it. Provenance is what trust actually requires — an unbroken chain from real conversation to publication, with enough circumstance attached for you to judge it yourself.
 
 ---
 
@@ -117,25 +92,11 @@ Verified identity isn't a privacy policy. It is the foundation of any claim that
 
 ---
 
-### Provenance Instead of Content
-
-Every platform that has ever existed produces content. Posts, comments, reactions, reviews, threads, replies — an endless accumulation of expression-shaped objects that fill feeds and databases and engagement dashboards. What almost none of them produce is context.
-
-Context is what makes expression mean something. Not just what was said, but who said it, when, from what relationship, at what point in their engagement with a thing. A comment without context is a fragment. A reaction without context is noise. A review without context is a number with a story attached that you have no way to verify.
-
-Provenance is the alternative. Not a summary of an experience after the fact, but the experience itself, partially preserved — a record of what was said, in what context, at what point in a relationship. It does not ask for a summary. It captures expression that arose naturally and keeps the circumstances that made it credible.
-
-The distinction matters because provenance answers questions that content never can. Not just *what did they think* but *what is this person's relationship to the thing they're describing*. How long they've been engaged. What they understood before they spoke. Whether their position is that of a newcomer or someone who has watched something develop over time. A name attached to that context adds weight — but even without one, the context itself is more honest than anything collected through a prompted mechanism.
-
-This is a richer object than a post. It makes no claim to objectivity, because it doesn't need to. It claims something more valuable: this is what someone in this specific relationship, at this specific moment, actually said — and here is enough of the circumstance for you to judge it yourself.
-
----
-
 ### What Trust Looks Like at Scale
 
 Trust at scale, under the current model, is a number. An aggregate score computed from self-selected responses to prompted requests, averaged across time, displayed next to a product or a person or a place as if the number means something precise.
 
-It does not mean something precise. Everyone knows this. Everyone uses it anyway, because there is nothing else.
+It does not mean something precise. You read it anyway because there's nothing else. But you don't trust it. Not really.
 
 What a listening platform produces, over time, is a body of evidence. Not a score — a collection of specific moments, each one documented, each one traceable, each one representing a real person in a real relationship saying something they actually meant. The body of evidence does not compress into a number. It does not need to. It can be navigated, questioned, examined. You can look at who said what, when, and from what position, and form your own judgment.
 
