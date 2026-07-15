@@ -44,21 +44,11 @@ The box waited. The feeling kept happening somewhere else.
 
 ### What the Mechanisms Actually Contain
 
-The star rating is the most honest version of the failure because it makes the extraction visible. Consider what it knows.
-
-Five positions. A thumb moved along a scale. Behind it — weeks behind it, sometimes — an experience. A meal. A product. A night you won't forget or one you're trying to. All of that compressed, by you, in some distracted moment, into a number.
-
-The platform calls this data. It runs the numbers. It is very confident in what it knows.
+*How would you rate your recent experience?* A notification fired into the future, long after the feeling has gone cold, asking you to reconstruct an emotion you've already finished having. The platform isn't curious. It's mining — convinced that extraction and listening are the same operation.
 
 What it knows is residue. The shadow a feeling casts when you ask it to hold still.
 
-The like button is the same operation with less friction. The reaction strip gives you five options for the full range of human emotion. The comment section hands you a blank field and waits. Each one is a platform saying: we need something from you, and here is the shape we need it in. None of them are listening. They are collecting.
-
-And the collection is skewed. Expression captured through these mechanisms comes from people who were enraged or enchanted enough to act — the feeling had to clear some threshold of intensity just to reach the interface. The vast middle of honest, considered, specific reaction goes unrecorded. Every engagement metric in the history of the web is structurally a collection of outliers with a confidence interval on top.
-
-The prompted review makes this explicit. *How would you rate your recent experience?* A notification fired into the future, long after the feeling has gone cold, asking you to reconstruct an emotion you've already finished having. The platform isn't curious. It's mining — convinced that extraction and listening are the same operation.
-
-They are not. You've been turned into a data labeler across every platform you've ever used. You just weren't told.
+The like button, the reaction strip, the star rating — each one is the same operation with a different interface. Each one is a platform saying: we need something from you, and here is the shape we need it in. None of them are listening. They are collecting. And the collection is skewed. Expression captured through these mechanisms comes from people who were enraged or enchanted enough to act — the feeling had to clear some threshold of intensity just to reach the interface. The vast middle of honest, considered, specific reaction goes unrecorded. Every engagement metric in the history of the web is structurally a collection of outliers with a confidence interval on top.
 
 ---
 
