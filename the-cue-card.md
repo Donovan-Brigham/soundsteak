@@ -46,7 +46,7 @@ The box waited. The feeling kept happening somewhere else.
 
 *How would you rate your recent experience?* A notification fired into the future, long after the feeling has gone cold, asking you to reconstruct an emotion you've already finished having. The platform isn't curious. It's mining — convinced that extraction and listening are the same operation.
 
-What it knows is residue. The shadow a feeling casts when you ask it to hold still.
+What it collects is residue. The shadow a feeling casts when you ask it to hold still.
 
 The like button, the reaction strip, the star rating — each one is the same operation with a different interface. Each one is a platform saying: we need something from you, and here is the shape we need it in. None of them are listening. They are collecting. And the collection is skewed. Expression captured through these mechanisms comes from people who were enraged or enchanted enough to act — the feeling had to clear some threshold of intensity just to reach the interface. The vast middle of honest, considered, specific reaction goes unrecorded. Every engagement metric in the history of the web is structurally a collection of outliers with a confidence interval on top.
 
