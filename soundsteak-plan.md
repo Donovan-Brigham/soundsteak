@@ -206,6 +206,7 @@ Everything else in this platform is built on top of that.
 - Open to any verified human artist with original music and a real audience — no AI-generated acts
 - Every member of every band is protected from day one
 - The platform is a **label**, not a software product
+- **Artists are never held.** SoundSteak does not prevent, restrict, or penalize an artist for pursuing deals, contracts, partnerships, or signed agreements with any other label, publisher, distributor, manager, agent, or platform — at any time, including while actively signed to SoundSteak. Our position is that we want the artist working with as many people as possible. If another relationship helps the music, it helps the SteakHolders. We will assist wherever the platform's infrastructure is useful. We make no claim on anything outside the scope of the single contracted through us.
 - **This company remains private. Forever.** A public offering hands control to a board whose mandate is profit over everything else — the same logic that built the system SoundSteak exists to replace. The moment that happens, the platform becomes what it was built against. Growth is welcome. Outside investment is welcome. A public exit is not on the table, under any circumstances, at any valuation.
 
 ---
