@@ -3704,8 +3704,8 @@ An artist's family and friends all pledge but funnel money from a single source 
 **Same card, same account:**
 One payment method can only be linked to one SoundSteak profile, ever. A card number — hashed and stored, never raw — is flagged the moment it appears on a second profile. The second profile receives a clear error message: *"This payment method is already associated with another account."* No exception.
 
-**Prepaid and gift card detection:**
-Visa, Mastercard, and Amex prepaid BINs (Bank Identification Numbers — the first 6 digits of any card) are publicly known and catalogued. The platform checks every card's BIN at entry. Prepaid cards are not blocked outright — a real fan absolutely might pay with a gift card — but they are flagged as elevated-risk and subject to additional identity checks before the pledge is counted. A cluster of prepaid pledges to the same artist in a short window triggers manual review.
+**Prepaid and gift card rejection:**
+Visa, Mastercard, and Amex prepaid BINs (Bank Identification Numbers — the first 6 digits of any card) are publicly known and catalogued. Prepaid cards are blocked at the point of entry — no exceptions. The platform requires a payment method with a traceable financial identity behind it: a debit card linked to a real bank account or a credit card issued to a verified person. No dark money. No anonymous purchasing power. The pledge system is a provenance record, and every dollar in it must have a clear, accountable origin.
 
 **Bank account linking (ACH):**
 Where bank accounts are used instead of cards, the account + routing number combination is treated as a unique identity. One bank account, one profile.
@@ -3753,7 +3753,6 @@ Some clusters of signals don't warrant automatic rejection but do warrant a huma
 
 - More than 5 pledges from the same device fingerprint
 - More than 10 pledges from the same IP or subnet
-- More than 15 prepaid card pledges to one artist in a 48-hour window
 - A single artist receiving 50%+ of their pledges within a 2-hour window
 - Any artist whose pledge count goes from 0 to 200+ in under 24 hours
 - Geographic distribution significantly narrower than the artist's stated market
@@ -3775,12 +3774,6 @@ The response is structural, not technical:
 **Consequences are permanent.** A profile found to have participated in fraudulent pledging is removed from the platform, permanently. The artist associated with a fraud investigation — even if cleared — carries that in their history. The platform's reputation is the moat. We protect it aggressively.
 
 ---
-
-### The Prepaid Card Threshold
-
-Prepaid cards should not be banned. A real fan who gets paid in cash, doesn't have a bank account, or received a gift card as a birthday present should be able to participate. Financial exclusion defeats the platform's stated purpose.
-
-The threshold: prepaid cards are accepted with enhanced identity verification (phone + device fingerprint required, no VoIP numbers accepted). If a prepaid card pledge is one of a cluster of prepaid pledges to the same artist from the same geographic area or the same device, it is held for manual review before counting.
 
 ---
 
