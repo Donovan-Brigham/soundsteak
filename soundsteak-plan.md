@@ -3664,6 +3664,136 @@ Filmed properly, the kickoff event becomes:
 
 ---
 
+## Pledge Integrity & Anti-Fraud
+
+The pledge system is the foundation of the platform's legitimacy. 300 real fans backing an artist is what gives the label mandate and the gong meaning. One person running 300 fake profiles doesn't prove anything — it corrupts everything. The system has to make that structurally impossible, not just against the rules.
+
+This section covers the threat model and the layered defenses.
+
+---
+
+### The Threat Model
+
+Bad actors will attempt to manipulate the pledge system in the following ways:
+
+**Multiple accounts, one person:**
+The most obvious attack. One person creates dozens or hundreds of profiles to back their own artist or kill a competitor's chances. Motivations: vanity (I got signed), sabotage (they didn't), financial (manufactured investor demand).
+
+**Payment farming:**
+Using the same payment method across multiple accounts — one debit card, one credit card, one bank account — to fund multiple pledges from a single source of funds.
+
+**Prepaid and gift card evasion:**
+Once the same-card block is in place, a determined bad actor buys 300 Visa gift cards. Each card is technically distinct. This is expensive but not impossible, especially for an artist or their team trying to guarantee a signing.
+
+**Device and network clustering:**
+All 300 fake profiles created and funded from the same device, the same IP address, the same home network, or the same geographic location in a short time window.
+
+**Synthetic identities:**
+Fake names, fake email addresses, throwaway phone numbers. Each profile looks superficially legitimate but has no real person behind it.
+
+**Coordinated bot campaigns:**
+Automated scripts creating profiles and pledging at scale — faster than any human team could manage manually.
+
+**Colluding real people:**
+An artist's family and friends all pledge but funnel money from a single source — Venmo'd or cash-handed from the artist to 30 real people who each make a real profile and pledge with their own card. Technically real, structurally manufactured.
+
+---
+
+### Layer 1 — Payment Fingerprinting
+
+**Same card, same account:**
+One payment method can only be linked to one SoundSteak profile, ever. A card number — hashed and stored, never raw — is flagged the moment it appears on a second profile. The second profile receives a clear error message: *"This payment method is already associated with another account."* No exception.
+
+**Prepaid and gift card detection:**
+Visa, Mastercard, and Amex prepaid BINs (Bank Identification Numbers — the first 6 digits of any card) are publicly known and catalogued. The platform checks every card's BIN at entry. Prepaid cards are not blocked outright — a real fan absolutely might pay with a gift card — but they are flagged as elevated-risk and subject to additional identity checks before the pledge is counted. A cluster of prepaid pledges to the same artist in a short window triggers manual review.
+
+**Bank account linking (ACH):**
+Where bank accounts are used instead of cards, the account + routing number combination is treated as a unique identity. One bank account, one profile.
+
+**Velocity checks:**
+If 20+ pledges to the same artist arrive from distinct payment methods within a narrow time window, that cohort is flagged for review. Organic fans don't all pledge in the same 4-minute window. Coordinated campaigns do.
+
+---
+
+### Layer 2 — Identity Signals
+
+**One phone number, one profile:**
+Phone verification is required at sign-up. A phone number can only be associated with one account. SMS verification at pledge time adds a second confirmation that the number is active and in the person's possession. VoIP numbers and number-recycling services are detected and rejected — these are the tool of choice for mass fake-account creation.
+
+**One email address, one profile:**
+Trivial to enforce. Plus-addressing (user+1@gmail.com, user+2@gmail.com) is normalized to its root address.
+
+**Government ID for investment-level stakes:**
+At the $1 pledge level, the bar is intentionally low — we are trying to be accessible. But once a pledge converts to a Founding SteakHolder stake and real money is invested, KYC (Know Your Customer) identity verification is triggered for any user above a defined threshold. ID verification is standard in financial products and the platform will integrate with a provider (Persona, Jumio, Stripe Identity, or equivalent) to automate it. This catches synthetic identities that passed the low-barrier pledge stage.
+
+---
+
+### Layer 3 — Behavioral & Device Signals
+
+**Device fingerprinting:**
+Browser fingerprints — GPU, screen resolution, font list, language settings, installed plugins — are highly unique. A device that creates multiple accounts, even with different emails and phone numbers, generates a matching fingerprint. Multiple accounts from the same fingerprint are flagged.
+
+**IP clustering:**
+Multiple accounts created or pledges submitted from the same IP address in a short window are flagged. Residential proxies and VPNs are detected using commercial databases (IPQualityScore or equivalent). A pledge from a known data center IP is treated as bot-risk.
+
+**Account age vs. pledge timing:**
+An account created 4 minutes before pledging for an artist, with no prior platform activity, is a much higher-risk signal than an account that has existed for 6 weeks and has browsed other artist profiles. New accounts can pledge — early fans are real — but a mass of brand-new accounts all pledging the same artist in the same session is a pattern, not a coincidence.
+
+**Geographic clustering:**
+300 pledges from the same ZIP code to a band based in a different city is anomalous. The platform tracks pledge geography as part of artist audience data anyway — anomalous clustering is surfaced in the review queue automatically.
+
+**Behavioral velocity:**
+A normal user takes 30–120 seconds to read a profile, navigate to the pledge button, and complete the flow. Pledges completing in under 10 seconds are bot-pattern.
+
+---
+
+### Layer 4 — Manual Review Triggers
+
+Some clusters of signals don't warrant automatic rejection but do warrant a human looking at the data before the pledge counts. Triggers include:
+
+- More than 5 pledges from the same device fingerprint
+- More than 10 pledges from the same IP or subnet
+- More than 15 prepaid card pledges to one artist in a 48-hour window
+- A single artist receiving 50%+ of their pledges within a 2-hour window
+- Any artist whose pledge count goes from 0 to 200+ in under 24 hours
+- Geographic distribution significantly narrower than the artist's stated market
+
+Manual review does not freeze the pledge campaign. Flagged pledges are held in a provisional state — they count toward the visible total but are marked for review. If review confirms fraud, they are removed and the count adjusts. If review confirms legitimacy, they clear automatically. Provisional counts are not surfaced publicly — the visible number is always the confirmed number.
+
+---
+
+### Layer 5 — The Colluding Real People Problem
+
+This is the hardest case. Thirty real people, real phones, real cards, real identities — all paid by the artist to pledge. Technically, the system can't distinguish this from 30 genuine fans.
+
+The response is structural, not technical:
+
+**The pledge is public record.** Every Founding SteakHolder's pledge date is documented on their profile, permanently. A SteakHolder with a 3-day-old account and no prior platform history who pledged the same night as 29 other 3-day-old accounts sends a signal. The community will notice. It is documented. It becomes part of the artist's provenance — and provenance is the asset.
+
+**The gong is the real test.** A manufactured pledge campaign may win the signing. But the gong rings, the LLC forms, and actual investors commit real money in the open raise that follows. If the 300 "fans" were manufactured, there are no real fans behind them. That will surface immediately in the open raise, in stream performance, in merch pre-order numbers, in every downstream metric. A manufactured signing is its own punishment — the artist is now publicly accountable to a community that doesn't exist.
+
+**Consequences are permanent.** A profile found to have participated in fraudulent pledging is removed from the platform, permanently. The artist associated with a fraud investigation — even if cleared — carries that in their history. The platform's reputation is the moat. We protect it aggressively.
+
+---
+
+### The Prepaid Card Threshold
+
+Prepaid cards should not be banned. A real fan who gets paid in cash, doesn't have a bank account, or received a gift card as a birthday present should be able to participate. Financial exclusion defeats the platform's stated purpose.
+
+The threshold: prepaid cards are accepted with enhanced identity verification (phone + device fingerprint required, no VoIP numbers accepted). If a prepaid card pledge is one of a cluster of prepaid pledges to the same artist from the same geographic area or the same device, it is held for manual review before counting.
+
+---
+
+### Open Questions — Pledge Integrity
+
+- [ ] Which identity verification provider? (Stripe Identity, Persona, Jumio, manual) — timing tied to when investment-level product is live
+- [ ] Does the public pledge count show provisional (flagged-but-unreviewed) pledges or confirmed-only? Recommend: confirmed-only, with a visual indicator that the total reflects verified pledges
+- [ ] At what investment threshold does full KYC kick in? ($500? $1,000? Whatever the Reg CF exemption requires?)
+- [ ] Should the platform allow one person to pledge for multiple artists in the same cycle, or is one pledge per cycle per person the rule?
+- [ ] How is the colluding-real-people scenario disclosed to the community, if confirmed?
+
+---
+
 ## Edge Cases & Contingency Planning
 
 The platform will encounter situations no standard record deal anticipated. These need answers before they happen — because the first time any of these lands, investors are watching how the platform handles it. The response to a crisis is itself a statement of values.
