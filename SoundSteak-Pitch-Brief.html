@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SoundSteak Pitch Brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+@page { size: 8.5in 11in; margin: 0; }
+
+html, body {
+  margin: 0; padding: 0;
+  background: #0D0B09;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+.page {
+  width: 8.5in;
+  height: 11in;
+  background: #0D0B09;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  page-break-after: always;
+  overflow: hidden;
+  padding: 0.58in 0.72in 0.5in;
+  display: flex;
+  flex-direction: column;
+}
+.page:last-child { page-break-after: auto; }
+
+/* ── TOKENS ── */
+:root {
+  --text:   #F2EDE4;
+  --text-2: #A89E94;
+  --accent: #C94B0E;
+  --surf:   #181411;
+  --surf-2: #1F1C18;
+  --rule:   rgba(242,237,228,0.08);
+  --rule-s: rgba(242,237,228,0.14);
+}
+
+/* ── SHARED ── */
+.eyebrow {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 6.5pt;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.06in;
+}
+
+.hr { width: 100%; height: 1px; background: var(--rule); }
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.1in;
+  margin-top: 0.14in;
+  border-top: 1px solid var(--rule);
+  flex-shrink: 0;
+}
+.footer-brand {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 9pt;
+  color: rgba(242,237,228,0.2);
+  letter-spacing: 0.12em;
+}
+.footer-pg {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 6.5pt;
+  color: rgba(242,237,228,0.2);
+  letter-spacing: 0.08em;
+}
+
+/* ══════════════════════════════
+   PAGE 1
+══════════════════════════════ */
+.p1-accent-bar {
+  width: 0.45in;
+  height: 2.5px;
+  background: var(--accent);
+  margin-bottom: 0.16in;
+  flex-shrink: 0;
+}
+
+.p1-wordmark {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 90pt;
+  color: var(--text);
+  line-height: 0.88;
+  letter-spacing: 0.025em;
+  margin-bottom: 0.15in;
+  flex-shrink: 0;
+}
+
+.p1-tagline {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-style: italic;
+  font-size: 15.5pt;
+  color: rgba(242,237,228,0.68);
+  line-height: 1.42;
+  max-width: 4.8in;
+  margin-bottom: 0.32in;
+  flex-shrink: 0;
+}
+
+/* Stats row */
+.stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  margin-bottom: 0.28in;
+  flex-shrink: 0;
+}
+
+.stat-block {
+  padding-right: 0.22in;
+  border-right: 1px solid var(--rule-s);
+}
+.stat-block:last-child {
+  border-right: none;
+  padding-right: 0;
+  padding-left: 0.22in;
+}
+.stat-block:nth-child(2) {
+  padding-left: 0.22in;
+}
+
+.stat-num {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 46pt;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: 0.05in;
+}
+
+.stat-label {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 7.5pt;
+  color: var(--text-2);
+  line-height: 1.55;
+}
+
+/* Body */
+.p1-body {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 9pt;
+  color: rgba(242,237,228,0.7);
+  line-height: 1.78;
+  max-width: 5.8in;
+  margin-bottom: 0.28in;
+  flex-shrink: 0;
+}
+.p1-body strong { color: var(--text); font-weight: 500; }
+
+/* Principle block — flex-grow pushes to bottom */
+.p1-push { flex: 1; }
+
+.p1-principle {
+  border-left: 2.5px solid var(--accent);
+  padding: 0.14in 0.22in;
+  background: rgba(201,75,14,0.06);
+  flex-shrink: 0;
+}
+.p1-principle-text {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-style: italic;
+  font-size: 12pt;
+  color: rgba(242,237,228,0.88);
+  line-height: 1.58;
+  max-width: 5.9in;
+}
+
+/* ══════════════════════════════
+   PAGE 2
+══════════════════════════════ */
+.p2-head {
+  flex-shrink: 0;
+  margin-bottom: 0.22in;
+}
+.sec-title {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 40pt;
+  color: var(--text);
+  line-height: 1;
+  letter-spacing: 0.025em;
+}
+.sec-sub {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-style: italic;
+  font-size: 12pt;
+  color: rgba(242,237,228,0.5);
+  margin-top: 0.06in;
+}
+
+/* Timeline */
+.timeline {
+  display: flex;
+  align-items: center;
+  padding: 0.16in 0.18in;
+  background: var(--surf);
+  border: 1px solid var(--rule-s);
+  border-radius: 4px;
+  margin-bottom: 0.26in;
+  flex-shrink: 0;
+  gap: 0;
+}
+.tl-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.05in;
+  position: relative;
+}
+.tl-step:not(:last-child)::after {
+  content: '›';
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-60%);
+  color: rgba(201,75,14,0.5);
+  font-size: 11pt;
+  font-family: 'DM Sans', sans-serif;
+}
+.tl-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.tl-dot.white { background: var(--text); }
+.tl-label {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 6pt;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(242,237,228,0.5);
+  text-align: center;
+  line-height: 1.35;
+}
+.tl-label.bright { color: rgba(242,237,228,0.82); }
+
+/* Audience grid */
+.audience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  flex: 1;
+}
+.aud-col {
+  padding: 0.18in 0.2in 0 0;
+  border-right: 1px solid var(--rule);
+}
+.aud-col:last-child {
+  border-right: none;
+  padding-right: 0;
+  padding-left: 0.2in;
+}
+.aud-col:nth-child(2) { padding-left: 0.2in; }
+
+.aud-title {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 14pt;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 0.1in;
+}
+.aud-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.07in;
+}
+.aud-list li {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 7.5pt;
+  color: rgba(242,237,228,0.73);
+  line-height: 1.58;
+  padding-left: 0.1in;
+  position: relative;
+}
+.aud-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: rgba(201,75,14,0.6);
+  font-size: 6.5pt;
+  top: 1pt;
+}
+
+/* ══════════════════════════════
+   PAGE 3
+══════════════════════════════ */
+.p3-head { flex-shrink: 0; margin-bottom: 0.14in; }
+
+.epigraph {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-style: italic;
+  font-size: 11.5pt;
+  color: rgba(242,237,228,0.45);
+  margin-top: 0.07in;
+}
+
+.diff-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.13in 0.3in;
+  align-content: start;
+  flex: 1;
+}
+.diff-item {
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-size: 8pt;
+  color: rgba(242,237,228,0.75);
+  line-height: 1.62;
+  padding-left: 0.1in;
+  position: relative;
+  align-self: start;
+}
+.diff-item::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 7pt;
+  top: 1pt;
+}
+
+.commitments {
+  display: flex;
+  border-top: 1px solid var(--rule-s);
+  padding-top: 0.16in;
+  margin-top: 0.14in;
+  gap: 0;
+  flex-shrink: 0;
+}
+.commit-block {
+  flex: 1;
+  text-align: center;
+  padding: 0 0.15in;
+  border-right: 1px solid var(--rule);
+}
+.commit-block:last-child { border-right: none; }
+.commit-block:first-child { padding-left: 0; }
+
+.commit-text {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 10.5pt;
+  color: var(--text);
+  letter-spacing: 0.04em;
+  line-height: 1.25;
+}
+
+.p3-close {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-style: italic;
+  font-size: 12pt;
+  color: rgba(242,237,228,0.45);
+  text-align: center;
+  margin-top: 0.14in;
+  flex-shrink: 0;
+}
+</style>
+</head>
+<body>
+
+<!-- ══ PAGE 1 — THE PROBLEM & THE ANSWER ══ -->
+<div class="page">
+
+  <div class="p1-accent-bar"></div>
+
+  <div class="p1-wordmark">SOUNDSTEAK</div>
+
+  <div class="p1-tagline">A record label built so the people who build the music own what it earns.</div>
+
+  <div class="hr" style="margin-bottom:0.28in; flex-shrink:0;"></div>
+
+  <div class="stats-row">
+    <div class="stat-block">
+      <span class="eyebrow">The Industry</span>
+      <div class="stat-num">$31.7B</div>
+      <div class="stat-label">Global recorded music revenue in 2025 — the 11th consecutive year of growth. Catalogs now sell at 12–18× annual earnings. Returns historically around 13%, largely uncorrelated with equity markets.</div>
+    </div>
+    <div class="stat-block">
+      <span class="eyebrow">The Artist</span>
+      <div class="stat-num">$13,327</div>
+      <div class="stat-label">Average total annual income for a working musician in 2024 — in an industry generating $31.7 billion. The people who created this asset class are the last to benefit from it.</div>
+    </div>
+    <div class="stat-block">
+      <span class="eyebrow">The Label</span>
+      <div class="stat-num">80–90%</div>
+      <div class="stat-label">Of major label artists who never recoup their advance. The music earns. The label keeps it. The artist owes the difference. The fans who found them first get nothing documented.</div>
+    </div>
+  </div>
+
+  <div class="hr" style="margin-bottom:0.26in; flex-shrink:0;"></div>
+
+  <p class="p1-body">
+    Private equity knows what musicians don't: music catalogs are exceptional assets. Blackstone, Sony, Primary Wave, and Hipgnosis are acquiring at scale — buying from labels who retained the masters as a condition of the original deal. The artist made the asset and was paid once. The institution collects forever.<br><br>
+    <strong>SoundSteak changes who owns the asset at the moment it is created.</strong> When an artist signs, an LLC forms simultaneously. Every investor — from the fan who pledged $1 to the professional who traded their fee for equity — holds a documented legal stake in the release. The music earns. The earnings distribute automatically to every stakeholder (SteakHolder) on record. Permanently.
+  </p>
+
+  <div class="p1-push"></div>
+
+  <div class="p1-principle">
+    <p class="p1-principle-text">"This record label does what is in the best interest of the artist — because that is what is in the best interest of the investors, and in turn, SoundSteak. That alignment is not a policy. It is the structure."</p>
+  </div>
+
+  <div class="page-footer">
+    <span class="footer-brand">SOUNDSTEAK</span>
+    <span class="footer-pg">CONFIDENTIAL &nbsp;·&nbsp; 2026 &nbsp;&nbsp;&nbsp; 1 / 3</span>
+  </div>
+
+</div>
+
+<!-- ══ PAGE 2 — HOW IT WORKS ══ -->
+<div class="page">
+
+  <div class="p2-head">
+    <span class="eyebrow">The Mechanism</span>
+    <div class="sec-title">HOW IT WORKS</div>
+    <div class="sec-sub">One single. One year. One event that changes everything.</div>
+  </div>
+
+  <div class="timeline">
+    <div class="tl-step">
+      <div class="tl-dot"></div>
+      <div class="tl-label">Apply &<br>Pledge Drive</div>
+    </div>
+    <div class="tl-step">
+      <div class="tl-dot"></div>
+      <div class="tl-label">300 Fans<br>Pledge $1</div>
+    </div>
+    <div class="tl-step">
+      <div class="tl-dot white"></div>
+      <div class="tl-label bright">The Gong<br>Rings</div>
+    </div>
+    <div class="tl-step">
+      <div class="tl-dot"></div>
+      <div class="tl-label">Contract +<br>LLC Formed</div>
+    </div>
+    <div class="tl-step">
+      <div class="tl-dot"></div>
+      <div class="tl-label">IPO Opens.<br>The Year Begins.</div>
+    </div>
+    <div class="tl-step">
+      <div class="tl-dot"></div>
+      <div class="tl-label">Recording<br>& Release</div>
+    </div>
+    <div class="tl-step" style="border:none;">
+      <div class="tl-dot" style="background:#E05C1A;"></div>
+      <div class="tl-label bright">Earnings Begin.<br>Permanently.</div>
+    </div>
+  </div>
+
+  <div class="audience-grid">
+    <div class="aud-col">
+      <span class="aud-title">For Artists</span>
+      <ul class="aud-list">
+        <li>Full legal infrastructure at signing — LLC formed, ISRC, IPI, PRO, SoundExchange, and MLC registered before a note is recorded. The business is built before the first session.</li>
+        <li>Retain your ownership percentage. Set before Event One, locked into the LLC, never renegotiated.</li>
+        <li>Non-exclusive. Pursue any deal, any label, any contract at any time. Our scope is one single. Everything outside it is yours.</li>
+        <li>Community votes on who you work with. The hired person decides what they create. No direction from the platform, the investors, or the fans.</li>
+        <li>Stems required at delivery — every instrument, every vocal, isolated. Each stem is a separately licensable product the LLC holds permanently.</li>
+        <li>Journey is adaptive. No gear? The system sources it. Need more time? The timeline extends. The platform meets you where you are.</li>
+      </ul>
+    </div>
+
+    <div class="aud-col">
+      <span class="aud-title">For SteakHolders</span>
+      <ul class="aud-list">
+        <li>$1 buys a real stake in the release LLC — not a token, not a handshake. A documented investment in a legal entity with real terms.</li>
+        <li>The first 300 fans to pledge become Founding SteakHolders — a permanent, timestamped badge that cannot be purchased retroactively. You were there or you weren't.</li>
+        <li>Real-time earnings across every revenue stream — streams, sync, live, merch, AI licensing — tracked and distributed automatically, indefinitely.</li>
+        <li>Governance rights. SteakHolders vote on platform decisions. The people who built the audience have a say in what the platform does with it.</li>
+        <li>Fan Cues: structured signals delivered directly to the artist — weighted by stake, not buried in a feed. Intelligence, not noise.</li>
+        <li>Every product launches as a presale &mdash; nothing is produced until demand clears the profitability threshold. SteakHolders get first access to every window, and every purchase flows back through the LLC.</li>
+      </ul>
+    </div>
+
+    <div class="aud-col">
+      <span class="aud-title">For the Industry</span>
+      <ul class="aud-list">
+        <li>Engineers, producers, photographers, directors, promoters — every credit documented at the time of work, paid automatically as the release earns. No chasing. No spreadsheets.</li>
+        <li>Option to take LLC equity instead of a flat fee. The engineer who mixed the record earns from what it earns, indefinitely, if both parties agree.</li>
+        <li>Recording studios, rehearsal spaces, luthiers, gear makers, equipment vendors — all sourced through the platform. Every vendor credited. Every transaction part of the permanent record.</li>
+        <li>AI companies access a licensed, contextually annotated music catalog — and pay the artist directly for answers about their own creative process through the developer console.</li>
+        <li>No external sourcing. If it's needed to make the music, it exists in the system. The entire supply chain is on the platform.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span class="footer-brand">SOUNDSTEAK</span>
+    <span class="footer-pg">CONFIDENTIAL &nbsp;·&nbsp; 2026 &nbsp;&nbsp;&nbsp; 2 / 3</span>
+  </div>
+
+</div>
+
+<!-- ══ PAGE 3 — WHY THIS IS DIFFERENT ══ -->
+<div class="page">
+
+  <div class="p3-head">
+    <span class="eyebrow">The Differentiators</span>
+    <div class="sec-title">WHY THIS IS DIFFERENT</div>
+    <div class="epigraph">What is unusual for the usually bad is usually good.</div>
+  </div>
+
+  <div class="hr" style="margin-bottom:0.18in; flex-shrink:0;"></div>
+
+  <div class="diff-grid">
+    <div class="diff-item">300 real fans are louder than 300,000 fake ones. Every person on this platform has a verified identity, a real dollar on the line, and a documented relationship to the artist. Provenance cannot be purchased. It cannot be manufactured.</div>
+    <div class="diff-item">An LLC formed per release at the moment of signing. Every investor holds a real legal entity with documented terms — not a token, not a back-catalog royalty that dissolves when the label gets acquired.</div>
+    <div class="diff-item">A catalog that appreciates through documentation. Every context task completed, every fan behavior recorded, every question answered by the artist builds a more licensable, more valuable asset. Not a fixed recording. A living catalog.</div>
+    <div class="diff-item">No comment sections. Ever. Expression happens through Cues — structured signals routed directly to the people who need them. The platform has no mechanism for anonymous noise, toxic loops, or manufactured consensus.</div>
+    <div class="diff-item">A developer console where AI companies license contextually annotated music — and pay the artist directly for answers about their own creative process. Every opt-in is a distinct, automatic revenue stream.</div>
+    <div class="diff-item">Regular, scheduled mediation between artist, vendors, and SteakHolders — built into the release calendar. Alignment is a meeting on the schedule, not a crisis response after something goes wrong.</div>
+    <div class="diff-item">Governance rights that extend to how the platform itself is run. The community that built the audience votes on what the platform does with it. This is not a feature. It is the legal architecture.</div>
+    <div class="diff-item">A conversational AI that treats every participant as a relationship, not a task list. It reaches out before things go wrong. It turns behavior into signal before a human asks the question. The system already knows.</div>
+  </div>
+
+  <div class="commitments">
+    <div class="commit-block">
+      <div class="commit-text">No one tells<br>the artist<br>what to make.</div>
+    </div>
+    <div class="commit-block">
+      <div class="commit-text">We do not<br>hold<br>artists.</div>
+    </div>
+    <div class="commit-block">
+      <div class="commit-text">This company<br>remains private.<br>Forever.</div>
+    </div>
+  </div>
+
+  <div class="p3-close">Built for the next generation of artists.</div>
+
+  <div class="page-footer">
+    <span class="footer-brand">SOUNDSTEAK</span>
+    <span class="footer-pg">CONFIDENTIAL &nbsp;·&nbsp; 2026 &nbsp;&nbsp;&nbsp; 3 / 3</span>
+  </div>
+
+</div>
+
+</body>
+</html>
