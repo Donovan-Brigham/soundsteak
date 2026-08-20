@@ -1,7 +1,6 @@
 import { redirect } from "next/navigation";
-import { requireArtistContext } from "@/lib/artist";
-import { createClient } from "@/lib/supabase/server";
-import { submitApplication } from "./actions";
+import { getApplicationProgress } from "../progress";
+import { SubmitButton } from "./submit-button";
 
 const ARTIST_TYPE_LABELS: Record<string, string> = {
   band: "Band",
@@ -12,28 +11,11 @@ const ARTIST_TYPE_LABELS: Record<string, string> = {
 };
 
 export default async function ReviewStepPage() {
-  const { artist } = await requireArtistContext();
+  const { artist, hasVideo, hasIntake } = await getApplicationProgress();
 
-  if (!artist) {
-    redirect("/apply/profile");
-  }
-
-  const supabase = await createClient();
-
-  const [{ count: videoCount }, { count: intakeCount }] = await Promise.all([
-    supabase
-      .from("artist_video_submissions")
-      .select("id", { count: "exact", head: true })
-      .eq("artist_id", artist.id),
-    supabase
-      .from("artist_intake_responses")
-      .select("id", { count: "exact", head: true })
-      .eq("artist_id", artist.id)
-      .eq("response_group", "journey"),
-  ]);
-
-  if (!videoCount) redirect("/apply/video");
-  if (!intakeCount) redirect("/apply/questions");
+  if (!artist) redirect("/apply/profile");
+  if (!hasVideo) redirect("/apply/video");
+  if (!hasIntake) redirect("/apply/questions");
 
   return (
     <div>
@@ -71,14 +53,7 @@ export default async function ReviewStepPage() {
         </div>
       </dl>
 
-      <form action={submitApplication}>
-        <button
-          type="submit"
-          className="rounded-radius bg-accent px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
-        >
-          Submit application
-        </button>
-      </form>
+      <SubmitButton />
     </div>
   );
 }

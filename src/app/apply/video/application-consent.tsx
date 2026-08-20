@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import { createClient } from "@/lib/supabase/client";
+import { useActionState, useEffect, useState } from "react";
+import { acceptApplicationConsent, type AcceptConsentState } from "./actions";
 
-const CONSENT_KEY = "application_terms";
+const initialState: AcceptConsentState = { status: "idle" };
 
 export function ApplicationConsent({
   artistId,
@@ -12,36 +12,25 @@ export function ApplicationConsent({
   artistId: string;
   onAccepted: () => void;
 }) {
+  const [state, formAction, pending] = useActionState(
+    acceptApplicationConsent,
+    initialState,
+  );
   const [originalWork, setOriginalWork] = useState(false);
   const [reviewConsent, setReviewConsent] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (state.status === "success") {
+      onAccepted();
+    }
+  }, [state.status, onAccepted]);
 
   const canContinue = originalWork && reviewConsent;
 
-  const handleContinue = async () => {
-    setSubmitting(true);
-    setError(null);
-
-    const supabase = createClient();
-    const { error: insertError } = await supabase
-      .from("artist_consents")
-      .upsert(
-        { artist_id: artistId, consent_key: CONSENT_KEY },
-        { onConflict: "artist_id,consent_key" },
-      );
-
-    if (insertError) {
-      setError(insertError.message);
-      setSubmitting(false);
-      return;
-    }
-
-    onAccepted();
-  };
-
   return (
-    <div className="flex flex-col gap-6">
+    <form action={formAction} className="flex flex-col gap-6">
+      <input type="hidden" name="artist_id" value={artistId} />
+
       <div className="flex flex-col gap-4 rounded-radius border border-border bg-surface-2 p-5 text-sm text-text-2">
         <p>
           <span className="text-text">What this is for.</span> Applications
@@ -93,15 +82,17 @@ export function ApplicationConsent({
         </label>
       </div>
 
-      {error && <p className="text-sm text-red-400">{error}</p>}
+      {state.status === "error" && (
+        <p className="text-sm text-red-400">{state.message}</p>
+      )}
 
       <button
-        onClick={handleContinue}
-        disabled={!canContinue || submitting}
+        type="submit"
+        disabled={!canContinue || pending}
         className="self-start rounded-radius bg-accent px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:opacity-40"
       >
-        {submitting ? "Saving…" : "I'm ready to record"}
+        {pending ? "Saving…" : "I'm ready to record"}
       </button>
-    </div>
+    </form>
   );
 }

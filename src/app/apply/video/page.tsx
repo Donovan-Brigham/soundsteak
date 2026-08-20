@@ -1,10 +1,10 @@
 import { redirect } from "next/navigation";
-import { requireArtistContext } from "@/lib/artist";
+import { getApplicationProgress } from "../progress";
 import { createClient } from "@/lib/supabase/server";
 import { VideoStep } from "./video-step";
 
 export default async function VideoStepPage() {
-  const { artist } = await requireArtistContext();
+  const { artist } = await getApplicationProgress();
 
   if (!artist) {
     redirect("/apply/profile");
