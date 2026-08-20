@@ -376,6 +376,146 @@ export type Database = {
         }
         Relationships: []
       }
+      releases: {
+        Row: {
+          artist_id: string
+          created_at: string
+          id: string
+          status: Database["public"]["Enums"]["release_status"]
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          artist_id: string
+          created_at?: string
+          id?: string
+          status?: Database["public"]["Enums"]["release_status"]
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          artist_id?: string
+          created_at?: string
+          id?: string
+          status?: Database["public"]["Enums"]["release_status"]
+          title?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "releases_artist_id_fkey"
+            columns: ["artist_id"]
+            isOneToOne: false
+            referencedRelation: "artists"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      revenue_event_allocations: {
+        Row: {
+          amount_cents: number
+          created_at: string
+          holder_type: Database["public"]["Enums"]["ownership_holder_type"]
+          id: string
+          ownership_split_id: string
+          paid_at: string | null
+          revenue_event_id: string
+        }
+        Insert: {
+          amount_cents: number
+          created_at?: string
+          holder_type: Database["public"]["Enums"]["ownership_holder_type"]
+          id?: string
+          ownership_split_id: string
+          paid_at?: string | null
+          revenue_event_id: string
+        }
+        Update: {
+          amount_cents?: number
+          created_at?: string
+          holder_type?: Database["public"]["Enums"]["ownership_holder_type"]
+          id?: string
+          ownership_split_id?: string
+          paid_at?: string | null
+          revenue_event_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "revenue_event_allocations_ownership_split_id_fkey"
+            columns: ["ownership_split_id"]
+            isOneToOne: false
+            referencedRelation: "artist_ownership_splits"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "revenue_event_allocations_revenue_event_id_fkey"
+            columns: ["revenue_event_id"]
+            isOneToOne: false
+            referencedRelation: "revenue_events"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      revenue_events: {
+        Row: {
+          amount_cents: number
+          artist_id: string
+          created_at: string
+          currency: string
+          external_reference: string | null
+          external_source: string | null
+          id: string
+          metadata: Json
+          release_id: string | null
+          source_type: Database["public"]["Enums"]["revenue_source_type"]
+          status: Database["public"]["Enums"]["revenue_event_status"]
+          updated_at: string
+        }
+        Insert: {
+          amount_cents: number
+          artist_id: string
+          created_at?: string
+          currency?: string
+          external_reference?: string | null
+          external_source?: string | null
+          id?: string
+          metadata?: Json
+          release_id?: string | null
+          source_type: Database["public"]["Enums"]["revenue_source_type"]
+          status?: Database["public"]["Enums"]["revenue_event_status"]
+          updated_at?: string
+        }
+        Update: {
+          amount_cents?: number
+          artist_id?: string
+          created_at?: string
+          currency?: string
+          external_reference?: string | null
+          external_source?: string | null
+          id?: string
+          metadata?: Json
+          release_id?: string | null
+          source_type?: Database["public"]["Enums"]["revenue_source_type"]
+          status?: Database["public"]["Enums"]["revenue_event_status"]
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "revenue_events_artist_id_fkey"
+            columns: ["artist_id"]
+            isOneToOne: false
+            referencedRelation: "artists"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "revenue_events_release_id_fkey"
+            columns: ["release_id"]
+            isOneToOne: false
+            referencedRelation: "releases"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
@@ -406,6 +546,18 @@ export type Database = {
         | "instagram"
         | "tiktok"
         | "youtube"
+        | "other"
+      release_status: "planned" | "recording" | "released" | "archived"
+      revenue_event_status: "pipeline" | "confirmed" | "distributed"
+      revenue_source_type:
+        | "streaming"
+        | "sync"
+        | "merch"
+        | "ticketing"
+        | "stem_licensing"
+        | "ai_licensing"
+        | "sponsorship"
+        | "attribution"
         | "other"
       video_submission_status: "pending" | "reviewed" | "approved" | "rejected"
       video_submission_type: "application" | "showcase"
@@ -563,6 +715,19 @@ export const Constants = {
         "instagram",
         "tiktok",
         "youtube",
+        "other",
+      ],
+      release_status: ["planned", "recording", "released", "archived"],
+      revenue_event_status: ["pipeline", "confirmed", "distributed"],
+      revenue_source_type: [
+        "streaming",
+        "sync",
+        "merch",
+        "ticketing",
+        "stem_licensing",
+        "ai_licensing",
+        "sponsorship",
+        "attribution",
         "other",
       ],
       video_submission_status: ["pending", "reviewed", "approved", "rejected"],

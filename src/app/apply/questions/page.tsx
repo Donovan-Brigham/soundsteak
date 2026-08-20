@@ -1,22 +1,15 @@
 import { redirect } from "next/navigation";
-import { requireArtistContext } from "@/lib/artist";
-import { createClient } from "@/lib/supabase/server";
+import { getApplicationProgress } from "../progress";
 import { QuestionsForm } from "./questions-form";
 
 export default async function QuestionsStepPage() {
-  const { artist } = await requireArtistContext();
+  const { artist, hasVideo } = await getApplicationProgress();
 
   if (!artist) {
     redirect("/apply/profile");
   }
 
-  const supabase = await createClient();
-  const { count } = await supabase
-    .from("artist_video_submissions")
-    .select("id", { count: "exact", head: true })
-    .eq("artist_id", artist.id);
-
-  if (!count) {
+  if (!hasVideo) {
     redirect("/apply/video");
   }
 

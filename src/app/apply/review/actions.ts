@@ -3,7 +3,15 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 
-export async function submitApplication() {
+export type SubmitApplicationState = {
+  status: "idle" | "error";
+  message?: string;
+};
+
+export async function submitApplication(
+  _prevState: SubmitApplicationState,
+  _formData: FormData,
+): Promise<SubmitApplicationState> {
   const supabase = await createClient();
   const {
     data: { user },
@@ -19,7 +27,7 @@ export async function submitApplication() {
     .eq("user_id", user.id);
 
   if (error) {
-    throw new Error(error.message);
+    return { status: "error", message: error.message };
   }
 
   redirect("/apply/submitted");
