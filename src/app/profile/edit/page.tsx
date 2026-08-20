@@ -19,7 +19,7 @@ export default async function ProfileStepPage() {
   return (
     <div>
       <p className="mb-2 text-[10.5px] font-medium uppercase tracking-[0.18em] text-accent">
-        Step 1
+        Profile
       </p>
       <h1 className="mb-8 text-3xl font-semibold text-text">
         Tell us who you are

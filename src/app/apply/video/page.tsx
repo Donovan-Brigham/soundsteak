@@ -7,7 +7,7 @@ export default async function VideoStepPage() {
   const { artist } = await getApplicationProgress();
 
   if (!artist) {
-    redirect("/apply/profile");
+    redirect("/profile/edit");
   }
 
   const supabase = await createClient();
@@ -21,7 +21,7 @@ export default async function VideoStepPage() {
   return (
     <div>
       <p className="mb-2 text-[10.5px] font-medium uppercase tracking-[0.18em] text-accent">
-        Step 2
+        Application
       </p>
       <h1 className="mb-2 text-3xl font-semibold text-text">
         Record your performance
