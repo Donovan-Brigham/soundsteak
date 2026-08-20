@@ -1,6 +1,8 @@
 # SoundSteak — Master Plan
 *Working title. Last updated: 2026-07-12*
 
+> **Superseded 2026-08-18.** This file is kept for history. The current source of truth is split into parts at [`plan/00-index.md`](plan/00-index.md).
+
 ---
 
 ## The One-Pager
@@ -906,24 +908,32 @@ An EP (typically 3–6 tracks) sits between a single and an album. It may includ
 
 ---
 
-### Merch Cadence — One Drop at a Time
+### Merch Cadence — Presale First, Always
 
-SoundSteak merch is not a store. It is a rhythm. Every artist on the platform ships on the same cadence — one product released as a pre-sale every two to three months, for the duration of their time on the platform. Each drop is its own event: a Cue sequence, a SteakHolder notification, a new reason to share the artist.
+SoundSteak merch is not a store. It is a demand signal. Nothing is produced until it is paid for. Nothing is commissioned until production is justified.
 
-The goal is not to maximize inventory. It is to maximize moments. Four drops per year means four separate windows where the platform has something to push, SteakHolders have something to share, and the release LLC has a new revenue line opening. That compounds across a growing roster.
+**The gong rings and everything goes on presale simultaneously.** The moment an artist signs — the same moment the LLC forms and the investment raise opens — every founding merch product goes live as a presale. The digital bundle, the zine, the shirt, the event tickets. All of it. SteakHolders see it in real time. New fans discover it through sharing. The presale window is the announcement.
 
-**Year 1 cadence — every artist, at signing:**
+**The designer is selected before a single file is opened.** The platform announces the product and the designer (chosen through the community selection process) before production begins. That designer already knows: 100 presales of the zine have been committed before they start. The brief is real. The audience is real. The payment is real. They are not working on spec. They are not hoping someone buys it. They are executing a confirmed commission.
 
-Every artist begins with the same three founding products, released in sequence across the year. A fourth drop closes the year with event ticket pre-sales.
+**If presales don't hit the profitability threshold, the product doesn't get made.** Every product has a defined minimum — the number of presales required to cover production costs and pay the designer at the agreed rate. If the window closes without hitting the threshold, orders are refunded automatically and no one loses money. No unsold inventory. No debt. No guessing. The community voted with their wallets and the answer was not yet. The platform moves on.
 
-| Drop | Timing | Product | Notes |
-|---|---|---|---|
-| **1** | Month 1–2 after signing | Digital bundle | Lossless audio, lyrics, liner notes PDF, production notes. Zero production cost. Immediate earn. |
-| **2** | Month 3–4 | Zine pre-sale | 30-day pre-order window. Print-to-order through platform-contracted printer. Numbered run. |
-| **3** | Month 5–6 | Shirt pre-sale | One design, one colorway. 30-day window. Print-on-demand — no inventory risk, no minimum. |
-| **4** | Month 10–11 | Event ticket pre-sale | SteakHolders get first-window access before public. The year ends with the room filling up. |
+**This is not a failure state. It is honest market signal.** An artist whose zine doesn't hit minimum is an artist who needs more time, more songs, or more audience before that product makes sense. The platform doesn't hide that. It shows it — and routes it back to the artist as useful information about where they stand.
 
-The digital bundle drops first because it costs nothing to produce and earns immediately. The zine and shirt follow at pace. Tickets close the year — every artist's last drop is the platform's biggest event.
+**Year 1 — every artist, at signing:**
+
+All presales open the moment the gong rings. Profitability thresholds are set per product before the window opens.
+
+| Product | Presale Window | Threshold Logic |
+|---|---|---|
+| **Digital bundle** | Permanent — no window, no threshold. Zero production cost. | Goes live at signing. Earns immediately and indefinitely. |
+| **Zine** | 30 days from signing | Minimum presales cover: designer fee + print cost + platform margin. If not met: full refund, no print. |
+| **Shirt** | 30 days from signing | Print-on-demand — threshold is low. Minimum covers designer fee only; fulfillment is per-order. |
+| **Event tickets** | Opens at Month 10–11 | SteakHolders get first-window access. Tickets are always produced — the event happens regardless. |
+
+**The merch catalog grows with the catalog:**
+
+Each year an artist stays on the platform, new products unlock — not on a fixed schedule, but as the catalog, the audience, and the streaming numbers warrant. The platform proposes. SteakHolders vote. Presales open. The professional network executes only when the threshold is cleared.
 
 **The merch catalog grows with the catalog:**
 
@@ -1078,18 +1088,18 @@ These ship immediately. No inventory. No lead time. No fulfillment cost. Every a
 
 ---
 
-### Tier 2 — Merch Cadence (Four Drops Per Year, Every Year)
+### Tier 2 — Merch Cadence (Presale-First, Every Artist)
 
-Every artist ships on the same platform-wide rhythm — one product released as a pre-sale every two to three months. The cadence is consistent. The product evolves.
+Nothing is produced until it is paid for. Everything goes on presale the moment the gong rings. The designer is announced and selected before production begins — they know the presale count before they open a file. If presales don't clear the profitability threshold within the window, orders are refunded and the product is not made. No inventory risk. No spec work.
 
 **Year 1 — every artist, at signing:**
 
-| Drop | Timing | Product |
+| Product | Window | Threshold |
 |---|---|---|
-| **1** | Month 1–2 | Digital bundle — lossless audio, lyrics, liner notes, production notes |
-| **2** | Month 3–4 | Zine — numbered print run, artist-designed, 30-day pre-order window |
-| **3** | Month 5–6 | Shirt — one design, one colorway, print-on-demand, 30-day window |
-| **4** | Month 10–11 | Event tickets — SteakHolder first-window pre-sale |
+| **Digital bundle** | Permanent, no threshold | Zero production cost — earns immediately and indefinitely |
+| **Zine** | 30 days from signing | Must cover: designer fee + print cost + platform margin |
+| **Shirt** | 30 days from signing | Must cover designer fee; fulfillment is per-order (print-on-demand) |
+| **Event tickets** | Month 10–11 | Always produced — the event happens regardless; SteakHolders get first window |
 
 **Catalog unlocks by song count:**
 
@@ -1101,7 +1111,7 @@ Every artist ships on the same platform-wide rhythm — one product released as 
 | 5 | Compilation LP, box set, zine companion volume |
 | 7+ | Full album vinyl, definitive collection |
 
-Each new format is a governance moment — SteakHolders see the streaming data, vote on whether to greenlight the run, and hold the first pre-order window when it opens.
+Each new format is a governance moment — SteakHolders see the streaming data, vote on whether to greenlight the run, and the presale window opens only after the vote clears.
 
 ---
 
