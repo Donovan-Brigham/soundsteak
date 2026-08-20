@@ -57,7 +57,7 @@ export async function saveIntakeAnswers(
     .maybeSingle();
 
   if (!artist) {
-    redirect("/apply/profile");
+    redirect("/profile/edit");
   }
 
   const performsLiveYes =
@@ -89,5 +89,5 @@ export async function saveIntakeAnswers(
     return { status: "error", message: error.message };
   }
 
-  redirect("/apply/review");
+  redirect("/profile");
 }

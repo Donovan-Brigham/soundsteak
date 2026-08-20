@@ -96,5 +96,5 @@ export async function saveProfile(
     }
   }
 
-  redirect("/apply/video");
+  redirect("/profile/about");
 }

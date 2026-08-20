@@ -135,7 +135,7 @@ export function VideoRecorder({ artistId }: { artistId: string }) {
     }
 
     stopStream();
-    router.push("/apply/questions");
+    router.push("/apply/review");
   }, [recordedBlob, artistId, seconds, stopStream, router]);
 
   const minutes = Math.floor(seconds / 60);

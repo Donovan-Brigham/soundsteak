@@ -56,5 +56,5 @@ export async function verifyCode(
     return { status: "error", message: "That code didn't work — check for a typo, or request a new one." };
   }
 
-  redirect("/apply/profile");
+  redirect("/profile");
 }
