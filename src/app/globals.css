@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* Brand tokens — matches index.html's :root exactly, single source of truth
+   for both the marketing page and the product/application UI. */
+:root {
+  --bg: #f5f0e8;
+  --surface: #ffffff;
+  --surface-2: #ede8df;
+  --text: #141210;
+  --text-2: #6b6560;
+  --accent: #c94b0e;
+  --gold: #a87a08;
+  --border: rgba(20, 18, 16, 0.1);
+  --radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141210;
+    --surface: #1e1c19;
+    --surface-2: #262420;
+    --text: #f2ede4;
+    --text-2: #a8a49e;
+    --accent: #e05c1a;
+    --gold: #c8960a;
+    --border: rgba(242, 237, 228, 0.09);
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-accent: var(--accent);
+  --color-gold: var(--gold);
+  --color-border: var(--border);
+  --radius-radius: var(--radius);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
