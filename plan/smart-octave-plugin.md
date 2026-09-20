@@ -138,16 +138,31 @@ A separate control sets where on the pitch spectrum the plugin considers a note 
 - [x] `cycle~` sine synthesis from pitch data
 - [x] `harmonic gain` and `synth gain` mix controls per path
 - [x] Named audio buses for all three signals
+- [x] Smart pitch routing: `fzero~` → `sig~` → `onepole~ 10` → subtract threshold → divide by zone → `clip~` → gain pair (`down_gain`, `up_gain`)
+- [x] Voice character knobs wired: `live.dial` (0–1) → harmonic `*~`, `expr 1 - $f1` → synth `*~` (per path)
+- [x] Midpoint (Crossover Overlap Width) knob: 1–400 Hz, default 1 Hz (hard split)
+- [x] Pitch crossover threshold knob: 50–2000 Hz, default 220 Hz (A3)
+- [x] `onepole~ 10` smoothing on gain transitions (~16ms time constant, eliminates zipper noise)
+- [x] Level normalization: octave paths scaled to 0.5x (max additive gain 1.5x / +3.5 dB)
+- [x] `omx.peaklim~` output limiter: ceiling −0.5 dBFS, 1ms lookahead, 50ms release
+
+### Level Management
+
+```
+dry (1.0×)
++ oct_down × down_gain × 0.5
++ oct_up   × up_gain   × 0.5
+  → sum → omx.peaklim~ → plugout~
+```
+
+No octave active: 1.0× (0 dB, limiter transparent).
+One octave fully active: 1.5× (+3.5 dB), limiter engages gently.
+Perceived volume stays consistent — the limiter handles psychoacoustic density (added harmonics increase loudness even at same dBFS).
 
 ### To Do
 - [ ] Expression pedal mapping (MIDI CC → octave down/up blend)
-- [ ] Pitch threshold logic: high note → auto-weight octave down, low note → octave up
-- [ ] Voice character knobs wired: 2 crossfade knobs (one per path), full left = synth only, full right = harmonic only
-- [ ] Midpoint knob: controls overlap width — zero = clean split, max = each octave extends to where the other begins
 - [ ] MIDI mapping for midpoint knob (expression pedal / fader)
-- [ ] Pitch crossover threshold control
-- [ ] Attack/release smoothing on the smart routing (avoid zipper noise on pitch change)
-- [ ] UI panel: voice character knobs (harmonic + synth per path) + pedal/fader position indicator
+- [ ] UI panel layout in Ableton Live device view
 - [ ] Preset save/load
 - [ ] Polyphony handling (single note vs chord detection)
 - [ ] Testing across instrument ranges: guitar, bass, keys, vocals
