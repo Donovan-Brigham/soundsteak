@@ -66,12 +66,9 @@ plugin~ (input from Ableton Live)
 
 ## UI / Controls
 
-### Three Volume Knobs
-- **Octave Down Volume** (magenta) — level of the lower octave layer
-- **Dry Signal Volume** (neutral) — always-on original signal, unaffected by expression pedal
-- **Octave Up Volume** (cyan) — level of the upper octave layer
+### Expression Pedal / Fader (Volume + Blend)
+Volume is controlled entirely by the motion of the expression pedal or fader — there are no separate volume knobs.
 
-### Expression Pedal Behavior
 ```
 PEDAL BACK          MIDPOINT             PEDAL FORWARD
 100% octave down    0% up / 0% down      100% octave up
@@ -79,9 +76,17 @@ PEDAL BACK          MIDPOINT             PEDAL FORWARD
 [magenta zone]    [dry only / center]    [cyan zone]
 ```
 
-- Dry signal volume stays **constant** regardless of pedal position
-- The arc sweeps smoothly between the two octave signals
+- Dry signal stays constant throughout the sweep
+- Pedal/fader position is the only volume control for the octave layers
 - Midpoint = only dry signal passes through
+
+### Voice Character Knobs
+Two knobs shape the *tone* of each octave path independently — not volume, but character:
+
+- **Harmonic character** — dials in the harmonic (pitch-shifted audio) component of the octave signal. More = more of the shifted source instrument sound.
+- **Synth character** — dials in the synthesized (sine oscillator via `cycle~`) component. More = cleaner, more fundamental, less transient-y tone.
+
+Each octave path (up and down) has its own harmonic and synth character knobs, letting the player blend between a natural-sounding shifted tone and a pure synth-like octave. This maps directly to the `harmonic gain` and `synth gain` objects in the Max patch.
 
 ---
 
@@ -125,12 +130,12 @@ The midpoint setting is saved per-preset so different instruments/tunings can ha
 ### To Do
 - [ ] Expression pedal mapping (MIDI CC → octave down/up blend)
 - [ ] Pitch threshold logic: high note → auto-weight octave down, low note → octave up
-- [ ] Dry signal volume knob wired
+- [ ] Voice character knobs wired: harmonic gain + synth gain per octave path
 - [ ] Configurable midpoint/crossover threshold control in UI
 - [ ] Instrument preset icons: bass guitar, mandolin (+ guitar, keys, vocals later)
 - [ ] Fine-tune slider above/below preset anchor
 - [ ] Attack/release smoothing on the smart routing (avoid zipper noise on pitch change)
-- [ ] UI panel: three knobs + expression pedal position indicator
+- [ ] UI panel: voice character knobs (harmonic + synth per path) + pedal/fader position indicator
 - [ ] Preset save/load
 - [ ] Polyphony handling (single note vs chord detection)
 - [ ] Testing across instrument ranges: guitar, bass, keys, vocals
