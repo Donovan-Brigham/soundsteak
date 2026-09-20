@@ -66,19 +66,18 @@ plugin~ (input from Ableton Live)
 
 ## UI / Controls
 
-### Expression Pedal / Fader (Volume + Blend)
-Volume is controlled entirely by the motion of the expression pedal or fader — there are no separate volume knobs.
+### Midpoint Knob (Blend Control)
+A single knob controls the blend between octave down and octave up. At the center (12 o'clock), both octave signals are at 0 volume — only the dry signal passes through. Turning left brings in octave down; turning right brings in octave up.
 
 ```
-PEDAL BACK          MIDPOINT             PEDAL FORWARD
-100% octave down    0% up / 0% down      100% octave up
-     ◄──────────────────────────────────────────►
-[magenta zone]    [dry only / center]    [cyan zone]
+Full left        12 o'clock       Full right
+Octave down ◄──── 0 / 0 ────► Octave up
+100% down       both silent      100% up
 ```
 
+- Center position = both octave layers silent, dry only
 - Dry signal stays constant throughout the sweep
-- Pedal/fader position is the only volume control for the octave layers
-- Midpoint = only dry signal passes through
+- This knob can be MIDI-mapped to an expression pedal or fader for real-time foot control
 
 ### Voice Character Knobs
 Two blend knobs — one for octave down, one for octave up — each sweep between the two signal sources for that path:
@@ -106,18 +105,9 @@ The core intelligence: `fzero~` continuously tracks the fundamental frequency of
 
 The pedal controls *how much* of the smart blend the player wants. The midpoint setting controls *where on the pitch spectrum* that crossover lives.
 
-### Midpoint (Crossover Threshold) Setting
+### Pitch Crossover Threshold
 
-A dedicated control lets the player set where the low/high boundary falls. Rather than entering a raw frequency, the UI offers **instrument preset icons** as quick-select anchors:
-
-| Icon | Instrument | Crossover region | Rationale |
-|---|---|---|---|
-| Bass guitar | Bass | Low (~100–200 Hz) | Bass players want octave up on their low strings, octave down on upper register |
-| Mandolin | Mandolin | High (~400–600 Hz) | Mandolin's entire range is upper register; crossover sits much higher |
-
-Additional presets (guitar, keys, vocals) can be added. The player can also fine-tune the threshold manually above or below any preset.
-
-The midpoint setting is saved per-preset so different instruments/tunings can have their own stored configuration.
+A separate control sets where on the pitch spectrum the plugin considers a note "low" vs "high" — determining which octave path the smart routing favors. The player dials this in to match their instrument's register.
 
 ---
 
@@ -137,9 +127,9 @@ The midpoint setting is saved per-preset so different instruments/tunings can ha
 - [ ] Expression pedal mapping (MIDI CC → octave down/up blend)
 - [ ] Pitch threshold logic: high note → auto-weight octave down, low note → octave up
 - [ ] Voice character knobs wired: 2 crossfade knobs (one per path), full left = synth only, full right = harmonic only
-- [ ] Configurable midpoint/crossover threshold control in UI
-- [ ] Instrument preset icons: bass guitar, mandolin (+ guitar, keys, vocals later)
-- [ ] Fine-tune slider above/below preset anchor
+- [ ] Midpoint knob: bipolar blend control, center = both octaves silent, left = octave down, right = octave up
+- [ ] MIDI mapping for midpoint knob (expression pedal / fader)
+- [ ] Pitch crossover threshold control
 - [ ] Attack/release smoothing on the smart routing (avoid zipper noise on pitch change)
 - [ ] UI panel: voice character knobs (harmonic + synth per path) + pedal/fader position indicator
 - [ ] Preset save/load
