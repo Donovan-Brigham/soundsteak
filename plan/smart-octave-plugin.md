@@ -91,9 +91,22 @@ The core intelligence: `fzero~` continuously tracks the fundamental frequency of
 
 - **High pitch input** → weight toward **octave down** blend
 - **Low pitch input** → weight toward **octave up** blend
-- Crossover threshold TBD — likely configurable
+- The crossover threshold is **user-configurable** — the point where the plugin switches from "this is a low note" to "this is a high note" shifts to match the instrument's register
 
-This means even with the expression pedal at midpoint, the plugin is subtly compensating for register. The pedal controls *how much* of the smart blend the player wants, not which octave is fixed.
+The pedal controls *how much* of the smart blend the player wants. The midpoint setting controls *where on the pitch spectrum* that crossover lives.
+
+### Midpoint (Crossover Threshold) Setting
+
+A dedicated control lets the player set where the low/high boundary falls. Rather than entering a raw frequency, the UI offers **instrument preset icons** as quick-select anchors:
+
+| Icon | Instrument | Crossover region | Rationale |
+|---|---|---|---|
+| Bass guitar | Bass | Low (~100–200 Hz) | Bass players want octave up on their low strings, octave down on upper register |
+| Mandolin | Mandolin | High (~400–600 Hz) | Mandolin's entire range is upper register; crossover sits much higher |
+
+Additional presets (guitar, keys, vocals) can be added. The player can also fine-tune the threshold manually above or below any preset.
+
+The midpoint setting is saved per-preset so different instruments/tunings can have their own stored configuration.
 
 ---
 
@@ -113,7 +126,9 @@ This means even with the expression pedal at midpoint, the plugin is subtly comp
 - [ ] Expression pedal mapping (MIDI CC → octave down/up blend)
 - [ ] Pitch threshold logic: high note → auto-weight octave down, low note → octave up
 - [ ] Dry signal volume knob wired
-- [ ] Crossover frequency parameter exposed in UI
+- [ ] Configurable midpoint/crossover threshold control in UI
+- [ ] Instrument preset icons: bass guitar, mandolin (+ guitar, keys, vocals later)
+- [ ] Fine-tune slider above/below preset anchor
 - [ ] Attack/release smoothing on the smart routing (avoid zipper noise on pitch change)
 - [ ] UI panel: three knobs + expression pedal position indicator
 - [ ] Preset save/load
