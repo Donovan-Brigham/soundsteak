@@ -81,12 +81,18 @@ PEDAL BACK          MIDPOINT             PEDAL FORWARD
 - Midpoint = only dry signal passes through
 
 ### Voice Character Knobs
-Two knobs shape the *tone* of each octave path independently — not volume, but character:
+Two blend knobs — one for octave down, one for octave up — each sweep between the two signal sources for that path:
 
-- **Harmonic character** — dials in the harmonic (pitch-shifted audio) component of the octave signal. More = more of the shifted source instrument sound.
-- **Synth character** — dials in the synthesized (sine oscillator via `cycle~`) component. More = cleaner, more fundamental, less transient-y tone.
+```
+Full left          Center           Full right
+Synth only ◄────── 50/50 ──────► Harmonic only
+(cycle~ sine)               (pitchshift~ audio)
+```
 
-Each octave path (up and down) has its own harmonic and synth character knobs, letting the player blend between a natural-sounding shifted tone and a pure synth-like octave. This maps directly to the `harmonic gain` and `synth gain` objects in the Max patch.
+- **Octave Down character** — blends the down path between pure sine oscillator and pure pitch-shifted audio
+- **Octave Up character** — same blend control for the up path
+
+This maps directly to `harmonic gain` and `synth gain` in the Max patch, crossfading between the two sources rather than controlling separate levels.
 
 ---
 
@@ -130,7 +136,7 @@ The midpoint setting is saved per-preset so different instruments/tunings can ha
 ### To Do
 - [ ] Expression pedal mapping (MIDI CC → octave down/up blend)
 - [ ] Pitch threshold logic: high note → auto-weight octave down, low note → octave up
-- [ ] Voice character knobs wired: harmonic gain + synth gain per octave path
+- [ ] Voice character knobs wired: 2 crossfade knobs (one per path), full left = synth only, full right = harmonic only
 - [ ] Configurable midpoint/crossover threshold control in UI
 - [ ] Instrument preset icons: bass guitar, mandolin (+ guitar, keys, vocals later)
 - [ ] Fine-tune slider above/below preset anchor
