@@ -66,18 +66,34 @@ plugin~ (input from Ableton Live)
 
 ## UI / Controls
 
-### Midpoint Knob (Blend Control)
-A single knob controls the blend between octave down and octave up. At the center (12 o'clock), both octave signals are at 0 volume — only the dry signal passes through. Turning left brings in octave down; turning right brings in octave up.
+### Midpoint Knob (Crossover Overlap Width)
+Controls how far each octave signal extends into the other's register — the width of the overlap zone around the pitch crossover point.
 
+**Knob at zero — no overlap, clean split:**
 ```
-Full left        12 o'clock       Full right
-Octave down ◄──── 0 / 0 ────► Octave up
-100% down       both silent      100% up
+Low register          Crossover point         High register
+Octave up ──────► [fades to 0] [0 fades in] ◄────── Octave down
+                        ↑ they meet here, no overlap
 ```
 
-- Center position = both octave layers silent, dry only
-- Dry signal stays constant throughout the sweep
-- This knob can be MIDI-mapped to an expression pedal or fader for real-time foot control
+**Knob turned up — signals push into each other's territory:**
+```
+Low register                                    High register
+Octave up ──────────────────► [extends past mid]
+                    [extends past mid] ◄────────── Octave down
+                         ↑ both signals audible in overlap zone
+```
+
+**Knob at maximum — maximum overlap:**
+```
+Each signal ends exactly where the other originally began.
+Octave down now reaches into where octave up started, and vice versa.
+```
+
+- At zero: clean handoff between the two octave paths, silence gap at the boundary
+- Turned up: wider overlap zone where both octave signals are audible simultaneously in the mid register
+- At max: each octave signal ends at the starting point of the other — full crossover
+- Dry signal stays constant throughout
 
 ### Voice Character Knobs
 Two blend knobs — one for octave down, one for octave up — each sweep between the two signal sources for that path:
@@ -127,7 +143,7 @@ A separate control sets where on the pitch spectrum the plugin considers a note 
 - [ ] Expression pedal mapping (MIDI CC → octave down/up blend)
 - [ ] Pitch threshold logic: high note → auto-weight octave down, low note → octave up
 - [ ] Voice character knobs wired: 2 crossfade knobs (one per path), full left = synth only, full right = harmonic only
-- [ ] Midpoint knob: bipolar blend control, center = both octaves silent, left = octave down, right = octave up
+- [ ] Midpoint knob: controls overlap width — zero = clean split, max = each octave extends to where the other begins
 - [ ] MIDI mapping for midpoint knob (expression pedal / fader)
 - [ ] Pitch crossover threshold control
 - [ ] Attack/release smoothing on the smart routing (avoid zipper noise on pitch change)
